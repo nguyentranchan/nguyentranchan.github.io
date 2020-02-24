@@ -26,7 +26,7 @@
         <p class="txt-sub">
           Tuyển dụng
         </p>
-        <h1 id="h1-id">Bạn là mảnh ghép còn thiếu</h1>
+        <h1 id="h1-id">Bạn chính là mảnh ghép còn thiếu</h1>
         <p class="txt-text">Luxuriam non reprehendit, modo sit vacua infinita cupiditate et timore. Urgent tamen et
           nihil remittunt. Aut unde est hoc contritum vetustate proverbium.</p>
       </div>
@@ -42,6 +42,8 @@
         <div style="margin-top: 10px;"><label id="customButton" for="file"><a>Đính kèm CV tại đây</a></label>
           <span id="fileName"></span>
         </div>
+
+        <div style="margin-top: 10px;" id="form-message"></div>
         <button>Gửi ngay</button>
       </form>
       <script>(function (e, t, n) { var r = e.querySelectorAll("html")[0]; r.className = r.className.replace(/(^|s)no-js(s|$)/, "$1js$2") })(document, window, 0);</script>
@@ -49,9 +51,6 @@
     </div>
   </header>
 
-  <!-- <section>
-    <div class="wrap"></div>
-  </section> -->
   <footer></footer>
 
   <script src="js/main.js"></script>
@@ -72,16 +71,20 @@
       const name = (e.target.elements.name.value)
       const email = (e.target.elements.email.value)
       const file = (e.target.elements.file.files[0])
-      console.log([name, email,file])
+
       var formData = new FormData();
       formData.append("cv", file);
       formData.append("email", email)
       formData.append("name", name)
 
-      console.log('formdata ',formData.values())
+      console.log(formData.get('cv'))
       const Url = 'https://ggjungle.vn/api/send-mail'
       // const Url = 'localhost:3000/api/send-mail'
-      axios.post(Url,formData).then(data => console.log(data)).catch(err => console.log(err))
+      axios.post(Url,formData).then(data => {
+        if (data.status==200) {
+         document.getElementById('form-message').innerHTML = 'Thông tin của bạn đã được gửi!!'
+        }
+      }).catch(err => console.log(err))
 
       return false;
     }
