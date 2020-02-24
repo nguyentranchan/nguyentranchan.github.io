@@ -14,6 +14,7 @@
       $(".navbar").load("main-nav.html");
     });
   </script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 
 <body id="recruit">
@@ -29,12 +30,12 @@
         <p class="txt-text">Luxuriam non reprehendit, modo sit vacua infinita cupiditate et timore. Urgent tamen et
           nihil remittunt. Aut unde est hoc contritum vetustate proverbium.</p>
       </div>
-      <form class="form-recruit"action="/action_page.php">
-        <label for="email">Xin chào!!</label>
-        <input type="email" id="email" name="email" placeholder="Bạn tên gì?">
+      <form class="form-recruit" >
+        <label for="text">Xin chào!!</label>
+        <input type="text" id="name" name="name" placeholder="Bạn tên gì?">
         <label for="email">Chúng tôi có thể liên lạc bạn theo địa chỉ email:</label>
         <input type="email" id="email" name="email" placeholder="Nhập email vào đây">
-        <a for="email">Đính kèm CV tại đây </a>
+        <a >Đính kèm CV tại đây </a>
         <button>Gửi ngay</button>
       </form>
     </div>
@@ -46,6 +47,30 @@
   <footer></footer>
 
   <script src="js/main.js"></script>
+  <script>
+    const Url='https://ggjungle.vn/api/send-mail'
+    function processForm(e) {
+      if (e.preventDefault) e.preventDefault();
+
+      /* do what you want with the form */
+      const name =(e.target.elements.name.value)
+      const email =(e.target.elements.email.value)
+
+      console.log([name,email])
+
+
+      // You must return false to prevent the default form behavior
+      return false;
+    }
+
+    var form = document.getElementsByClassName('form-recruit');
+    console.log('adwawda',form)
+    if (form.attachEvent) {
+      form[0].attachEvent("submit", processForm);
+    } else {
+      form[0].addEventListener("submit", processForm);
+    }
+  </script>
 </body>
 
 </html>
