@@ -33,7 +33,9 @@
       <form class="form-recruit">
         <label for="text">Xin chào!!</label>
         <input type="text" id="name" name="name" placeholder="Bạn tên gì?">
-        <label for="email">Chúng tôi có thể liên lạc bạn theo địa chỉ email:</label>
+        <label for="position">Bạn ứng tuyển cho vị trí nào?</label>
+        <input type="text" id="position" name="position" placeholder="Nhập vị trí muốn ứng tuyển">
+        <label for="email">Chúng tôi có thể liên lạc với bạn theo địa chỉ email:</label>
         <input type="email" id="email" name="email" placeholder="Nhập email vào đây">
         <!-- <input type="file" name="file" id="file" class="inputfile" data-multiple-caption="{count} files selected" multiple />
         <label for="file"><a>Đính kèm CV tại đây </a></label> -->
@@ -62,7 +64,7 @@
     document.getElementById("fileUpload").addEventListener("change", function () {
       var fullPath = this.value; // fetched value = C:\fakepath\fileName.extension
       var fileName = fullPath.split(/(\\|\/)/g).pop();  // fetch the file name
-      document.getElementById("fileName").innerHTML = fileName;  // display the file name
+      document.getElementsByClassName("fileName").innerHTML = fileName;  // display the file name
     }, false);
 
     function processForm(e) {
@@ -70,12 +72,15 @@
 
       const name = (e.target.elements.name.value)
       const email = (e.target.elements.email.value)
+      const position = (e.target.elements.position.value)
       const file = (e.target.elements.file.files[0])
 
+      console.log([name,email,position,file])
       var formData = new FormData();
       formData.append("cv", file);
       formData.append("email", email)
       formData.append("name", name)
+      formData.append("position", position)
 
       console.log(formData.get('cv'))
       const Url = 'https://ggjungle.vn/api/send-mail'
@@ -83,6 +88,7 @@
       axios.post(Url,formData).then(data => {
         if (data.status==200) {
          document.getElementById('form-message').innerHTML = 'Thông tin của bạn đã được gửi!!'
+        //  document.getElementById("form-recruit").reset();
         }
       }).catch(err => console.log(err))
 
