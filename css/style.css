@@ -1916,3 +1916,11 @@ body#contact section .wrap a {
     margin-right: 0px;
   }
 }
+
+#fileUpload{
+  display: none; /* do not display the actual file upload button */
+}
+
+#customButton{  /* style the fake upload button */
+  border: 1px solid redwhite;
+}

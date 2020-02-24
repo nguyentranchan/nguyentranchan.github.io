@@ -20,6 +20,7 @@ function autoType(elementClass, typingSpeed) {
     }, 100);
 }
 
+
 $(document).ready(function() {
 
     autoType(".head-title", 50);
