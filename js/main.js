@@ -30,14 +30,14 @@ $(document).ready(function() {
         $('body, html').toggleClass('overflow');
         $('.txt-menu').toggle();
     });
-    // window.addEventListener("resize", function(){
-    //   if(window.innerWidth > 959){
-    //     $('.txt-menu').css('display', 'block');
-    //   } else {
-    //     $('.txt-menu').css('display', 'none');
-    //     $('.navbar-toggle').removeClass('open');
-    //   }
-    // });
+    window.addEventListener("resize", function(){
+      if(window.innerWidth > 959){
+        $('.txt-menu').css('display', 'block');
+      } else {
+        $('.txt-menu').css('display', 'none');
+        $('.navbar-toggle').removeClass('open');
+      }
+    });
 });
 
 //Paralax Effect
@@ -51,9 +51,9 @@ if (/Android|webOS|iPhone|iPad|BlackBerry|Windows Phone|Opera Mini|IEMobile|Mobi
         $('.g-what').css({
             'transform': 'translateY(-' + wScroll / 40 + 'px)'
         });
-        $('.about-wrapp').css({
-            'transform': 'translateY(-' + wScroll / 30 + 'px)'
-        });
+        // $('.about-wrapp').css({
+        //     'transform': 'translateY(-' + wScroll / 30 + 'px)'
+        // });
         $('.g-cta').css({
             'transform': 'translateY(-' + wScroll / 40 + 'px)'
         });

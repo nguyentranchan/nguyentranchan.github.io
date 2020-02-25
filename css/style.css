@@ -1249,7 +1249,7 @@ header .head-title h1 strong {
 }
 
 header .head-title-recruit {
-    padding: 15vh 0 2vh;
+    padding: 10vh 0 2vh;
 }
 
 header .head-title-recruit h1 {
@@ -1846,16 +1846,16 @@ body#contact section .wrap a {
 
 .form-recruit {
   font-size: 1.25rem;;
-  width: 60%;
+  width: 65%;
   display: flex;
   flex-direction: column;
-  height: 350px;
+  height: 400px;
 }
 
 .head-title-recruit {
   margin-left: 0;
   text-align: left;
-  width: 60%;
+  width: 65%;
 }
 
 .head-title-recruit .txt-text{
@@ -1881,6 +1881,7 @@ body#contact section .wrap a {
   width: 120px;
   height: 30px;
   margin-right: 145px;
+  z-index: 100;
 }
 
 .form-recruit a {
@@ -1905,6 +1906,7 @@ body#contact section .wrap a {
 @media (max-width: 960px) {
   .head-title-recruit {
     width: 100%;
+    font-size: 1.5rem;
   }         
   .form-recruit {
     width: 100%;
