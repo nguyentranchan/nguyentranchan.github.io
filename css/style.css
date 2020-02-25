@@ -1269,7 +1269,7 @@ section {
 }
 
 section.g-what {
-    background: url("../images/g-what.png") no-repeat #212529;
+    /* background: url("../images/g-what.png") no-repeat #212529; */
     background-position: -75px -45px;
     z-index: 2;
 }
@@ -1855,7 +1855,7 @@ body#contact section .wrap a {
 .head-title-recruit {
   margin-left: 0;
   text-align: left;
-  width: 65%;
+  width: 60%;
 }
 
 .head-title-recruit .txt-text{
