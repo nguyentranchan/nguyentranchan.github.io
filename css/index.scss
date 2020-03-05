@@ -1,5 +1,5 @@
-@import 'config';
-@import 'utilities';
+@import "config";
+@import "utilities";
 
 * {
   box-sizing: border-box;
@@ -16,7 +16,6 @@ body {
 
 a {
   text-decoration: none;
-  color: #d03b39;
 }
 
 ul {
@@ -25,4 +24,140 @@ ul {
 
 img {
   width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 150px;
+  .logo,
+  ul {
+    align-self: center;
+  }
+  .logo {
+    display: flex;
+    font-size: 30px;
+    img {
+      width: 75px;
+    }
+    &-text {
+      color: #2a4d69;
+      align-self: center;
+      margin-left: 10px;
+    }
+  }
+  ul {
+    li:first-child {
+      margin-right: 30px;
+    }
+    font-size: 24px;
+    margin-left: 10px;
+    color: #535353;
+    display: flex;
+  }
+}
+
+#banner {
+  height: 87vh;
+  display: flex;
+  overflow: hidden;
+  background-color: #F5F7E1;
+  justify-content: space-between;
+  .slogan {
+    margin-left: 150px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 200px;
+    &-1 {
+      line-height: 40px;
+      color: #2a4d69;
+      font-size: 36px;
+    }
+    &-2 {
+      margin-top: 20px;
+      font-size: 24px;
+      font-weight: 100;
+    }
+  }
+  .circle-01 {
+    position: relative;
+    background-color: #d9e3d6;
+    border-radius: 60%;
+    /* left: 583px; */
+    bottom: 190px;
+    width: 1300px;
+    height: 1200px;
+  }
+  .circle-02 {
+    position: relative;
+    background-color: #c1d1cc;
+    /* opacity: 0.11; */
+    border-radius: 50%;
+    left: 163px;
+    bottom: -75px;
+    width: 1000px;
+    height: 1000px;
+  }
+  .circle-03 {
+    position: absolute;
+    background-color: #acc1c3;
+    /* opacity: 0.11; */
+    border-radius: 50%;
+    left: 300px;
+    bottom: 234px;
+    width: 750px;
+    height: 750px;
+  }
+  .circle-04 {
+    position: absolute;
+    background-color: #99b3bb;
+    /* opacity: 0.11; */
+    border-radius: 50%;
+    left: 377px;
+    bottom: 305px;
+    width: 600px;
+    height: 600px;
+  }
+  .images {
+    position: absolute;
+    background-color: #99b3bb;
+    /* opacity: 0.11; */
+    border-radius: 50%;
+    left: 377px;
+    bottom: 305px;
+    width: 600px;
+    height: 600px;
+    .light {
+      position: relative;
+      right: -44px;
+      bottom: -29px;
+      width: 84%;
+    }
+    .money {
+      position: absolute;
+      right: 110px;
+      bottom: 216px;
+      width: 12%;
+    }
+    .wifi {
+      position: absolute;
+      right: 391px;
+      bottom: 128px;
+      width: 12%;
+    }
+  }
+  // .circle-03 {
+  //   position: relative;
+  //   background-color: #2a4d69;
+  //   opacity: 0.11;
+  //   border-radius: 50%;
+  //   left: 583px;
+  //   bottom: 150px;
+  //   width: 1300px;
+  //   height: 1200px;
+  //   &-01 {
+  //     background-color: #2a4d69;
+  //     width:1000px
+  //   }
+  // }
 }
