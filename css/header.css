@@ -75,7 +75,7 @@
 
 #banner .slogan-1 {
   line-height: 40px;
-  color: #2a4d69;
+  color: black;
   font-size: 36px;
 }
 
@@ -240,7 +240,7 @@
   #banner .slogan-1 {
     line-height: 30px;
     color: black;
-    font-size: 25px;
+    font-size: 30px;
   }
   #banner .slogan-2 {
     margin-top: 20px;
@@ -269,7 +269,7 @@
   #banner .slogan-1 {
     line-height: 30px;
     color: black;
-    font-size: 25px;
+    font-size: 30px;
   }
   #banner .slogan-2 {
     margin-top: 20px;
