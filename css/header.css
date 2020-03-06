@@ -285,4 +285,95 @@
     left: 10vw;
   }
 }
+
+footer .bg-blue {
+  background-color: #2a4d69;
+}
+
+footer .w-full {
+  width: 100%;
+}
+
+footer .mr-10 {
+  margin-right: 10px;
+}
+
+footer .mr-15 {
+  margin-right: 15px;
+}
+
+footer .ml-10 {
+  margin-left: 10px;
+}
+
+footer .ml-auto {
+  margin-left: auto;
+}
+
+footer .mt-auto {
+  margin-top: auto;
+}
+
+footer .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .flex.layout-row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+footer .co-white {
+  color: white;
+}
+
+footer .fs-13 {
+  font-size: 13px;
+}
+
+footer .fs-35 {
+  font-size: 35px;
+}
+
+footer .footer {
+  padding: 30px 5px;
+  width: 1000px;
+  margin: auto;
+}
+
+footer .social-links img {
+  width: 30px;
+}
+
+footer .address {
+  width: calc(100% - 300px);
+}
+
+footer .inline {
+  display: inline-block;
+}
+
+@media screen and (max-width: 1000px) {
+  footer .footer {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  footer .inline {
+    display: block;
+    width: 100%;
+  }
+  footer .address {
+    padding: 5px;
+  }
+  footer .footer {
+    padding: 15px 5px;
+    text-align: center;
+  }
+}
 /*# sourceMappingURL=header.css.map */
