@@ -340,8 +340,8 @@ footer .fs-35 {
 }
 
 footer .footer {
-  padding: 30px 5px;
-  width: 1000px;
+  padding: 30px 50px;
+  width: 100%;
   margin: auto;
 }
 
@@ -359,7 +359,13 @@ footer .inline {
 
 @media screen and (max-width: 1000px) {
   footer .footer {
-    width: 100%;
+    padding: 30px 40px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  footer .header {
+    padding: 20px 40px;
   }
 }
 

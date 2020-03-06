@@ -300,8 +300,8 @@ footer {
     font-size: 35px;
   }
   .footer {
-    padding: 30px 5px;
-    width: 1000px;
+    padding: 30px 50px;
+    width: 100%;
     margin: auto;
   }
   .social-links {
@@ -317,10 +317,15 @@ footer {
   }
   @media screen and (max-width: 1000px) {
     .footer {
-      width: 100%;
+      padding: 30px 40px;
     }
   }
 
+  @media screen and (max-width: 900px) {
+    .header {
+      padding: 20px 40px;
+    }
+  }
   @media screen and (max-width: 640px) {
     .inline {
       display: block;
