@@ -53,7 +53,7 @@
   display: -ms-flexbox;
   display: flex;
   overflow: hidden;
-  background-color: #F5F7E1;
+  background-color: #f5f7e1;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -207,48 +207,82 @@
   width: 12%;
 }
 
+#banner .image img {
+  width: 1200px;
+  position: relative;
+  bottom: 175px;
+  left: 35vw;
+}
+
 @media screen and (max-width: 900px) {
   .header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
     padding: 20px 40px;
   }
-  .logo,
-  ul {
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-  }
   .logo {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     font-size: 20px !important;
   }
   .logo img {
     width: 40px !important;
   }
-  .logo-text {
-    color: #2a4d69;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    margin-left: 10px;
-  }
   ul {
     font-size: 20px !important;
-    margin-left: 10px;
-    color: #535353;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
   }
   ul li:first-child {
     margin-right: 0px;
+  }
+  #banner {
+    height: 85vh;
+  }
+  #banner .slogan {
+    margin-left: 40px;
+    margin-top: 200px;
+  }
+  #banner .slogan-1 {
+    line-height: 30px;
+    color: black;
+    font-size: 25px;
+  }
+  #banner .slogan-2 {
+    margin-top: 20px;
+    font-weight: 100;
+    color: #535353;
+  }
+  #banner .image img {
+    width: 103vw;
+    position: relative;
+    bottom: 5px;
+    left: 25vw;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header ul {
+    display: none;
+  }
+  #banner {
+    height: 550px;
+  }
+  #banner .slogan {
+    margin-left: 20px;
+    margin-top: 50px;
+  }
+  #banner .slogan-1 {
+    line-height: 30px;
+    color: black;
+    font-size: 25px;
+  }
+  #banner .slogan-2 {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 100;
+    width: 134px;
+    color: #535353;
+  }
+  #banner .image img {
+    width: 142vw;
+    position: relative;
+    bottom: 5px;
+    left: 10vw;
   }
 }
 /*# sourceMappingURL=header.css.map */
