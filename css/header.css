@@ -60,6 +60,8 @@
 }
 
 #banner .slogan {
+  position: absolute;
+  z-index: 1;
   margin-left: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -81,6 +83,11 @@
   margin-top: 20px;
   font-size: 24px;
   font-weight: 100;
+}
+
+#banner .circle {
+  position: relative;
+  left: 30vw;
 }
 
 #banner .circle-01 {
@@ -126,7 +133,7 @@
   height: 600px;
 }
 
-#banner .images {
+#banner .circle .images {
   position: absolute;
   background-color: #99b3bb;
   /* opacity: 0.11; */
@@ -137,24 +144,111 @@
   height: 600px;
 }
 
-#banner .images .light {
+#banner .circle .images .light {
   position: relative;
   right: -44px;
   bottom: -29px;
   width: 84%;
 }
 
-#banner .images .money {
+#banner .circle .images .money {
   position: absolute;
   right: 110px;
   bottom: 216px;
   width: 12%;
 }
 
-#banner .images .wifi {
+#banner .circle .images .wifi {
   position: absolute;
   right: 391px;
   bottom: 128px;
   width: 12%;
+}
+
+#banner .circle .images .target {
+  position: absolute;
+  right: 357px;
+  bottom: 258px;
+  width: 13%;
+}
+
+#banner .circle .images .diagram {
+  position: absolute;
+  right: 391px;
+  bottom: 473px;
+  width: 10%;
+}
+
+#banner .circle .images .handshake {
+  position: absolute;
+  right: 197px;
+  bottom: 290px;
+  width: 9%;
+}
+
+#banner .circle .images .innovation {
+  position: absolute;
+  right: 166px;
+  bottom: 131px;
+  width: 9%;
+}
+
+#banner .circle .images .network {
+  position: absolute;
+  right: 178px;
+  bottom: 490px;
+  width: 9%;
+}
+
+#banner .circle .images .cogwheel {
+  position: absolute;
+  right: 465px;
+  bottom: 368px;
+  width: 12%;
+}
+
+@media screen and (max-width: 900px) {
+  .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 20px 40px;
+  }
+  .logo,
+  ul {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 20px !important;
+  }
+  .logo img {
+    width: 40px !important;
+  }
+  .logo-text {
+    color: #2a4d69;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-left: 10px;
+  }
+  ul {
+    font-size: 20px !important;
+    margin-left: 10px;
+    color: #535353;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  ul li:first-child {
+    margin-right: 0px;
+  }
 }
 /*# sourceMappingURL=header.css.map */

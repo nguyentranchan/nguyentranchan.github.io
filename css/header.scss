@@ -36,6 +36,8 @@
   background-color: #F5F7E1;
   justify-content: space-between;
   .slogan {
+    position: absolute;
+    z-index: 1;
     margin-left: 150px;
     display: flex;
     flex-direction: column;
@@ -51,71 +53,111 @@
       font-weight: 100;
     }
   }
-  .circle-01 {
+  .circle {
     position: relative;
-    background-color: #d9e3d6;
-    border-radius: 60%;
-    /* left: 583px; */
-    bottom: 190px;
-    width: 1300px;
-    height: 1200px;
-  }
-  .circle-02 {
-    position: relative;
-    background-color: #c1d1cc;
-    /* opacity: 0.11; */
-    border-radius: 50%;
-    left: 163px;
-    bottom: -75px;
-    width: 1000px;
-    height: 1000px;
-  }
-  .circle-03 {
-    position: absolute;
-    background-color: #acc1c3;
-    /* opacity: 0.11; */
-    border-radius: 50%;
-    left: 300px;
-    bottom: 234px;
-    width: 750px;
-    height: 750px;
-  }
-  .circle-04 {
-    position: absolute;
-    background-color: #99b3bb;
-    /* opacity: 0.11; */
-    border-radius: 50%;
-    left: 377px;
-    bottom: 305px;
-    width: 600px;
-    height: 600px;
-  }
-  .images {
-    position: absolute;
-    background-color: #99b3bb;
-    /* opacity: 0.11; */
-    border-radius: 50%;
-    left: 377px;
-    bottom: 305px;
-    width: 600px;
-    height: 600px;
-    .light {
+    left: 30vw;
+    &-01 {
       position: relative;
-      right: -44px;
-      bottom: -29px;
-      width: 84%;
+      background-color: #d9e3d6;
+      border-radius: 60%;
+      /* left: 583px; */
+      bottom: 190px;
+      width: 1300px;
+      height: 1200px;
     }
-    .money {
-      position: absolute;
-      right: 110px;
-      bottom: 216px;
-      width: 12%;
+    &-02 {
+      position: relative;
+      background-color: #c1d1cc;
+      /* opacity: 0.11; */
+      border-radius: 50%;
+      left: 163px;
+      bottom: -75px;
+      width: 1000px;
+      height: 1000px;
     }
-    .wifi {
+    &-03 {
       position: absolute;
-      right: 391px;
-      bottom: 128px;
-      width: 12%;
+      background-color: #acc1c3;
+      /* opacity: 0.11; */
+      border-radius: 50%;
+      left: 300px;
+      bottom: 234px;
+      width: 750px;
+      height: 750px;
+    }
+    &-04 {
+      position: absolute;
+      background-color: #99b3bb;
+      /* opacity: 0.11; */
+      border-radius: 50%;
+      left: 377px;
+      bottom: 305px;
+      width: 600px;
+      height: 600px;
+    }
+    .images {
+      position: absolute;
+      background-color: #99b3bb;
+      /* opacity: 0.11; */
+      border-radius: 50%;
+      left: 377px;
+      bottom: 305px;
+      width: 600px;
+      height: 600px;
+      .light {
+        position: relative;
+        right: -44px;
+        bottom: -29px;
+        width: 84%;
+      }
+      .money {
+        position: absolute;
+        right: 110px;
+        bottom: 216px;
+        width: 12%;
+      }
+      .wifi {
+        position: absolute;
+        right: 391px;
+        bottom: 128px;
+        width: 12%;
+      }
+      .target {
+        position: absolute;
+        right: 357px;
+        bottom: 258px;
+        width: 13%;
+      }
+      .diagram {
+        position: absolute;
+        right: 391px;
+        bottom: 473px;
+        width: 10%;
+      }
+      .handshake {
+        position: absolute;
+        right: 197px;
+        bottom: 290px;
+        width: 9%;
+      }
+      .innovation {
+        position: absolute;
+        right: 166px;
+        bottom: 131px;
+        width: 9%;
+      }
+      .network {
+        position: absolute;
+        right: 178px;
+        bottom: 490px;
+        width: 9%;
+      }
+      .cogwheel {
+        position: absolute;
+        right: 465px;
+        bottom: 368px;
+        width: 12%;
+      }
     }
   }
   // .circle-03 {
@@ -132,4 +174,38 @@
   //     width:1000px
   //   }
   // }
+}
+
+@media screen and (max-width:900px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+  }
+  .logo,
+  ul {
+    align-self: center;
+  }
+  .logo {
+    display: flex;
+    font-size: 20px !important;
+    img {
+      width: 40px !important;
+    }
+    &-text {
+      color: #2a4d69;
+      align-self: center;
+      margin-left: 10px;
+    }
+  }
+  ul {
+    li:first-child {
+      margin-right: 0px;
+    }
+    font-size: 20px !important;
+    margin-left: 10px;
+    color: #535353;
+    display: flex;
+    
+  }
 }
