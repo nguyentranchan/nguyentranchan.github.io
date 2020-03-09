@@ -39,6 +39,14 @@
           justify-content: center;
 }
 
+.about-us-bottom .vision {
+  padding-right: 100px;
+}
+
+.about-us-bottom .mission {
+  padding-left: 100px;
+}
+
 .about-us-bottom .vision, .about-us-bottom .mission {
   text-align: center;
   display: -webkit-box;
@@ -48,7 +56,6 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 0 100px;
 }
 
 .about-us-bottom .vision .image .yellow-circle, .about-us-bottom .mission .image .yellow-circle {
@@ -89,6 +96,44 @@
 .about-us-bottom .vision .description, .about-us-bottom .mission .description {
   width: 280px;
   font-size: 24px;
+}
+
+@media screen and (max-width: 850px) {
+  .about-us {
+    height: 750px;
+    padding: 40px 40px;
+  }
+  .about-us-info .title {
+    font-size: 30px;
+  }
+  .about-us-info .description {
+    font-size: 15px;
+    width: 300px;
+    font-weight: bold;
+  }
+  .about-us-bottom {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .about-us .vision, .about-us .mission {
+    padding: 0;
+  }
+  .about-us .vision .title, .about-us .mission .title {
+    margin-top: 20px;
+    font-size: 18px;
+  }
+  .about-us .vision .description, .about-us .mission .description {
+    font-size: 15px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    font-weight: bold;
+  }
+  .about-us .mission {
+    margin-top: 50px;
+  }
 }
 
 @-webkit-keyframes moveAni1 {

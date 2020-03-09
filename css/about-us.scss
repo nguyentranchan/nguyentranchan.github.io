@@ -21,11 +21,16 @@
   &-bottom {
     display: flex;
     justify-content: center;
+    .vision {
+      padding-right: 100px;
+    }
+    .mission {
+      padding-left: 100px;
+    }
     .vision, .mission {
       text-align: center;
       display: flex;
       flex-direction: column;
-      padding: 0 100px;
       .image {
         .yellow-circle {
           z-index: 1;
@@ -55,6 +60,41 @@
         width: 280px;
         font-size: 24px;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .about-us{
+    height: 750px;
+    padding:40px 40px;
+    &-info{
+      .title{
+        font-size: 30px;
+      }
+      .description{
+        font-size: 15px;
+        width: 300px;
+        font-weight: bold;
+      }
+    }
+    &-bottom{
+      flex-direction: column;
+    }
+    .vision,.mission {
+      padding: 0;
+      .title{
+        margin-top: 20px;
+        font-size: 18px;
+      }
+      .description{
+        font-size: 15px;
+        align-self: center;
+        font-weight: bold;
+      }
+    }
+    .mission {
+      margin-top: 50px;
     }
   }
 }
