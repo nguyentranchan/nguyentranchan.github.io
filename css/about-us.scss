@@ -1,0 +1,77 @@
+.about-us {
+  padding: 100px 150px;
+  height: 87vh;
+  background-color: #0F4E82;
+  color: white;
+  &-info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 60px;
+    .title {
+      font-size: 72px;
+      font-weight: bold;
+    }
+    .description {
+      font-size: 24px;
+      width: 840px;
+      align-self: center;
+    }
+  }
+  &-bottom {
+    display: flex;
+    justify-content: center;
+    .vision, .mission {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      padding: 0 100px;
+      .image {
+        .yellow-circle {
+          z-index: 1;
+        }
+        &-mission,&-vision {
+          position: absolute;
+        }
+        &-mission {
+          transform: translate(29px, -18px);
+          animation: moveAni1 1s ;
+        }
+        &-vision {
+          transform: translate(-29px, 18px);
+          animation: moveAni2 1s ;
+        }
+        img {
+          align-self: center;
+          height: 100px;
+          width: 100px;
+        }
+      }
+      .title {
+        font-size: 36px;
+        font-weight: bold;
+      }
+      .description {
+        width: 280px;
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+@keyframes moveAni1 {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  100% {
+    transform: translate(29px, -18px);
+  }
+}
+@keyframes moveAni2 {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  100% {
+    transform: translate(-29px, 18px);
+  }
+}

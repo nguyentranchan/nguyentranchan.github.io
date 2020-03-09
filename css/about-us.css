@@ -1,0 +1,137 @@
+.about-us {
+  padding: 100px 150px;
+  height: 87vh;
+  background-color: #0F4E82;
+  color: white;
+}
+
+.about-us-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.about-us-info .title {
+  font-size: 72px;
+  font-weight: bold;
+}
+
+.about-us-info .description {
+  font-size: 24px;
+  width: 840px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.about-us-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.about-us-bottom .vision, .about-us-bottom .mission {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 100px;
+}
+
+.about-us-bottom .vision .image .yellow-circle, .about-us-bottom .mission .image .yellow-circle {
+  z-index: 1;
+}
+
+.about-us-bottom .vision .image-mission, .about-us-bottom .vision .image-vision, .about-us-bottom .mission .image-mission, .about-us-bottom .mission .image-vision {
+  position: absolute;
+}
+
+.about-us-bottom .vision .image-mission, .about-us-bottom .mission .image-mission {
+  -webkit-transform: translate(29px, -18px);
+          transform: translate(29px, -18px);
+  -webkit-animation: moveAni1 1s;
+          animation: moveAni1 1s;
+}
+
+.about-us-bottom .vision .image-vision, .about-us-bottom .mission .image-vision {
+  -webkit-transform: translate(-29px, 18px);
+          transform: translate(-29px, 18px);
+  -webkit-animation: moveAni2 1s;
+          animation: moveAni2 1s;
+}
+
+.about-us-bottom .vision .image img, .about-us-bottom .mission .image img {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  height: 100px;
+  width: 100px;
+}
+
+.about-us-bottom .vision .title, .about-us-bottom .mission .title {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.about-us-bottom .vision .description, .about-us-bottom .mission .description {
+  width: 280px;
+  font-size: 24px;
+}
+
+@-webkit-keyframes moveAni1 {
+  0% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+  100% {
+    -webkit-transform: translate(29px, -18px);
+            transform: translate(29px, -18px);
+  }
+}
+
+@keyframes moveAni1 {
+  0% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+  100% {
+    -webkit-transform: translate(29px, -18px);
+            transform: translate(29px, -18px);
+  }
+}
+
+@-webkit-keyframes moveAni2 {
+  0% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+  100% {
+    -webkit-transform: translate(-29px, 18px);
+            transform: translate(-29px, 18px);
+  }
+}
+
+@keyframes moveAni2 {
+  0% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+  100% {
+    -webkit-transform: translate(-29px, 18px);
+            transform: translate(-29px, 18px);
+  }
+}
+/*# sourceMappingURL=about-us.css.map */
