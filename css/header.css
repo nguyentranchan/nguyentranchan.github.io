@@ -37,7 +37,6 @@
 .header ul {
   font-size: 24px;
   margin-left: 10px;
-  color: #535353;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -45,6 +44,10 @@
 
 .header ul li:first-child {
   margin-right: 30px;
+}
+
+.header ul a {
+  color: #535353;
 }
 
 .header a:hover {
