@@ -346,7 +346,7 @@ footer {
   width: 100%;
   margin: auto;
   position: relative;
-
+  
   .hiring-title {
     position: absolute;
     font-size: 40px;
@@ -400,7 +400,7 @@ footer {
       padding: 10px;
     }
     .hiring-title {
-      padding-top: 50px;;
+      padding-top: 0;
       position: unset;
     }
     .btn-hiring {
@@ -414,11 +414,8 @@ footer {
     padding: 15px 5px;
     text-align: center;
   }
-}
-@media screen and (max-width: 640px) {
-  .hiring {
-    padding: 15px 5px;
-    text-align: center;
+  .bg-hiring {
+    background-image: none !important;
   }
 }
 @media screen and (max-width: 900px) {

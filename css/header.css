@@ -447,7 +447,7 @@ footer .inline {
     padding: 10px;
   }
   .hiring .hiring-title {
-    padding-top: 50px;
+    padding-top: 0;
     position: unset;
   }
   .hiring .btn-hiring {
@@ -461,12 +461,8 @@ footer .inline {
     padding: 15px 5px;
     text-align: center;
   }
-}
-
-@media screen and (max-width: 640px) {
-  .hiring {
-    padding: 15px 5px;
-    text-align: center;
+  .bg-hiring {
+    background-image: none !important;
   }
 }
 
