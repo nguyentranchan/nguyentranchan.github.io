@@ -340,3 +340,89 @@ footer {
     }
   }
 }
+
+.hiring {
+  padding: 50px 150px;
+  width: 100%;
+  margin: auto;
+  position: relative;
+
+  .hiring-title {
+    position: absolute;
+    font-size: 40px;
+    top: 10%;
+    left: 20%;
+    color: #2A4D69;
+  }
+  .btn-hiring {
+    color: white;
+    background-color: #2A4D69;
+    width: 40%;
+    display: inline-block;
+    border-radius: 35px;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 50px;
+  }
+  
+  .hiring-pic {
+    width: 700px;
+    margin-left: auto;
+  }
+  @media screen and (max-width: 1400px) {
+    .hiring-title {
+      font-size: 27px;
+      left: 260px;
+      top: 120px;
+    }
+  }
+  
+  @media screen and (max-width: 1200px) {
+    .hiring-pic {
+      width: 50%;
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    .hiring-title{
+      left: 150px;
+      top: 10%;
+    }
+  }
+  @media screen and (max-width: 900px) {
+    .hiring-title {
+      left: 50px;
+    }
+  }
+  
+  @media screen and (max-width: 640px) {
+    .hiring-pic {
+      width: 100%;
+      padding: 10px;
+    }
+    .hiring-title {
+      padding-top: 50px;;
+      position: unset;
+    }
+    .btn-hiring {
+      margin: auto;
+      margin-top: 20px;
+    }
+  }
+}
+@media screen and (max-width: 640px) {
+  .hiring {
+    padding: 15px 5px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 640px) {
+  .hiring {
+    padding: 15px 5px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 900px) {
+  .hiring {
+    padding: 40px;
+  }
+}
