@@ -27,6 +27,13 @@
     color: #535353;
     display: flex;
   }
+  a:hover {
+    color:black;
+    cursor: pointer;
+  }
+  a:active {
+    color:lighten(black, 50);
+  }
 }
 
 #banner {

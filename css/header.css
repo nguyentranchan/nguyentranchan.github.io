@@ -47,6 +47,15 @@
   margin-right: 30px;
 }
 
+.header a:hover {
+  color: black;
+  cursor: pointer;
+}
+
+.header a:active {
+  color: gray;
+}
+
 #banner {
   height: 87vh;
   display: -webkit-box;
