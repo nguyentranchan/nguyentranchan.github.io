@@ -296,7 +296,7 @@
 }
 
 footer .bg-blue {
-  background-color: #2a4d69;
+  background-color: #0F4E82;
 }
 
 footer .w-full {
@@ -404,12 +404,12 @@ footer .inline {
   font-size: 40px;
   top: 10%;
   left: 20%;
-  color: #2A4D69;
+  color: #0F4E82;
 }
 
 .hiring .btn-hiring {
   color: white;
-  background-color: #2A4D69;
+  background-color: #0F4E82;
   width: 40%;
   display: inline-block;
   border-radius: 35px;
