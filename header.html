@@ -7,7 +7,7 @@
     <li><a href="./recruit.html">Careers</a></li>
     <li id="contact">
       <a >Contact Us</a>
-      <div class="hidden show-contact">
+      <div class="hidden show-contact non-float">
         <div>
           <span>Hotline:</span>
           <span class="mr-auto">0919 742 472</span>
@@ -24,8 +24,8 @@
 <script>
   $("#contact").hover(
     function() {
-      $('.show-contact').removeClass('hidden');
+      $('.non-float').removeClass('hidden');
     }, function() {
-      $('.show-contact').addClass('hidden');
+      $('.non-float').addClass('hidden');
     });
 </script>

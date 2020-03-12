@@ -427,10 +427,15 @@ footer {
   .bg-hiring {
     background-image: none !important;
   }
+  
 }
 @media screen and (max-width: 900px) {
   .hiring {
     padding: 40px;
+  }
+  .float {
+    font-size: 15px !important;
+    width: 230px !important;
   }
 }
 .hidden {
@@ -468,10 +473,27 @@ footer {
     right: 28px;
   }
 }
+body {
+  position: relative;
+}
+.mb-20 {
+  margin-bottom: 20px;
+}
 .floating {
-  width: 50px;
-  height: 50px;
-  img {
-    width: 70%;
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  //display: none;
+  .btn {
+    width: 70px;
+    height: 70px;
+    padding: 20px;
+    border: 1px solid #b2b2b2;
+    border-radius: 10px;
+    background-color: #fff;
+  }
+  .float {
+    top: 0;
+    right: 85px;
   }
 }

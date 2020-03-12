@@ -483,6 +483,10 @@ footer .inline {
   .hiring {
     padding: 40px;
   }
+  .float {
+    font-size: 15px !important;
+    width: 230px !important;
+  }
 }
 
 .hidden {
@@ -526,12 +530,31 @@ footer .inline {
   }
 }
 
-.floating {
-  width: 50px;
-  height: 50px;
+body {
+  position: relative;
 }
 
-.floating img {
-  width: 70%;
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.floating {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+}
+
+.floating .btn {
+  width: 70px;
+  height: 70px;
+  padding: 20px;
+  border: 1px solid #b2b2b2;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.floating .float {
+  top: 0;
+  right: 85px;
 }
 /*# sourceMappingURL=header.css.map */
