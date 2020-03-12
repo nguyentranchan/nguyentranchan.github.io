@@ -5,6 +5,27 @@
   </div>
   <ul>
     <li><a href="./recruit.html">Careers</a></li>
-    <li><a>Contact Us</a></li>
+    <li id="contact">
+      <a >Contact Us</a>
+      <div class="hidden show-contact">
+        <div>
+          <span>Hotline:</span>
+          <span class="mr-auto">0919 742 472</span>
+        </div> 
+        <div style="margin-top: 10px">
+          <span>Email:</span>
+          <span class="ml-auto">support@gogojungle.vn</span>
+        </div>
+        <div class="tool-tip"></div>
+      </div>
+    </li>
   </ul>
 </div>
+<script>
+  $("#contact").hover(
+    function() {
+      $('.show-contact').removeClass('hidden');
+    }, function() {
+      $('.show-contact').addClass('hidden');
+    });
+</script>

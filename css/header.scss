@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   padding: 20px 150px;
+  position: relative;
   .logo,
   ul {
     align-self: center;
@@ -430,5 +431,40 @@ footer {
 @media screen and (max-width: 900px) {
   .hiring {
     padding: 40px;
+  }
+}
+.hidden {
+  display: none;
+}
+.show-contact {
+  position: absolute;
+  padding: 20px;
+  width: 300px;
+  font-size: 20px;
+  right: 55px;
+  top: 100px;
+  background-color: #fff;
+  border-radius: 20px;
+  z-index: 1;
+  box-shadow: 0 30px 100px -20px rgba(50,50,70,.5), 0 30px 50px -30px rgba(0,0,0,.2), 0 15px 60px 0 rgba(0,0,0,.01);
+}
+.ml-auto {
+  margin-left: auto;
+}
+.tool-tip {
+  position: absolute;
+  border-bottom: 25px solid #fff;
+  border-right: 20px solid transparent;
+  border-left: 20px solid transparent;
+  top: -24px;
+  right: 125px;
+}
+@media screen and (max-width: 900px) {
+  .show-contact {
+    right: 40px;
+    top: 80px;
+  }
+  .tool-tip {
+    right: 28px;
   }
 }
