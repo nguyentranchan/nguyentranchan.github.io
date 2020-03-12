@@ -525,4 +525,13 @@ footer .inline {
     right: 28px;
   }
 }
+
+.floating {
+  width: 50px;
+  height: 50px;
+}
+
+.floating img {
+  width: 70%;
+}
 /*# sourceMappingURL=header.css.map */
