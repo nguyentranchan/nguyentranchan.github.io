@@ -553,7 +553,7 @@ body {
   height: 70px;
   padding: 20px;
   border: 1px solid #b2b2b2;
-  border-radius: 10px;
+  border-radius: 50px;
   background-color: #fff;
 }
 
@@ -590,10 +590,10 @@ body {
   position: absolute;
   bottom: 0;
   left: 10px;
-  width: 45%;
+  width: 40%;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 900px) {
   .project .project-pic {
     display: none;
   }
@@ -602,7 +602,6 @@ body {
 .project .project-summary {
   width: 68%;
   max-width: 585px;
-  right: 0;
   margin: 0 0 20px auto;
 }
 
@@ -625,15 +624,17 @@ body {
   .project .project-summary .project-link {
     font-size: 30px;
   }
+  .project .project-summary .project-des {
+    font-size: 15px;
+  }
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 900px) {
   .project .project-summary .project-des {
     margin: auto;
     color: #868686;
     background-color: unset;
     max-width: 370px;
-    font-size: 15px;
   }
 }
 
@@ -652,9 +653,9 @@ body {
   }
 }
 
-@media screen and (min-width: 1000px) {
-  .project {
-    height: 46vw;
+@media screen and (min-width: 1700px) {
+  .project .project-summary {
+    margin: 0 0 175px auto;
   }
 }
 
@@ -664,10 +665,14 @@ body {
   }
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 900px) {
   .project {
     padding: 40px;
     text-align: center;
   }
+}
+
+.cursor-pointer:hover {
+  cursor: pointer;
 }
 /*# sourceMappingURL=header.css.map */

@@ -492,7 +492,7 @@ body {
     height: 70px;
     padding: 20px;
     border: 1px solid #b2b2b2;
-    border-radius: 10px;
+    border-radius: 50px;
     background-color: #fff;
   }
   .float {
@@ -522,9 +522,9 @@ body {
     position: absolute;
     bottom: 0;
     left: 10px;
-    width: 45%;
+    width: 40%;
   }
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 900px) {
     .project-pic {
       display: none;
     }
@@ -532,7 +532,6 @@ body {
   .project-summary {
     width: 68%;
     max-width: 585px;
-    right: 0;
     margin: 0 0 20px auto;
     .project-link {
       font-size: 72px;
@@ -551,14 +550,16 @@ body {
       .project-link {
         font-size: 30px;
       }
+      .project-des {
+        font-size: 15px;
+      }
     }
-    @media screen and (max-width: 640px) {
+    @media screen and (max-width: 900px) {
       .project-des {
         margin: auto ;
         color: #868686;
         background-color: unset;
         max-width: 370px;
-        font-size: 15px;
       }
     }
   }
@@ -576,20 +577,24 @@ body {
       width: 35%;
     }
   }
-}
-@media screen and (min-width: 1000px) {
-  .project{
-    height: 46vw;
+  @media screen and (min-width: 1700px) {
+    .project-summary {
+      margin: 0 0 175px auto;
+    }
   }
 }
+
 @media screen and (max-width: 900px) {
   .project{
     padding-left: 130px;
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 900px) {
   .project{
     padding: 40px;
     text-align: center;
   }
+}
+.cursor-pointer:hover {
+  cursor: pointer;
 }
