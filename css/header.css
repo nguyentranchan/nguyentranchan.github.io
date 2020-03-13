@@ -616,6 +616,7 @@ body {
 
 .project .project-our {
   font-size: 72px;
+  color: #0F4E82;
 }
 
 .project .project-pic {
@@ -639,6 +640,7 @@ body {
 
 .project .project-summary .project-link {
   font-size: 72px;
+  color: #0F4E82;
 }
 
 .project .project-summary .project-des {
@@ -649,7 +651,6 @@ body {
   border-radius: 20px;
   margin: 0 50px 0 50px;
   text-align: center;
-  font-weight: bold;
 }
 
 @media screen and (max-width: 900px) {

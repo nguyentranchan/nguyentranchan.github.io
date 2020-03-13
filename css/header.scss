@@ -545,6 +545,7 @@ body {
   position: relative;
   .project-our {
     font-size: 72px;
+    color: #0F4E82;
   }
   .project-pic {
     position: absolute;
@@ -563,6 +564,7 @@ body {
     margin: 0 0 20px auto;
     .project-link {
       font-size: 72px;
+      color: #0F4E82;
     }
     .project-des {
       background-color: #0F4E82;
@@ -572,7 +574,6 @@ body {
       border-radius: 20px;
       margin: 0 50px 0 50px;
       text-align: center;
-      font-weight: bold;
     }
     @media screen and (max-width: 900px) {
       .project-link {
