@@ -6,6 +6,7 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 20px 150px;
+  position: relative;
 }
 
 .header .logo,
@@ -398,6 +399,7 @@ footer .inline {
 .hiring {
   padding: 50px 150px;
   width: 100%;
+  height: 60vw;
   margin: auto;
   position: relative;
 }
@@ -406,7 +408,6 @@ footer .inline {
   position: absolute;
   font-size: 40px;
   top: 10%;
-  left: 20%;
   color: #0F4E82;
 }
 
@@ -422,27 +423,22 @@ footer .inline {
 }
 
 .hiring .hiring-pic {
-  width: 700px;
+  width: 60%;
   margin-left: auto;
+  position: absolute;
+  bottom: 80px;
+  right: 60px;
 }
 
 @media screen and (max-width: 1400px) {
   .hiring .hiring-title {
     font-size: 27px;
-    left: 260px;
     top: 120px;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  .hiring .hiring-pic {
-    width: 50%;
   }
 }
 
 @media screen and (max-width: 1000px) {
   .hiring .hiring-title {
-    left: 150px;
     top: 10%;
   }
 }
@@ -451,16 +447,22 @@ footer .inline {
   .hiring .hiring-title {
     left: 50px;
   }
+  .hiring .hiring-pic {
+    bottom: 40px;
+  }
 }
 
 @media screen and (max-width: 640px) {
   .hiring .hiring-pic {
     width: 100%;
     padding: 10px;
+    position: unset;
+    margin-top: 40px;
   }
   .hiring .hiring-title {
     padding-top: 0;
     position: unset;
+    margin-top: 40px;
   }
   .hiring .btn-hiring {
     margin: auto;
@@ -468,19 +470,201 @@ footer .inline {
   }
 }
 
+.bg-hiring {
+  background-color: #F2F5D0;
+  border-radius: 180px 0 0 0;
+}
+
 @media screen and (max-width: 640px) {
   .hiring {
     padding: 15px 5px;
     text-align: center;
-  }
-  .bg-hiring {
-    background-image: none !important;
+    height: unset;
   }
 }
 
 @media screen and (max-width: 900px) {
   .hiring {
     padding: 40px;
+  }
+  .float {
+    font-size: 15px !important;
+    width: 230px !important;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.show-contact {
+  position: absolute;
+  padding: 20px;
+  width: 300px;
+  font-size: 20px;
+  right: 55px;
+  top: 100px;
+  background-color: #fff;
+  border-radius: 20px;
+  z-index: 1;
+  -webkit-box-shadow: 0 30px 100px -20px rgba(50, 50, 70, 0.5), 0 30px 50px -30px rgba(0, 0, 0, 0.2), 0 15px 60px 0 rgba(0, 0, 0, 0.01);
+          box-shadow: 0 30px 100px -20px rgba(50, 50, 70, 0.5), 0 30px 50px -30px rgba(0, 0, 0, 0.2), 0 15px 60px 0 rgba(0, 0, 0, 0.01);
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.tool-tip {
+  position: absolute;
+  border-bottom: 25px solid #fff;
+  border-right: 20px solid transparent;
+  border-left: 20px solid transparent;
+  top: -24px;
+  right: 125px;
+}
+
+@media screen and (max-width: 900px) {
+  .show-contact {
+    right: 40px;
+    top: 80px;
+  }
+  .tool-tip {
+    right: 28px;
+  }
+}
+
+body {
+  position: relative;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.floating {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+}
+
+.floating .btn {
+  width: 70px;
+  height: 70px;
+  padding: 20px;
+  border: 1px solid #b2b2b2;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.floating .float {
+  top: 0;
+  right: 85px;
+}
+
+.bg-project {
+  background-color: #F2F5D0;
+  border-radius: 0 0 250px 0;
+}
+
+.video {
+  padding: 30px 50px;
+}
+
+.video .dummy {
+  width: 100%;
+  height: 50vw;
+  background-color: #535353;
+}
+
+.project {
+  padding: 40px 20px 40px 150px;
+  position: relative;
+}
+
+.project .project-our {
+  font-size: 72px;
+}
+
+.project .project-pic {
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  width: 45%;
+}
+
+@media screen and (max-width: 640px) {
+  .project .project-pic {
+    display: none;
+  }
+}
+
+.project .project-summary {
+  width: 68%;
+  max-width: 585px;
+  right: 0;
+  margin: 0 0 20px auto;
+}
+
+.project .project-summary .project-link {
+  font-size: 72px;
+}
+
+.project .project-summary .project-des {
+  background-color: #0F4E82;
+  color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  margin: 0 50px 0 100px;
+  text-align: center;
+}
+
+@media screen and (max-width: 900px) {
+  .project .project-summary .project-link {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .project .project-summary .project-des {
+    margin: auto;
+    color: #868686;
+    background-color: unset;
+    max-width: 370px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .project .project-summary {
+    width: 100%;
+    padding: 10px;
+    position: unset;
+    margin-top: 0;
+  }
+  .project .project-our {
+    font-size: 30px;
+  }
+  .project .project-pic {
+    width: 35%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .project {
+    height: 50vw;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .project {
+    padding-left: 130px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .project {
+    padding: 40px;
+    text-align: center;
   }
 }
 /*# sourceMappingURL=header.css.map */
