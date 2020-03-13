@@ -1,7 +1,9 @@
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 20px 150px;
+  padding: 20px 0;
+  width: 1000px;
+  margin: auto;
   position: relative;
   .logo,
   ul {
@@ -38,7 +40,12 @@
     color:lighten(black, 50);
   }
 }
-
+@media screen and (max-width: 1000px) {
+  .header {
+    width: 100%;
+    padding: 20px 150px;
+  }
+}
 #banner {
   height: 87vh;
   display: flex;
@@ -310,8 +317,8 @@ footer {
     font-size: 35px;
   }
   .footer {
-    padding: 30px 150px;
-    width: 100%;
+    padding: 30px 0px;
+    width: 1000px;
     margin: auto;
   }
   .social-links {
@@ -328,6 +335,7 @@ footer {
   @media screen and (max-width: 1000px) {
     .footer {
       padding: 30px 40px;
+      width: 100%;
     }
   }
 
@@ -353,8 +361,8 @@ footer {
 
 .hiring {
   padding: 50px 150px;
-  width: 100%;
-  height: 50vw;
+  width: 1000px;
+  height: 35vw;
   margin: auto;
   position: relative;
   
@@ -425,20 +433,27 @@ footer {
   background-color: #F2F5D0;
   border-radius: 180px 0 0 0;
 }
+@media screen and (max-width: 1000px) {
+  .hiring {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .hiring {
+    padding: 40px;
+    height: 60vw;
+  }
+  .float {
+    font-size: 15px !important;
+    width: 230px !important;
+  }
+}
 @media screen and (max-width: 640px) {
   .hiring {
     padding: 15px 5px;
     text-align: center;
     height: unset;
-  }
-}
-@media screen and (max-width: 900px) {
-  .hiring {
-    padding: 40px;
-  }
-  .float {
-    font-size: 15px !important;
-    width: 230px !important;
   }
 }
 .hidden {
@@ -507,13 +522,22 @@ body {
 .video {
   padding: 30px 50px;
   .dummy {
-    width: 100%;
-    height: 50vw;
+    width: 1000px;
+    margin: auto;
+    height: 35vw;
     background-color: #535353;
+  }
+  @media screen and (max-width: 1000px) {
+    .dummy {
+      width: 100%;
+      height: 50vw;
+    }
   }
 }
 .project {
-  padding: 40px 150px 40px 150px;
+  width: 1000px;
+  margin: auto;
+  padding: 40px 0 40px 150px;
   position: relative;
   .project-our {
     font-size: 72px;
@@ -542,7 +566,7 @@ body {
       font-size: 24px;
       padding: 20px;
       border-radius: 20px;
-      margin: 0 50px 0 100px;
+      margin: 0 50px 0 50px;
       text-align: center;
       font-weight: bold;
     }
@@ -577,13 +601,13 @@ body {
       width: 35%;
     }
   }
-  @media screen and (min-width: 1700px) {
-    .project-summary {
-      margin: 0 0 175px auto;
-    }
+}
+@media screen and (max-width: 1000px) {
+  .project{
+    width: 100%;
+    padding: 40px 50px;
   }
 }
-
 @media screen and (max-width: 900px) {
   .project{
     padding-left: 130px;
