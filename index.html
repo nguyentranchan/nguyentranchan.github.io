@@ -18,16 +18,13 @@
             $("header").load("header.html");
             $("#banner").load("banner.html");
             $(".about-us").load("about-us.html");
+            $(".our-project").load("project.html");
             $(".hire").load("hiring.html");
         });
         $(document).ready(function(){
             $("#scroll-top").click(function(){
                 $('html, body').animate({ scrollTop: 0 }, 'slow')
             });
-            $(window).on('scroll', function() {
-                let scroll = document.body.scrollTop || document.documentElement.scrollTop
-                $('.scroll-btn').css('display', scroll > 20 ? 'flex' : 'none')
-            })
         });
         
     </script>
@@ -38,10 +35,11 @@
     </header>
     <section id='banner'></section>
     <section class='about-us'></section>
+    <section class='our-project'></section>
     <section class='hire'></section>
     <footer></footer>
     <div class="floating">
-        <div id="float-contact" class="btn mb-20"><img src="images\arrow-up(blue).svg" /></div>
+        <div id="float-contact" class="btn mb-20"><img src="images\comment.svg" /></div>
         <div id="scroll-top" class="btn"><img src="images\arrow-up(blue).svg" /></div>
         <div class="show-contact float hidden">
             <div>

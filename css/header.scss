@@ -354,6 +354,7 @@ footer {
 .hiring {
   padding: 50px 150px;
   width: 100%;
+  height: 60vw;
   margin: auto;
   position: relative;
   
@@ -361,7 +362,6 @@ footer {
     position: absolute;
     font-size: 40px;
     top: 10%;
-    left: 20%;
     color: #0F4E82;
   }
   .btn-hiring {
@@ -376,25 +376,21 @@ footer {
   }
   
   .hiring-pic {
-    width: 700px;
+    width: 60%;
     margin-left: auto;
+    position: absolute;
+    bottom: 80px;
+    right: 60px;
   }
   @media screen and (max-width: 1400px) {
     .hiring-title {
       font-size: 27px;
-      left: 260px;
       top: 120px;
     }
   }
   
-  @media screen and (max-width: 1200px) {
-    .hiring-pic {
-      width: 50%;
-    }
-  }
   @media screen and (max-width: 1000px) {
     .hiring-title{
-      left: 150px;
       top: 10%;
     }
   }
@@ -402,16 +398,22 @@ footer {
     .hiring-title {
       left: 50px;
     }
+    .hiring-pic {
+      bottom: 40px;
+    }
   }
   
   @media screen and (max-width: 640px) {
     .hiring-pic {
       width: 100%;
       padding: 10px;
+      position: unset;
+      margin-top: 40px;
     }
     .hiring-title {
       padding-top: 0;
       position: unset;
+      margin-top: 40px;
     }
     .btn-hiring {
       margin: auto;
@@ -419,15 +421,16 @@ footer {
     }
   }
 }
+.bg-hiring {
+  background-color: #F2F5D0;
+  border-radius: 180px 0 0 0;
+}
 @media screen and (max-width: 640px) {
   .hiring {
     padding: 15px 5px;
     text-align: center;
+    height: unset;
   }
-  .bg-hiring {
-    background-image: none !important;
-  }
-  
 }
 @media screen and (max-width: 900px) {
   .hiring {
@@ -495,5 +498,95 @@ body {
   .float {
     top: 0;
     right: 85px;
+  }
+}
+.bg-project {
+  background-color: #F2F5D0;
+  border-radius:  0 0 250px 0;
+}
+.video {
+  padding: 30px 50px;
+  .dummy {
+    width: 100%;
+    height: 50vw;
+    background-color: #535353;
+  }
+}
+.project {
+  padding: 40px 20px 40px 150px;
+  position: relative;
+  .project-our {
+    font-size: 72px;
+  }
+  .project-pic {
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    width: 45%;
+  }
+  @media screen and (max-width: 640px) {
+    .project-pic {
+      display: none;
+    }
+  }
+  .project-summary {
+    width: 68%;
+    max-width: 585px;
+    right: 0;
+    margin: 0 0 20px auto;
+    .project-link {
+      font-size: 72px;
+    }
+    .project-des {
+      background-color: #0F4E82;
+      color: #fff;
+      padding: 20px;
+      border-radius: 20px;
+      margin: 0 50px 0 100px;
+      text-align: center;
+    }
+    @media screen and (max-width: 900px) {
+      .project-link {
+        font-size: 30px;
+      }
+    }
+    @media screen and (max-width: 640px) {
+      .project-des {
+        margin: auto ;
+        color: #868686;
+        background-color: unset;
+        max-width: 370px;
+      }
+    }
+  }
+  @media screen and (max-width: 900px) {
+    .project-summary {
+      width: 100%;
+      padding: 10px;
+      position: unset;
+      margin-top: 0;
+    }
+    .project-our {
+      font-size: 30px;
+    }
+    .project-pic {
+      width: 35%;
+    }
+  }
+}
+@media screen and (min-width: 1000px) {
+  .project{
+    height: 50vw;
+  }
+}
+@media screen and (max-width: 900px) {
+  .project{
+    padding-left: 130px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .project{
+    padding: 40px;
+    text-align: center;
   }
 }
