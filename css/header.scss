@@ -13,7 +13,7 @@
     display: flex;
     font-size: 30px;
     img {
-      width: 75px;
+      width: 200px;
     }
     &-text {
       color: #2a4d69;
@@ -55,10 +55,10 @@
   .slogan {
     position: absolute;
     z-index: 1;
-    margin-left: 150px;
     display: flex;
     flex-direction: column;
     margin-top: 200px;
+    text-align: left !important;
     &-1 {
       line-height: 40px;
       color: black;
@@ -182,7 +182,7 @@
       width: 1200px;
       position: relative;
       bottom: 175px;
-      left: 35vw;
+      right: -11vw;
     }
   }
   // .circle-03 {
@@ -203,6 +203,12 @@
 .flex {
   display: flex;
 }
+.flex.center {
+  justify-content: center;
+}
+.flex.flex-wrap {
+  flex-wrap: wrap;
+}
 .flex.layout-row {
   flex-direction: row;
 }
@@ -214,7 +220,7 @@
   .logo {
     font-size: 20px !important;
     img {
-      width: 40px !important;
+      width: 140px !important;
     }
   }
   ul {
@@ -360,7 +366,7 @@ footer {
 }
 
 .hiring {
-  height: 35vw;
+  height: 600px;
   margin: auto;
   position: relative;
   
@@ -434,7 +440,7 @@ footer {
 
 @media screen and (max-width: 900px) {
   .hiring {
-    height: 60vw;
+    height: 500px;
   }
   .float {
     font-size: 15px !important;
@@ -445,6 +451,7 @@ footer {
   .hiring {
     text-align: center;
     height: unset;
+    padding: 20px 0;
   }
 }
 .hidden {
@@ -530,29 +537,22 @@ body {
   }
 }
 .project {
-  width: 1000px;
-  margin: auto auto 100px auto;
-  padding: 40px 0;
   position: relative;
-  .project-our {
-    font-size: 72px;
-    color: #0F4E82;
-  }
+  height: 330px;
   .project-pic {
     bottom: 0;
     left: 10px;
     width: 50%;
     margin-bottom: 135px;
   }
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 900px) {
     .project-pic {
       width: 100%;
       margin-bottom: 10px;
     }
   }
   .project-summary {
-    width: 55%;
-    max-width: 585px;
+    width: 60%;
     margin: 0 0 20px auto;
     position: absolute;
     right: 20px;
@@ -563,51 +563,27 @@ body {
     border-radius: 40px;
     text-align: center;
     font-size: 24px;
-    @media screen and (max-width: 900px) {
-      .project-link {
-        font-size: 30px;
-      }
-      .project-des {
-        font-size: 15px;
-      }
-    }
-    @media screen and (max-width: 900px) {
-      .project-des {
-        margin: auto ;
-        color: #868686;
-        background-color: unset;
-        max-width: 370px;
-      }
-    }
   }
   @media screen and (max-width: 900px) {
     .project-summary {
       width: 100%;
       padding: 10px;
       position: unset;
-      margin-top: 0;
+      margin: 0;
     }
-    .project-our {
-      font-size: 30px;
+  }
+  @media screen and (max-width: 640px) {
+    .project-summary {
+      color: #868686;
+      font-size: 15px;
+      background-color: unset;
     }
-    
   }
 }
-@media screen and (max-width: 1000px) {
+
+@media screen and (max-width: 640px) {
   .project{
-    width: 100%;
-    padding: 40px 50px;
-  }
-}
-@media screen and (max-width: 900px) {
-  .project{
-    padding-left: 130px;
-  }
-}
-@media screen and (max-width: 900px) {
-  .project{
-    padding: 40px;
-    text-align: center;
+    margin-bottom: 0 !important;
   }
 }
 .cursor-pointer:hover {
@@ -630,21 +606,16 @@ body {
   .feature-name {
     font-size: 30px;
     margin-top: 20px;
+    color: #2A4D69;
+    font-weight: bold;
   }
   .feature-des {
-    margin: 20px 0;
+    margin-bottom: 20px;
   }
 }
-.flex-spacebetween{
-  justify-content: space-evenly;
-}
-.flex-wrap {
-  flex-wrap: wrap;
-}
-
 .layout {
   width: 1000px;
-  margin: auto auto 100px auto;
+  margin: auto;
 }
 @media screen and (max-width: 1000px) {
   .layout{
@@ -655,11 +626,9 @@ body {
 @media screen and (max-width: 900px) {
   .layout{
     padding: 40px;
-  }
-}
-@media screen and (max-width: 900px) {
-  .layout{
-    padding: 40px;
     text-align: center;
   }
+}
+.mb-100 {
+  margin-bottom: 100px;
 }

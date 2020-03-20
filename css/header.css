@@ -26,7 +26,7 @@
 }
 
 .header .logo img {
-  width: 75px;
+  width: 200px;
 }
 
 .header .logo-text {
@@ -84,7 +84,6 @@
 #banner .slogan {
   position: absolute;
   z-index: 1;
-  margin-left: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -93,6 +92,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   margin-top: 200px;
+  text-align: left !important;
 }
 
 #banner .slogan-1 {
@@ -233,13 +233,24 @@
   width: 1200px;
   position: relative;
   bottom: 175px;
-  left: 35vw;
+  right: -11vw;
 }
 
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.flex.center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.flex.flex-wrap {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .flex.layout-row {
@@ -257,7 +268,7 @@
     font-size: 20px !important;
   }
   .logo img {
-    width: 40px !important;
+    width: 140px !important;
   }
   ul {
     font-size: 20px !important;
@@ -407,7 +418,7 @@ footer .inline {
 }
 
 .hiring {
-  height: 35vw;
+  height: 600px;
   margin: auto;
   position: relative;
 }
@@ -485,7 +496,7 @@ footer .inline {
 
 @media screen and (max-width: 900px) {
   .hiring {
-    height: 60vw;
+    height: 500px;
   }
   .float {
     font-size: 15px !important;
@@ -497,6 +508,7 @@ footer .inline {
   .hiring {
     text-align: center;
     height: unset;
+    padding: 20px 0;
   }
 }
 
@@ -598,15 +610,8 @@ body {
 }
 
 .project {
-  width: 1000px;
-  margin: auto auto 100px auto;
-  padding: 40px 0;
   position: relative;
-}
-
-.project .project-our {
-  font-size: 72px;
-  color: #0F4E82;
+  height: 330px;
 }
 
 .project .project-pic {
@@ -616,7 +621,7 @@ body {
   margin-bottom: 135px;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 900px) {
   .project .project-pic {
     width: 100%;
     margin-bottom: 10px;
@@ -624,8 +629,7 @@ body {
 }
 
 .project .project-summary {
-  width: 55%;
-  max-width: 585px;
+  width: 60%;
   margin: 0 0 20px auto;
   position: absolute;
   right: 20px;
@@ -639,52 +643,25 @@ body {
 }
 
 @media screen and (max-width: 900px) {
-  .project .project-summary .project-link {
-    font-size: 30px;
-  }
-  .project .project-summary .project-des {
-    font-size: 15px;
-  }
-}
-
-@media screen and (max-width: 900px) {
-  .project .project-summary .project-des {
-    margin: auto;
-    color: #868686;
-    background-color: unset;
-    max-width: 370px;
-  }
-}
-
-@media screen and (max-width: 900px) {
   .project .project-summary {
     width: 100%;
     padding: 10px;
     position: unset;
-    margin-top: 0;
-  }
-  .project .project-our {
-    font-size: 30px;
+    margin: 0;
   }
 }
 
-@media screen and (max-width: 1000px) {
-  .project {
-    width: 100%;
-    padding: 40px 50px;
+@media screen and (max-width: 640px) {
+  .project .project-summary {
+    color: #868686;
+    font-size: 15px;
+    background-color: unset;
   }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 640px) {
   .project {
-    padding-left: 130px;
-  }
-}
-
-@media screen and (max-width: 900px) {
-  .project {
-    padding: 40px;
-    text-align: center;
+    margin-bottom: 0 !important;
   }
 }
 
@@ -713,26 +690,17 @@ body {
 .feature .feature-name {
   font-size: 30px;
   margin-top: 20px;
+  color: #2A4D69;
+  font-weight: bold;
 }
 
 .feature .feature-des {
-  margin: 20px 0;
-}
-
-.flex-spacebetween {
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-}
-
-.flex-wrap {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
 .layout {
   width: 1000px;
-  margin: auto auto 100px auto;
+  margin: auto;
 }
 
 @media screen and (max-width: 1000px) {
@@ -745,13 +713,11 @@ body {
 @media screen and (max-width: 900px) {
   .layout {
     padding: 40px;
+    text-align: center;
   }
 }
 
-@media screen and (max-width: 900px) {
-  .layout {
-    padding: 40px;
-    text-align: center;
-  }
+.mb-100 {
+  margin-bottom: 100px;
 }
 /*# sourceMappingURL=header.css.map */
