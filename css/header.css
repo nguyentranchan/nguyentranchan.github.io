@@ -333,7 +333,7 @@
 }
 
 footer .bg-blue {
-  background-color: #0F4E82;
+  background-color: #0f4e82;
 }
 
 footer .w-full {
@@ -427,18 +427,27 @@ footer .inline {
   position: absolute;
   font-size: 40px;
   top: 10%;
-  color: #0F4E82;
+  color: #0f4e82;
 }
 
 .hiring .btn-hiring {
   color: white;
-  background-color: #0F4E82;
+  background-color: #0f4e82;
   width: 40%;
   display: inline-block;
   border-radius: 35px;
   text-align: center;
   margin-top: 10px;
   margin-left: 50px;
+  -webkit-transition: 0.5s linear;
+  transition: 0.5s linear;
+}
+
+.hiring .btn-hiring:hover {
+  -webkit-transform: translateY(-8px);
+          transform: translateY(-8px);
+  -webkit-transition: 0.5s linear;
+  transition: 0.5s linear;
 }
 
 .hiring .hiring-pic {
@@ -490,7 +499,7 @@ footer .inline {
 }
 
 .bg-hiring {
-  background-color: #F2F5D0;
+  background-color: #f2f5d0;
   border-radius: 180px 0 0 0;
 }
 
@@ -522,7 +531,7 @@ footer .inline {
   width: 300px;
   font-size: 20px;
   right: 55px;
-  top: 100px;
+  right: -90px;
   background-color: #fff;
   border-radius: 20px;
   z-index: 1;
@@ -582,7 +591,7 @@ body {
 }
 
 .bg-project {
-  background-color: #F2F5D0;
+  background-color: #f2f5d0;
   border-radius: 0 0 250px 0;
 }
 
@@ -634,7 +643,7 @@ body {
   position: absolute;
   right: 20px;
   bottom: -100px;
-  background-color: #0F4E82;
+  background-color: #0f4e82;
   color: #fff;
   padding: 20px 50px;
   border-radius: 40px;
@@ -669,33 +678,90 @@ body {
   cursor: pointer;
 }
 
+.our-project > div:nth-child(2) {
+  height: 700px;
+  position: relative;
+}
+
 .feature {
-  width: 280px;
+  max-width: 280px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   padding: 20px;
-  border: 1px solid #B2B2B2;
+  height: 280px;
+  border: 1px solid #b2b2b2;
   margin: 20px 20px;
   border-radius: 30px;
-  text-align: left;
+  text-align: center;
+  cursor: pointer;
+  -webkit-box-shadow: 1px 1px #ededed;
+          box-shadow: 1px 1px #ededed;
+  -webkit-transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+.feature:hover {
+  height: 280px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transform: translate(0, -20px);
+          transform: translate(0, -20px);
+  -webkit-box-shadow: 10px 10px #ededed;
+          box-shadow: 10px 10px #ededed;
+}
+
+.feature:hover .feature-pic {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.feature:hover .feature-pic img {
+  width: 50%;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.feature:hover .feature-name {
+  font-size: 30px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.feature:hover .feature-des {
+  opacity: 1;
+  height: 150px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .feature .feature-pic {
   width: 70%;
-  margin: auto;
+  margin: 28px auto;
+  -webkit-transition: all 0.5s ease-in-out;
 }
 
 .feature .feature-pic img {
-  max-height: 100px;
+  height: 100px;
+  width: 35%;
+  -webkit-transition: all 0.5s ease-in-out;
 }
 
 .feature .feature-name {
-  font-size: 30px;
-  margin-top: 20px;
-  color: #2A4D69;
+  font-size: 20px;
+  color: #2a4d69;
   font-weight: bold;
+  -webkit-transition: all 0.5s ease-in-out;
 }
 
 .feature .feature-des {
   margin-bottom: 20px;
+  color: black;
+  opacity: 0;
+  height: 0px;
+  overflow: hidden;
+  -webkit-transition: all 0.5s ease-in-out;
 }
 
 .layout {

@@ -33,11 +33,11 @@
     display: flex;
   }
   a:hover {
-    color:black;
+    color: black;
     cursor: pointer;
   }
   a:active {
-    color:lighten(black, 50);
+    color: lighten(black, 50);
   }
 }
 @media screen and (max-width: 1000px) {
@@ -293,7 +293,7 @@
 
 footer {
   .bg-blue {
-    background-color: #0F4E82; //main color
+    background-color: #0f4e82; //main color
   }
   .w-full {
     width: 100%;
@@ -369,24 +369,29 @@ footer {
   height: 600px;
   margin: auto;
   position: relative;
-  
+
   .hiring-title {
     position: absolute;
     font-size: 40px;
     top: 10%;
-    color: #0F4E82;
+    color: #0f4e82;
   }
   .btn-hiring {
+    &:hover {
+      transform: translateY(-8px);
+      transition: 0.5s linear;
+    }
     color: white;
-    background-color: #0F4E82;
+    background-color: #0f4e82;
     width: 40%;
     display: inline-block;
     border-radius: 35px;
     text-align: center;
     margin-top: 10px;
     margin-left: 50px;
+    transition: 0.5s linear;
   }
-  
+
   .hiring-pic {
     width: 60%;
     margin-left: auto;
@@ -400,9 +405,9 @@ footer {
       top: 120px;
     }
   }
-  
+
   @media screen and (max-width: 1000px) {
-    .hiring-title{
+    .hiring-title {
       top: 10%;
     }
   }
@@ -414,7 +419,7 @@ footer {
       bottom: 40px;
     }
   }
-  
+
   @media screen and (max-width: 640px) {
     .hiring-pic {
       width: 100%;
@@ -434,7 +439,7 @@ footer {
   }
 }
 .bg-hiring {
-  background-color: #F2F5D0;
+  background-color: #f2f5d0;
   border-radius: 180px 0 0 0;
 }
 
@@ -463,11 +468,12 @@ footer {
   width: 300px;
   font-size: 20px;
   right: 55px;
-  top: 100px;
+  right: -90px;
   background-color: #fff;
   border-radius: 20px;
   z-index: 1;
-  box-shadow: 0 30px 100px -20px rgba(50,50,70,.5), 0 30px 50px -30px rgba(0,0,0,.2), 0 15px 60px 0 rgba(0,0,0,.01);
+  box-shadow: 0 30px 100px -20px rgba(50, 50, 70, 0.5), 0 30px 50px -30px rgba(0, 0, 0, 0.2),
+    0 15px 60px 0 rgba(0, 0, 0, 0.01);
 }
 .ml-auto {
   margin-left: auto;
@@ -514,8 +520,8 @@ body {
   }
 }
 .bg-project {
-  background-color: #F2F5D0;
-  border-radius:  0 0 250px 0;
+  background-color: #f2f5d0;
+  border-radius: 0 0 250px 0;
 }
 .video {
   width: 1000px;
@@ -557,7 +563,7 @@ body {
     position: absolute;
     right: 20px;
     bottom: -100px;
-    background-color: #0F4E82;
+    background-color: #0f4e82;
     color: #fff;
     padding: 20px 50px;
     border-radius: 40px;
@@ -582,35 +588,77 @@ body {
 }
 
 @media screen and (max-width: 640px) {
-  .project{
+  .project {
     margin-bottom: 0 !important;
   }
 }
 .cursor-pointer:hover {
   cursor: pointer;
 }
+
+.our-project > div:nth-child(2) {
+  height: 700px;
+  position: relative;
+}
 .feature {
-  width: 280px;
+  max-width: 280px;
+  align-self: center;
   padding: 20px;
-  border: 1px solid #B2B2B2;
+  height: 280px;
+  border: 1px solid #b2b2b2;
   margin: 20px 20px;
   border-radius: 30px;
-  text-align: left;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 1px 1px #ededed;
+  -webkit-transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+  &:hover {
+    height: 280px;
+    transition: all 0.5s ease-in-out;
+    transform: translate(0, -20px);
+    box-shadow: 10px 10px #ededed;
+  }
+  &:hover .feature-pic {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    transition: all 0.5s ease-in-out;
+  }
+  &:hover .feature-pic img {
+    width: 50%;
+    transition: all 0.5s ease-in-out;
+  }
+  &:hover .feature-name {
+    font-size: 30px;
+    transition: all 0.5s ease-in-out;
+  }
+  &:hover .feature-des {
+    opacity: 1;
+    height: 150px;
+    transition: all 0.5s ease-in-out;
+  }
   .feature-pic {
     width: 70%;
-    margin: auto;
+    margin: 28px auto;
+    -webkit-transition: all 0.5s ease-in-out;
     img {
-      max-height: 100px;
+      height: 100px;
+      width: 35%;
+      -webkit-transition: all 0.5s ease-in-out;
     }
   }
   .feature-name {
-    font-size: 30px;
-    margin-top: 20px;
-    color: #2A4D69;
+    font-size: 20px;
+    color: #2a4d69;
     font-weight: bold;
+    -webkit-transition: all 0.5s ease-in-out;
   }
   .feature-des {
     margin-bottom: 20px;
+    color: black;
+    opacity: 0;
+    height: 0px;
+    overflow: hidden;
+    -webkit-transition: all 0.5s ease-in-out;
   }
 }
 .layout {
@@ -618,13 +666,13 @@ body {
   margin: auto;
 }
 @media screen and (max-width: 1000px) {
-  .layout{
+  .layout {
     width: 100%;
     padding: 40px 50px;
   }
 }
 @media screen and (max-width: 900px) {
-  .layout{
+  .layout {
     padding: 40px;
     text-align: center;
   }
