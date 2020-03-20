@@ -629,7 +629,7 @@ body {
     transition: all 0.5s ease-in-out;
   }
   &:hover .feature-pic img {
-    width: 50%;
+    width: 40%;
     transition: all 0.5s ease-in-out;
   }
   &:hover .feature-name {
@@ -647,7 +647,7 @@ body {
     -webkit-transition: all 0.5s ease-in-out;
     img {
       height: 100px;
-      width: 35%;
+      width: 50%;
       -webkit-transition: all 0.5s ease-in-out;
     }
   }

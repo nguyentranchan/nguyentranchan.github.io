@@ -724,7 +724,7 @@ body {
 }
 
 .feature:hover .feature-pic img {
-  width: 50%;
+  width: 40%;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
@@ -750,7 +750,7 @@ body {
 
 .feature .feature-pic img {
   height: 100px;
-  width: 35%;
+  width: 50%;
   -webkit-transition: all 0.5s ease-in-out;
 }
 
