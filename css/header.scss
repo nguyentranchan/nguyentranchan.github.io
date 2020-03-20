@@ -330,6 +330,15 @@ footer {
   .social-links {
     img {
       width: 30px;
+      height: 30px;
+      filter: invert(99%) sepia(100%) 
+        saturate(2%) hue-rotate(270deg) 
+        brightness(105%) contrast(101%);
+    }
+    img:hover {
+      filter: invert(49%) sepia(89%) 
+        saturate(5365%) hue-rotate(340deg) 
+        brightness(97%) contrast(89%);
     }
   }
   .address {
@@ -520,9 +529,22 @@ body {
     border-radius: 50px;
     background-color: #fff;
   }
+  .btn:hover {
+    background-color: #0f4e82;
+    img {
+      filter: invert(99%) sepia(100%) 
+        saturate(2%) hue-rotate(270deg) 
+        brightness(105%) contrast(101%);
+    }
+  }
   .float {
     top: 0;
     right: 85px;
+  }
+  img {
+    filter: invert(12%) sepia(92%) 
+      saturate(3435%) hue-rotate(195deg) 
+      brightness(97%) contrast(88%);
   }
 }
 .bg-project {
