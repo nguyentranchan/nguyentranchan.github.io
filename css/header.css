@@ -380,6 +380,14 @@ footer .footer {
 
 footer .social-links img {
   width: 30px;
+  height: 30px;
+  -webkit-filter: invert(99%) sepia(100%) saturate(2%) hue-rotate(270deg) brightness(105%) contrast(101%);
+          filter: invert(99%) sepia(100%) saturate(2%) hue-rotate(270deg) brightness(105%) contrast(101%);
+}
+
+footer .social-links img:hover {
+  -webkit-filter: invert(49%) sepia(89%) saturate(5365%) hue-rotate(340deg) brightness(97%) contrast(89%);
+          filter: invert(49%) sepia(89%) saturate(5365%) hue-rotate(340deg) brightness(97%) contrast(89%);
 }
 
 footer .address {
@@ -593,9 +601,23 @@ body {
   background-color: #fff;
 }
 
+.floating .btn:hover {
+  background-color: #0f4e82;
+}
+
+.floating .btn:hover img {
+  -webkit-filter: invert(99%) sepia(100%) saturate(2%) hue-rotate(270deg) brightness(105%) contrast(101%);
+          filter: invert(99%) sepia(100%) saturate(2%) hue-rotate(270deg) brightness(105%) contrast(101%);
+}
+
 .floating .float {
   top: 0;
   right: 85px;
+}
+
+.floating img {
+  -webkit-filter: invert(12%) sepia(92%) saturate(3435%) hue-rotate(195deg) brightness(97%) contrast(88%);
+          filter: invert(12%) sepia(92%) saturate(3435%) hue-rotate(195deg) brightness(97%) contrast(88%);
 }
 
 .bg-project {
