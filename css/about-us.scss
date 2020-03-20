@@ -1,7 +1,7 @@
 .about-us {
   padding: 100px 150px;
   height: 87vh;
-  background-color: #0F4E82;
+  background-color: #0f4e82;
   color: white;
   &-info {
     display: flex;
@@ -27,7 +27,8 @@
     .mission {
       padding-left: 100px;
     }
-    .vision, .mission {
+    .vision,
+    .mission {
       text-align: center;
       display: flex;
       flex-direction: column;
@@ -35,17 +36,18 @@
         .yellow-circle {
           z-index: 1;
         }
-        &-mission,&-vision {
+        &-mission,
+        &-vision {
           position: absolute;
         }
-        &-mission {
-          transform: translate(29px, -18px);
-          animation: moveAni1 1s ;
-        }
-        &-vision {
-          transform: translate(-29px, 18px);
-          animation: moveAni2 1s ;
-        }
+        // &-mission {
+        //   transform: translate(29px, -18px);
+        //   animation: moveAni1 1s;
+        // }
+        // &-vision {
+        //   transform: translate(-29px, 18px);
+        //   animation: moveAni2 1s;
+        // }
         img {
           align-self: center;
           height: 100px;
@@ -64,30 +66,43 @@
   }
 }
 
+.moveAni1 {
+  transform: translate(29px, -18px);
+  animation: moveAni2 2s;
+  animation-fill-mode: forwards;
+}
+
+.moveAni2 {
+  transform: translate(29px, -18px);
+  animation: moveAni1 2s;
+  animation-fill-mode: forwards;
+}
+
 @media screen and (max-width: 850px) {
-  .about-us{
+  .about-us {
     height: 750px;
-    padding:40px 40px;
-    &-info{
-      .title{
+    padding: 40px 40px;
+    &-info {
+      .title {
         font-size: 30px;
       }
-      .description{
+      .description {
         font-size: 15px;
         width: 300px;
         font-weight: bold;
       }
     }
-    &-bottom{
+    &-bottom {
       flex-direction: column;
     }
-    .vision,.mission {
+    .vision,
+    .mission {
       padding: 0;
-      .title{
+      .title {
         margin-top: 20px;
         font-size: 18px;
       }
-      .description{
+      .description {
         font-size: 15px;
         align-self: center;
         font-weight: bold;
