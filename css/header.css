@@ -446,8 +446,8 @@ footer .inline {
 .hiring .btn-hiring:hover {
   -webkit-transform: translateY(-8px);
           transform: translateY(-8px);
-  -webkit-transition: 0.5s linear;
-  transition: 0.5s linear;
+  -webkit-transition: 0.4s linear;
+  transition: 0.4s linear;
   -webkit-box-shadow: 5px 5px #9cccf4;
           box-shadow: 5px 5px #9cccf4;
 }

@@ -21,3 +21,17 @@
     <span class="description">Build the great place for people to work and improve.</span>
   </div>
 </div>
+<script>
+  let observer = new IntersectionObserver((entries, observer) => { 
+        entries.forEach((entry,index) => {
+        if(entry.isIntersecting){
+            entry.target.classList.add(`moveAni${index+1}`)
+            
+            // entry.target.src = entry.target.dataset.src;
+            observer.unobserve(entry.target);
+        }
+        });
+    }, {rootMargin: "0px 0px -300px 0px"});
+    const img1 = document.querySelectorAll('.about-us-bottom .image > img:nth-child(1)').forEach(img => observer.observe(img))
+    console.log(img1)
+</script>

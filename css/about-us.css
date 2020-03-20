@@ -1,7 +1,7 @@
 .about-us {
   padding: 100px 150px;
   height: 87vh;
-  background-color: #0F4E82;
+  background-color: #0f4e82;
   color: white;
 }
 
@@ -47,7 +47,8 @@
   padding-left: 100px;
 }
 
-.about-us-bottom .vision, .about-us-bottom .mission {
+.about-us-bottom .vision,
+.about-us-bottom .mission {
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -58,29 +59,19 @@
           flex-direction: column;
 }
 
-.about-us-bottom .vision .image .yellow-circle, .about-us-bottom .mission .image .yellow-circle {
+.about-us-bottom .vision .image .yellow-circle,
+.about-us-bottom .mission .image .yellow-circle {
   z-index: 1;
 }
 
-.about-us-bottom .vision .image-mission, .about-us-bottom .vision .image-vision, .about-us-bottom .mission .image-mission, .about-us-bottom .mission .image-vision {
+.about-us-bottom .vision .image-mission, .about-us-bottom .vision .image-vision,
+.about-us-bottom .mission .image-mission,
+.about-us-bottom .mission .image-vision {
   position: absolute;
 }
 
-.about-us-bottom .vision .image-mission, .about-us-bottom .mission .image-mission {
-  -webkit-transform: translate(29px, -18px);
-          transform: translate(29px, -18px);
-  -webkit-animation: moveAni1 1s;
-          animation: moveAni1 1s;
-}
-
-.about-us-bottom .vision .image-vision, .about-us-bottom .mission .image-vision {
-  -webkit-transform: translate(-29px, 18px);
-          transform: translate(-29px, 18px);
-  -webkit-animation: moveAni2 1s;
-          animation: moveAni2 1s;
-}
-
-.about-us-bottom .vision .image img, .about-us-bottom .mission .image img {
+.about-us-bottom .vision .image img,
+.about-us-bottom .mission .image img {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -88,14 +79,34 @@
   width: 100px;
 }
 
-.about-us-bottom .vision .title, .about-us-bottom .mission .title {
+.about-us-bottom .vision .title,
+.about-us-bottom .mission .title {
   font-size: 36px;
   font-weight: bold;
 }
 
-.about-us-bottom .vision .description, .about-us-bottom .mission .description {
+.about-us-bottom .vision .description,
+.about-us-bottom .mission .description {
   width: 280px;
   font-size: 24px;
+}
+
+.moveAni1 {
+  -webkit-transform: translate(29px, -18px);
+          transform: translate(29px, -18px);
+  -webkit-animation: moveAni2 2s;
+          animation: moveAni2 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.moveAni2 {
+  -webkit-transform: translate(29px, -18px);
+          transform: translate(29px, -18px);
+  -webkit-animation: moveAni1 2s;
+          animation: moveAni1 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 @media screen and (max-width: 850px) {
@@ -117,14 +128,17 @@
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .about-us .vision, .about-us .mission {
+  .about-us .vision,
+  .about-us .mission {
     padding: 0;
   }
-  .about-us .vision .title, .about-us .mission .title {
+  .about-us .vision .title,
+  .about-us .mission .title {
     margin-top: 20px;
     font-size: 18px;
   }
-  .about-us .vision .description, .about-us .mission .description {
+  .about-us .vision .description,
+  .about-us .mission .description {
     font-size: 15px;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
