@@ -1,106 +1,69 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html>
 
 <head>
-  <meta charset="UTF-8" />
-  <title>GGJungle</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="”robots”" content="”noindex,nofollow”" />
-  <link rel="stylesheet" href="css/style.css" />
-  <script src="js/jquery-3.2.1.min.js"></script>
-  <script>
-    $(function () {
-      $("footer").load("footer.html");
-      $(".navbar").load("main-nav.html");
-    });
-  </script>
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <meta charset="UTF-8" />
+    <title>GGJungle</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="”robots”" content="”noindex,nofollow”" />
+    <link rel="shortcut icon" type="image/png" href="/Favicon.ico"/>
+    <link rel="shortcut icon" type="image/png" href="http://ggjungle.vn/favicon.png"/>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/about-us.css" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script>
+        $(function() {
+            $("footer").load("./comp/footer.html");
+            $("header").load("./comp/header.html");
+        });
+        $(document).ready(function(){
+            $("#scroll-top").click(function(){
+                $('html, body').animate({ scrollTop: 0 }, 'slow')
+            });
+        });
+        $(document).scroll(function() {
+            var y = $(this).scrollTop();
+            if (y > 100) {
+                $('.floating').fadeIn();
+            } else {
+                $('.floating').fadeOut();
+            }
+        });
+    </script>
 </head>
 
-<body id="recruit">
-  <header>
-    <div class="wrap">
-      <div class="navbar"></div>
-      <div class="wrap head-title-recruit">
-        <div class="head-bg"></div>
-        <p class="txt-sub">
-          Tuyển dụng
-        </p>
-        <h1 id="h1-id">Bạn chính là mảnh ghép còn thiếu</h1>
-        <p class="txt-text">Luxuriam non reprehendit, modo sit vacua infinita cupiditate et timore. Urgent tamen et
-          nihil remittunt. Aut unde est hoc contritum vetustate proverbium.</p>
-      </div>
-      <form class="form-recruit">
-        <label for="text">Xin chào!!</label>
-        <input type="text" id="name" name="name" placeholder="Bạn tên gì?">
-        <label for="position">Bạn ứng tuyển cho vị trí nào?</label>
-        <input type="text" id="position" name="position" placeholder="Nhập vị trí muốn ứng tuyển">
-        <label for="email">Chúng tôi có thể liên lạc với bạn theo địa chỉ email:</label>
-        <input type="email" id="email" name="email" placeholder="Nhập email vào đây">
-        <!-- <input type="file" name="file" id="file" class="inputfile" data-multiple-caption="{count} files selected" multiple />
-        <label for="file"><a>Đính kèm CV tại đây </a></label> -->
-
-        <input type="file" id="fileUpload" name="file" > <!-- actual file upload button -->
-        <div style="margin-top: 10px;"><label id="customButton" for="file"><a>Đính kèm CV tại đây</a></label>
-          <span id="fileName"></span>
+<body>
+    <header>
+    </header>
+    <section id='banner'></section>
+    
+    <footer></footer>
+    <div class="floating hidden">
+        <div id="float-contact" class="btn mb-20 cursor-pointer"><img src="images\comment.svg" /></div>
+        <div id="scroll-top" class="btn cursor-pointer"><img src="images\arrow-up(blue).svg" /></div>
+        <div class="show-contact float hidden">
+            <div>
+              <span>Hotline:</span>
+              <span class="mr-auto">0919 742 472</span>
+            </div> 
+            <div style="margin-top: 10px">
+              <span>Email:</span>
+              <span class="ml-auto">support@gogojungle.vn</span>
+            </div>
         </div>
-
-        <div style="margin-top: 10px;" id="form-message"></div>
-        <button>Gửi ngay</button>
-      </form>
-      
-      <script>(function (e, t, n) { var r = e.querySelectorAll("html")[0]; r.className = r.className.replace(/(^|s)no-js(s|$)/, "$1js$2") })(document, window, 0);</script>
-
     </div>
-  </header>
-
-  <footer></footer>
-
-  <script src="js/main.js"></script>
-  <script>
-    document.getElementById("customButton").addEventListener("click", function () {
-      document.getElementById("fileUpload").click();  // trigger the click of actual file upload button
-    });
-
-    document.getElementById("fileUpload").addEventListener("change", function () {
-      var fullPath = this.value; // fetched value = C:\fakepath\fileName.extension
-      var fileName = fullPath.split(/(\\|\/)/g).pop();  // fetch the file name
-      document.getElementsByClassName("fileName").innerHTML = fileName;  // display the file name
-    }, false);
-
-    function processForm(e) {
-      if (e.preventDefault) e.preventDefault();
-
-      const name = (e.target.elements.name.value)
-      const email = (e.target.elements.email.value)
-      const position = (e.target.elements.position.value)
-      const file = (e.target.elements.file.files[0])
-
-      var formData = new FormData();
-      formData.append("cv", file);
-      formData.append("email", email)
-      formData.append("name", name)
-      formData.append("position", position)
-
-      const Url = 'https://ggjungle.vn/api/send-mail'
-      // const Url = 'localhost:3000/api/send-mail'
-      axios.post(Url,formData).then(data => {
-        if (data.status==200) {
-         document.getElementById('form-message').innerHTML = 'Thông tin của bạn đã được gửi!!'
-        //  document.getElementById("form-recruit").reset();
-        }
-      }).catch(err => console.log(err))
-
-      return false;
-    }
-
-    var form = document.getElementsByClassName('form-recruit');
-    if (form.attachEvent) {
-      form[0].attachEvent("submit", processForm);
-    } else {
-      form[0].addEventListener("submit", processForm);
-    }
-  </script>
 </body>
-
+<script>
+    $("#float-contact").click(
+    function() {
+        if($('.float').hasClass("hidden"))
+        {
+            $('.float').removeClass('hidden')
+        }
+        else {
+            $('.float').addClass('hidden')
+        }
+    });
+</script>
 </html>
