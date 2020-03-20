@@ -792,4 +792,16 @@ body {
 .mb-100 {
   margin-bottom: 100px;
 }
+
+@media screen and (max-width: 970px) {
+  .our-project > div:nth-child(2) {
+    height: 1200px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .our-project > div:nth-child(2) {
+    height: 1800px;
+  }
+}
 /*# sourceMappingURL=header.css.map */
