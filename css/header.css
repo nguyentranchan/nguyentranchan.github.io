@@ -521,8 +521,8 @@ footer .inline {
   padding: 20px;
   width: 300px;
   font-size: 20px;
-  right: 0;
-  top: 85px;
+  right: 55px;
+  top: 100px;
   background-color: #fff;
   border-radius: 20px;
   z-index: 1;
@@ -540,13 +540,7 @@ footer .inline {
   border-right: 20px solid transparent;
   border-left: 20px solid transparent;
   top: -24px;
-  right: 40px;
-}
-
-@media screen and (max-width: 1000px) {
-  .show-contact {
-    right: 150px;
-  }
+  right: 125px;
 }
 
 @media screen and (max-width: 900px) {
