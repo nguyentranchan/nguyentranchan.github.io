@@ -380,6 +380,10 @@ footer {
     &:hover {
       transform: translateY(-8px);
       transition: 0.5s linear;
+      box-shadow: 5px 5px lighten($color: #0f4e82, $amount: 50%);
+    }
+    &:active {
+      
     }
     color: white;
     background-color: #0f4e82;
