@@ -13,7 +13,7 @@
       font-weight: bold;
     }
     .description {
-      font-size: 24px;
+      font-size: 22px;
       width: 840px;
       align-self: center;
     }
@@ -55,12 +55,13 @@
         }
       }
       .title {
+        margin-top: 5px;
         font-size: 36px;
         font-weight: bold;
       }
       .description {
-        width: 280px;
-        font-size: 24px;
+        width: 300px;
+        font-size: 22px;
       }
     }
   }
@@ -89,7 +90,6 @@
       .description {
         font-size: 15px;
         width: 300px;
-        font-weight: bold;
       }
     }
     &-bottom {
@@ -105,7 +105,6 @@
       .description {
         font-size: 15px;
         align-self: center;
-        font-weight: bold;
       }
     }
     .mission {

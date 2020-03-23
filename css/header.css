@@ -69,6 +69,44 @@
   }
 }
 
+/* The typing effect */
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@-webkit-keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+
 #banner {
   height: 87vh;
   display: -webkit-box;
@@ -102,6 +140,7 @@
 }
 
 #banner .slogan-2 {
+  font-family: "Roboto Mono";
   margin-top: 20px;
   font-size: 24px;
   font-weight: 100;
@@ -444,9 +483,10 @@ footer .inline {
   width: 40%;
   display: inline-block;
   border-radius: 35px;
+  font-size: 30px;
   text-align: center;
-  margin-top: 10px;
-  margin-left: 50px;
+  margin-top: 0px;
+  margin-left: 60px;
   -webkit-transition: 0.5s linear;
   transition: 0.5s linear;
 }
@@ -538,10 +578,10 @@ footer .inline {
 .show-contact {
   position: absolute;
   padding: 20px;
-  width: 300px;
+  width: 340px;
   font-size: 20px;
   right: 0;
-  top: 85px;
+  top: 120px;
   background-color: #fff;
   border-radius: 20px;
   z-index: 1;
@@ -714,14 +754,14 @@ body {
 }
 
 .feature {
-  max-width: 280px;
+  max-width: 300px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
   padding: 20px;
   height: 280px;
   border: 1px solid #b2b2b2;
-  margin: 20px 20px;
+  margin: 20px 15px;
   border-radius: 30px;
   text-align: center;
   cursor: pointer;
@@ -797,6 +837,14 @@ body {
 .layout {
   width: 1000px;
   margin: auto;
+}
+
+@media screen and (min-width: 1000px) {
+  .feature:nth-child(4),
+  .feature:nth-child(5) {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
 }
 
 @media screen and (max-width: 1000px) {

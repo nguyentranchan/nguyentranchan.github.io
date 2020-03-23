@@ -46,12 +46,43 @@
     padding: 20px 150px;
   }
 }
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
 #banner {
   height: 87vh;
   display: flex;
   overflow: hidden;
   background-color: #f5f7e1;
   justify-content: space-between;
+  // .typewriter {
+  //   overflow: hidden; /* Ensures the content is not revealed until the animation */
+  //   border-right: .15em solid orange; /* The typwriter cursor */
+  //   white-space: nowrap; /* Keeps the content on a single line */
+  //   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  //   letter-spacing: .15em; /* Adjust as needed */
+  //   animation:
+  //     typing 3.5s steps(40, end),
+  //     blink-caret .75s step-end infinite;
+  // }
   .slogan {
     position: absolute;
     z-index: 1;
@@ -65,6 +96,7 @@
       font-size: 36px;
     }
     &-2 {
+      font-family: "Roboto Mono";
       margin-top: 20px;
       font-size: 24px;
       font-weight: 100;
@@ -331,14 +363,10 @@ footer {
     img {
       width: 30px;
       height: 30px;
-      filter: invert(99%) sepia(100%) 
-        saturate(2%) hue-rotate(270deg) 
-        brightness(105%) contrast(101%);
+      filter: invert(99%) sepia(100%) saturate(2%) hue-rotate(270deg) brightness(105%) contrast(101%);
     }
     img:hover {
-      filter: invert(49%) sepia(89%) 
-        saturate(5365%) hue-rotate(340deg) 
-        brightness(97%) contrast(89%);
+      filter: invert(49%) sepia(89%) saturate(5365%) hue-rotate(340deg) brightness(97%) contrast(89%);
     }
   }
   .address {
@@ -378,7 +406,6 @@ footer {
   height: 600px;
   margin: auto;
   position: relative;
-
   .hiring-title {
     position: absolute;
     font-size: 40px;
@@ -396,9 +423,10 @@ footer {
     width: 40%;
     display: inline-block;
     border-radius: 35px;
+    font-size: 30px;
     text-align: center;
-    margin-top: 10px;
-    margin-left: 50px;
+    margin-top: 0px;
+    margin-left: 60px;
     transition: 0.5s linear;
   }
 
@@ -475,10 +503,10 @@ footer {
 .show-contact {
   position: absolute;
   padding: 20px;
-  width: 300px;
+  width: 340px;
   font-size: 20px;
   right: 0;
-  top: 85px;
+  top: 120px;
   background-color: #fff;
   border-radius: 20px;
   z-index: 1;
@@ -532,9 +560,7 @@ body {
   .btn:hover {
     background-color: #0f4e82;
     img {
-      filter: invert(99%) sepia(100%) 
-        saturate(2%) hue-rotate(270deg) 
-        brightness(105%) contrast(101%);
+      filter: invert(99%) sepia(100%) saturate(2%) hue-rotate(270deg) brightness(105%) contrast(101%);
     }
   }
   .float {
@@ -542,9 +568,7 @@ body {
     right: 85px;
   }
   img {
-    filter: invert(12%) sepia(92%) 
-      saturate(3435%) hue-rotate(195deg) 
-      brightness(97%) contrast(88%);
+    filter: invert(12%) sepia(92%) saturate(3435%) hue-rotate(195deg) brightness(97%) contrast(88%);
   }
 }
 .bg-project {
@@ -628,13 +652,14 @@ body {
   height: 700px;
   position: relative;
 }
+
 .feature {
-  max-width: 280px;
+  max-width: 300px;
   align-self: center;
   padding: 20px;
   height: 280px;
   border: 1px solid #b2b2b2;
-  margin: 20px 20px;
+  margin: 20px 15px;
   border-radius: 30px;
   text-align: center;
   cursor: pointer;
@@ -692,6 +717,13 @@ body {
 .layout {
   width: 1000px;
   margin: auto;
+}
+
+@media screen and (min-width: 1000px) {
+  .feature:nth-child(4),
+  .feature:nth-child(5) {
+    align-self: flex-start;
+  }
 }
 @media screen and (max-width: 1000px) {
   .layout {

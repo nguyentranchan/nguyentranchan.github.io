@@ -2,74 +2,77 @@
 <html>
 
 <head>
-    <meta charset="UTF-8" />
-    <title>GGJungle</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="”robots”" content="”noindex,nofollow”" />
-    <link rel="shortcut icon" type="image/png" href="/Favicon.ico"/>
-    <link rel="shortcut icon" type="image/png" href="http://ggjungle.vn/favicon.png"/>
-    <link rel="stylesheet" href="css/index.css" />
-    <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/about-us.css" />
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-    <script>
-        $(function() {
-            $("footer").load("./comp/footer.html");
-            $("header").load("./comp/header.html");
-            $("#banner").load("./comp/banner.html");
-            $(".about-us").load("./comp/about-us.html");
-            $(".our-project").load("./comp/project.html");
-            $(".hire").load("./comp/hiring.html");
-        });
-        $(document).ready(function(){
-            $("#scroll-top").click(function(){
-                $('html, body').animate({ scrollTop: 0 }, 'slow')
-            });
-        });
-        $(document).scroll(function() {
-            var y = $(this).scrollTop();
-            if (y > 100) {
-                $('.floating').fadeIn();
-            } else {
-                $('.floating').fadeOut();
-            }
-        });
-    </script>
+  <meta charset="UTF-8" />
+  <title>GGJungle</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="”robots”" content="”noindex,nofollow”" />
+  <link rel="shortcut icon" type="image/png" href="/Favicon.ico" />
+  <link rel="shortcut icon" type="image/png" href="http://ggjungle.vn/favicon.png" />
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/about-us.css" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script>
+    $(function () {
+      $("footer").load("./comp/footer.html");
+      $("header").load("./comp/header.html");
+      $("#banner").load("./comp/banner.html");
+      $(".about-us").load("./comp/about-us.html");
+      $(".our-project").load("./comp/project.html");
+      $(".hire").load("./comp/hiring.html");
+    });
+    $(document).ready(function () {
+      $("#scroll-top").click(function () {
+        $('html, body').animate({ scrollTop: 0 }, 'slow')
+      });
+    });
+    $(document).scroll(function () {
+      var y = $(this).scrollTop();
+      if (y > 100) {
+        $('.floating').fadeIn();
+      } else {
+        $('.floating').fadeOut();
+      }
+    });
+  </script>
 </head>
 
 <body>
-    <header>
-    </header>
-    <section id='banner'></section>
-    <section class='about-us'></section>
-    <section class='our-project'></section>
-    <section class='hire'></section>
-    <footer></footer>
-    <div class="floating hidden">
-        <div id="float-contact" class="btn mb-20 cursor-pointer"><img src="images\float button\comment-dots-solid.svg" /></div>
-        <div id="scroll-top" class="btn cursor-pointer"><img src="images\float button\arrow-up.svg" /></div>
-        <div class="show-contact float hidden">
-            <div>
-              <span>Hotline:</span>
-              <span class="mr-auto">0919 742 472</span>
-            </div> 
-            <div style="margin-top: 10px">
-              <span>Email:</span>
-              <span class="ml-auto">support@gogojungle.vn</span>
-            </div>
-        </div>
+  <header>
+  </header>
+  <section id='banner'></section>
+  <section class='about-us'></section>
+  <section class='our-project'></section>
+  <section class='hire'></section>
+  <footer></footer>
+  <div class="floating hidden">
+    <div id="float-contact" class="btn mb-20 cursor-pointer"><img src="images\float button\comment-dots-solid.svg" />
     </div>
+    <div id="scroll-top" class="btn cursor-pointer"><img src="images\float button\arrow-up.svg" /></div>
+    <div class="show-contact float hidden">
+      <div>
+        <span>Hotline:</span>
+        <span class="mr-auto">0919 742 472</span>
+      </div>
+      <div style="margin-top: 10px">
+        <span>Email:</span>
+        <span class="ml-auto">support@gogojungle.vn</span>
+      </div>
+    </div>
+  </div>
 </body>
 <script>
-    $("#float-contact").click(
-    function() {
-        if($('.float').hasClass("hidden"))
-        {
-            $('.float').removeClass('hidden')
-        }
-        else {
-            $('.float').addClass('hidden')
-        }
+  $("#float-contact").click(
+    function () {
+      if ($('.float').hasClass("hidden")) {
+        $('.float').removeClass('hidden')
+      }
+      else {
+        $('.float').addClass('hidden')
+      }
     });
 </script>
+
 </html>

@@ -23,7 +23,7 @@
 }
 
 .about-us-info .description {
-  font-size: 24px;
+  font-size: 22px;
   width: 840px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -81,14 +81,15 @@
 
 .about-us-bottom .vision .title,
 .about-us-bottom .mission .title {
+  margin-top: 5px;
   font-size: 36px;
   font-weight: bold;
 }
 
 .about-us-bottom .vision .description,
 .about-us-bottom .mission .description {
-  width: 280px;
-  font-size: 24px;
+  width: 300px;
+  font-size: 22px;
 }
 
 .moveAni1 {
@@ -120,7 +121,6 @@
   .about-us-info .description {
     font-size: 15px;
     width: 300px;
-    font-weight: bold;
   }
   .about-us-bottom {
     -webkit-box-orient: vertical;
@@ -143,7 +143,6 @@
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
-    font-weight: bold;
   }
   .about-us .mission {
     margin-top: 50px;
