@@ -1,0 +1,25 @@
+.job {
+    width: 200px;
+    padding: 20px;
+    height: 200px;
+    flex-direction: column;
+    border: 1px solid #b2b2b2;
+    border-top: 8px solid #E64C3C;
+    margin: 20px 15px;
+    cursor: pointer;
+    .job-name {
+    font-size: 36px;
+    margin-top: 20px;
+    }
+    .tags {
+        margin-top: auto;
+        font-size: 12px;;
+        span {
+            padding: 0 10px;
+            color: #b2b2b2;
+            border: 1px solid #b2b2b2;
+            display: inline-block;
+            margin-bottom: 2px;
+        }
+    }
+}
