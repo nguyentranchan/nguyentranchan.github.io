@@ -10,12 +10,13 @@
     <link rel="shortcut icon" type="image/png" href="http://ggjungle.vn/favicon.png"/>
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/about-us.css" />
+    <link rel="stylesheet" href="css/recruit.css" />
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
     <script>
         $(function() {
             $("footer").load("./comp/footer.html");
             $("header").load("./comp/header.html");
+            $(".job-list").load("./comp/recruit/job-list.html");
         });
         $(document).ready(function(){
             $("#scroll-top").click(function(){
@@ -37,11 +38,11 @@
     <header>
     </header>
     <section id='banner'></section>
-    
+    <section class="job-list"></section>
     <footer></footer>
     <div class="floating hidden">
-        <div id="float-contact" class="btn mb-20 cursor-pointer"><img src="images\comment.svg" /></div>
-        <div id="scroll-top" class="btn cursor-pointer"><img src="images\arrow-up(blue).svg" /></div>
+        <div id="float-contact" class="btn mb-20 cursor-pointer"><img src="images\float button\comment-dots-solid.svg" /></div>
+        <div id="scroll-top" class="btn cursor-pointer"><img src="images\float button\arrow-up.svg" /></div>
         <div class="show-contact float hidden">
             <div>
               <span>Hotline:</span>
