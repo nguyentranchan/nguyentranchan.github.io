@@ -1,20 +1,32 @@
 .job {
-  width: 200px;
-  padding: 20px;
-  height: 200px;
+  width: 220px;
+  padding: 16px;
+  height: 220px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   border: 1px solid #b2b2b2;
-  border-top: 8px solid #E64C3C;
   margin: 20px 15px;
+  position: relative;
   cursor: pointer;
+}
+
+.job .job-position {
+  height: 30px;
+  color: white;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
 
 .job .job-name {
   font-size: 36px;
-  margin-top: 20px;
+  margin-top: 25px;
+  line-height: 37px;
+  color: #696969;
 }
 
 .job .tags {
@@ -27,7 +39,8 @@
   color: #b2b2b2;
   border: 1px solid #b2b2b2;
   display: inline-block;
-  margin-bottom: 2px;
+  margin-bottom: 5px;
+  margin-right: 5px;
 }
 
 .job-des {

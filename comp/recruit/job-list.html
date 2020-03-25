@@ -1,33 +1,35 @@
+<script src="js/recruitData.js"></script>
+<script>
+    for (i in data) {
+        let job = "<div class=\"job flex\" style=\"border-top: 8px solid " + data[i].color + ";\">";
+        if (data[i].position)
+            job += "<div class=\"job-position\" style=\" background-color:"+ data[i].color + " \">"+ data[i].position +"</div>";
+        job += "<div class=\"job-name\">"+ data[i].name +"</div>";
+        job += "<div class=\"tags\">";
+        let tag = 0
+        for (j in data[i].tags)
+        {
+            if(tag > 4)
+            {
+                break;
+            }
+            tag++;
+            job += "<span>"+ data[i].tags[j] + "</span>"
+        }
+        job += "</div></div>";
+        $(".jobs").append(job);
+        //text += cars[i] + "<br>";
+    }
+    //document.getElementById("demo").innerHTML = text;
+</script>
 <div class="layout jobs flex center flex-wrap">
+    <!---
     <div class="job flex">
-        <div class="job-name">QA/QC</div>
-        <div class="tags">
-            <span>Excel</span>
-            <span>SQL</span>
-            <span>Excel</span>
-            <span>SQL</span>
-            <span>Excel</span>
-        </div>
-    </div>
-    <div class="job flex">
-        <div class="job-name">QA/QC</div>
+        <div class="job-position">Fresher</div>
+        <div class="job-name">QA/QC nono</div>
         <div class="tags">
             <span>Excel</span>
             <span>SQL</span>
         </div>
-    </div>
-    <div class="job flex">
-        <div class="job-name">QA/QC</div>
-        <div class="tags">
-            <span>Excel</span>
-            <span>SQL</span>
-        </div>
-    </div>
-    <div class="job flex">
-        <div class="job-name">QA/QC</div>
-        <div class="tags">
-            <span>Excel</span>
-            <span>SQL</span>
-        </div>
-    </div>
+    </div>--->
 </div>
