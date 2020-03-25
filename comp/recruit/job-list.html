@@ -1,7 +1,34 @@
 <script src="js/recruitData.js"></script>
 <script>
+    function myFunction(job) {
+        document.getElementById("name").innerHTML = data[job.id].name;
+        let tags = "";
+        for (i in data[job.id].tags)
+        {
+            tags += "<span class=\"tags-child\">"+ data[job.id].tags[i] + "</span>"
+        }
+        $("span").remove(".tags-child");
+        $("#tags").append(tags);
+        let req = "";
+        for (i in data[job.id].requirement)
+        {
+            req += data[job.id].requirement[i] + "<br>";
+        }
+        document.getElementById("requirement").innerHTML = req;
+        let plu = "";
+        for (i in data[job.id].requirement)
+        {
+            plu += data[job.id].requirement[i] + "<br>";
+        }
+        document.getElementById("plus").innerHTML = plu;
+        
+        $( ".job-des" ).show();
+        $('html,body').animate({ scrollTop: $(".job-des").offset().top }, 'slow');
+    }
+</script>
+<script>
     for (i in data) {
-        let job = "<div class=\"job flex\" style=\"border-top: 8px solid " + data[i].color + ";\">";
+        let job = "<div id=\""+i+"\" class=\"job flex\" onclick=\"myFunction(this)\" style=\"border-top: 8px solid " + data[i].color + ";\">";
         if (data[i].position)
             job += "<div class=\"job-position\" style=\" background-color:"+ data[i].color + " \">"+ data[i].position +"</div>";
         job += "<div class=\"job-name\">"+ data[i].name +"</div>";
@@ -32,4 +59,31 @@
             <span>SQL</span>
         </div>
     </div>--->
+</div>
+<div class="layout">
+    <div class="job-des">
+
+        <div id="name" class="job-name"></div>
+
+        <div id="tags" class="tags"></div>
+
+        <div class="job-subtitle">Requirement</div>
+        <div id="requirement" class="job-detail requirement">
+            - MUST be fluent in English – both spoken and written 
+            <br> - Understand domain knowledge & client testing process clearly to implement all testing activities independently and effectively
+            <br> - Able to understand, communicate, analyse requirements, and identify gaps in requirements
+            <br> - Good at analyzing information objectively and making reasonable decisions
+            <br> - Able to perform all kinds of testing effectively & independently
+            <br> - Able to manage time and prioritize multiple tasks
+            <br> - Able to perform testing under high pressure
+        </div>
+
+        <div class="job-subtitle">Nice to have</div>
+        <div id="plus" class="job-detail">
+            - Experience in creating and implementing test cases/scripts based on requirements
+            <br> - Experience in estimating testing activities
+            <br> - Good knowledge and experience in automation tests
+        </div>
+
+    </div>
 </div>

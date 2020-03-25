@@ -43,7 +43,13 @@
   margin-right: 5px;
 }
 
+.job .tags span:hover {
+  color: #fff;
+  background-color: #b2b2b2;
+}
+
 .job-des {
+  display: none;
   width: calc(100% - 30px);
   padding: 20px 30px 40px 30px;
   border-top: 8px solid #0f4e82;
@@ -66,7 +72,13 @@
   color: #b2b2b2;
   border: 1px solid #b2b2b2;
   display: inline-block;
-  margin-bottom: 2px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+
+.job-des .tags span:hover {
+  color: #fff;
+  background-color: #b2b2b2;
 }
 
 .job-des .job-subtitle {
