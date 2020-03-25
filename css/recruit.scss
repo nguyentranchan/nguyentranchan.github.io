@@ -25,7 +25,7 @@
 }
 .job-des {
     width: calc(100% - 30px);
-    padding: 20px 30px 30px 40px;
+    padding: 20px 30px 40px 30px;
     border-top: 8px solid #0f4e82;
     border-bottom: 8px solid #0f4e82;
     margin: 20px 15px 50px 15px;
@@ -54,3 +54,8 @@
         color: #535353;
     }
 }
+@media screen and (max-width: 640px) {
+    .job-des {
+      padding: 20px 5px 40px 5px;
+    }
+  }
