@@ -1,4 +1,8 @@
-.job {
+.jobs {
+  background-color: #fff;
+}
+
+.jobs .job {
   width: 220px;
   padding: 16px;
   height: 220px;
@@ -9,10 +13,11 @@
   border: 1px solid #b2b2b2;
   margin: 20px 15px;
   position: relative;
+  background-color: #fff;
   cursor: pointer;
 }
 
-.job .job-position {
+.jobs .job .job-position {
   height: 30px;
   color: white;
   text-align: center;
@@ -22,19 +27,19 @@
   left: 0;
 }
 
-.job .job-name {
+.jobs .job .job-name {
   font-size: 36px;
   margin-top: 25px;
   line-height: 37px;
   color: #696969;
 }
 
-.job .tags {
+.jobs .job .tags {
   margin-top: auto;
   font-size: 12px;
 }
 
-.job .tags span {
+.jobs .job .tags span {
   padding: 0 10px;
   color: #b2b2b2;
   border: 1px solid #b2b2b2;
@@ -43,18 +48,25 @@
   margin-right: 5px;
 }
 
-.job .tags span:hover {
+.jobs .job .tags span:hover {
   color: #fff;
   background-color: #b2b2b2;
 }
 
+.jobs .job:hover {
+  -webkit-transform: translateY(-8px);
+          transform: translateY(-8px);
+  -webkit-transition: 0.4s linear;
+  transition: 0.4s linear;
+  -webkit-box-shadow: 5px 5px #e9e9e9;
+          box-shadow: 5px 5px #e9e9e9;
+}
+
 .job-des {
   display: none;
-  width: calc(100% - 30px);
   padding: 20px 30px 40px 30px;
-  border-top: 8px solid #0f4e82;
-  border-bottom: 8px solid #0f4e82;
-  margin: 20px 15px 50px 15px;
+  margin: 20px 0;
+  background-color: #fff;
   text-align: left;
 }
 
@@ -96,5 +108,97 @@
   .job-des {
     padding: 20px 5px 40px 5px;
   }
+}
+
+.recruit-banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+}
+
+.recruit-banner .recruit-slogan {
+  position: absolute;
+  font-size: 36px;
+  left: 8%;
+  top: 51%;
+  color: dimgrey;
+}
+
+.recruit-banner .recruit-img {
+  width: 100%;
+}
+
+.form {
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form .form-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.form .form-info .left {
+  width: 50%;
+}
+
+.form .form-info .right {
+  width: 45%;
+  margin-left: auto;
+}
+
+.form .form-info .left div span, .form .form-info .right div span {
+  display: inline-block;
+  width: 110px;
+}
+
+.form .form-info .left div input, .form .form-info .right div input {
+  width: calc(100% - 130px);
+}
+
+.form .form-info .left div textarea, .form .form-info .right div textarea {
+  width: 100%;
+}
+
+.form .btn-send {
+  color: white;
+  background-color: #0f4e82;
+  width: 150px;
+  margin: 20px auto 5px auto;
+  display: inline-block;
+  border-radius: 35px;
+  text-align: center;
+  -webkit-transition: 0.5s linear;
+  transition: 0.5s linear;
+}
+
+body {
+  background-color: #e9e9e9;
+}
+
+header {
+  background-color: #fff;
+}
+
+footer {
+  margin-top: 250px;
 }
 /*# sourceMappingURL=recruit.css.map */

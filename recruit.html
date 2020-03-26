@@ -16,8 +16,9 @@
         $(function() {
             $("footer").load("./comp/footer.html");
             $("header").load("./comp/header.html");
+            $("#recruitbanner").load("./comp/recruit/recruit-banner.html");
             $(".job-list").load("./comp/recruit/job-list.html");
-            $(".job-description").load("./comp/recruit/job-description.html");
+            
         });
         $(document).ready(function(){
             $("#scroll-top").click(function(){
@@ -38,7 +39,7 @@
 <body>
     <header>
     </header>
-    <section id='banner'></section>
+    <section id='recruitbanner' class="layout"></section>
     <section class="job-list"></section>
     <footer></footer>
     <div class="floating hidden">
