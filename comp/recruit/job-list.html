@@ -21,14 +21,18 @@
             plu += data[job.id].requirement[i] + "<br>";
         }
         document.getElementById("plus").innerHTML = plu;
-        
-        $( ".job-des" ).show();
-        $('html,body').animate({ scrollTop: $(".job-des").offset().top }, 'slow');
+        $(".job-des").css({"border-top": "8px solid "+ data[job.id].color});
+        $( ".job-des" ).show(); 
+        $( ".form" ).show();
+        $('html,body').animate({ scrollTop: $(".job-des").offset().top - 20 }, 'slow');
     }
 </script>
 <script>
+    $(document).ready(function(){
+        $( ".form" ).hide();
+    })
     for (i in data) {
-        let job = "<div id=\""+i+"\" class=\"job flex\" onclick=\"myFunction(this)\" style=\"border-top: 8px solid " + data[i].color + ";\">";
+        let job = "<div id=\""+i+"\" class=\"job flex\" onclick=\"myFunction(this)\" style=\"border: 2px solid " + data[i].color + "; border-top: 8px solid " + data[i].color + ";\">";
         if (data[i].position)
             job += "<div class=\"job-position\" style=\" background-color:"+ data[i].color + " \">"+ data[i].position +"</div>";
         job += "<div class=\"job-name\">"+ data[i].name +"</div>";
@@ -86,4 +90,30 @@
         </div>
 
     </div>
+</div>
+
+<div class="layout form">
+    <div class="form-info">
+        <div class="left">
+            <div>
+                <span>Your name:</span>
+                <input />
+            </div>
+            <div>
+                <span>Your email:</span>
+                <input />
+            </div>
+            <div>
+                <span>Your CV:</span>
+                <input />
+            </div>
+        </div>
+        <div class="right">
+            <div>
+                <span>Your message</span>
+                <textarea id="message" rows="3" cols="50"/>
+            </div>
+        </div>
+    </div>
+    <div class="btn-send">SendCV</div>
 </div>
