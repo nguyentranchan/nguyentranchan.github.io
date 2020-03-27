@@ -1,11 +1,17 @@
-<div class="bg-blue co-white w-full">
-    <div class="footer">
-        <div class="mr-15 logo inline fs-35 no-underlying">GGJungle</div>
-        <p class="fs-13 address inline">3rd Floor, Green Phil Building <br>8/1 - 8/3 Nguyen Huy Tuong, Ward 6, Binh Thanh District</p>
-        <div class="ml-auto mt-auto social-links inline p-5">
-            <a href=""><img src="images\social\facebook.svg" /></a>
-            <a href=""><img class="mr-10 ml-10" src="images\social\google-plus.svg" /></a>
-            <a href=""><img src="images\social\linkedin.svg" /></a>
-        </div>
-    </div>
+<div class="contact-info">
+    <div class="logo"></div>
+    <p><img src="images\address.svg" alt="">3rd Floor, Green Phil Building, 8/1 - 8/3 Nguyen Huy Tuong, Ward 6, Binh Thanh District</p>
+    <p><img src="images\phone.svg" alt="">0919 742 472</p>
+    <p><img src="images\email.svg" alt="">hr@gogojungle.vn</p>
 </div>
+<form class="contact-form" method="post">
+    <h2>Contact Us</h2>
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" autocomplete="off" required>
+    <span class="error" id="email-error"></span>
+    <label for="email-content">Content (1000 words)</label>
+    <textarea name="email-content" id="email-content" cols="30" rows="10" required maxlength="1000"></textarea>
+    <span class="error" id="content-error"></span>
+    <span id="result"></span>
+    <button type="button" onclick="sendMail()">Send</button>
+</form>
