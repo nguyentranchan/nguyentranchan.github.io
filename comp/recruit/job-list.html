@@ -1,30 +1,59 @@
-<script src="../../js/recruitData.js"></script>
+<script src="js/recruitData.js"></script>
 <script>
-    function myFunction(job) {
-        document.getElementById("name").innerHTML = data[job.id].name;
+    function loadJob(job) { // display target job
+        //display job name
+        document.getElementById("name").innerHTML = data[job.id].name; 
+        //display form title
+        document.getElementById("form-title").innerHTML =  'Join us as ' + data[job.id].name;
+        //display job tags
         let tags = "";
         for (i in data[job.id].tags)
         {
             tags += "<span class=\"tags-child\">"+ data[job.id].tags[i] + "</span>"
         }
-        $("span").remove(".tags-child");
+        $("span").remove(".tags-child"); // remove old tags
         $("#tags").append(tags);
+        //display job requirement
         let req = "";
         for (i in data[job.id].requirement)
         {
             req += data[job.id].requirement[i] + "<br>";
         }
         document.getElementById("requirement").innerHTML = req;
+        //display job's `nice to have`
         let plu = "";
-        for (i in data[job.id].requirement)
+        for (i in data[job.id].plus)
         {
-            plu += data[job.id].requirement[i] + "<br>";
+            plu += data[job.id].plus[i] + "<br>";
         }
         document.getElementById("plus").innerHTML = plu;
+        //display full JD
         $(".job-des").css({"border-top": "8px solid "+ data[job.id].color});
-        $( ".job-des" ).show(); 
-        $( ".form" ).show();
-        $('html,body').animate({ scrollTop: $(".job-des").offset().top - 20 }, 'slow');
+        $(".job-des").slideDown( "slow",function() { $( ".form" ).slideDown("slow"); });
+        //scroll to JD
+        $('html,body').animate({ scrollTop: $(".job-des").offset().top - 50 }, 'slow');
+    }
+    function sendCV() { 
+        //collect data for sending mail
+        let name, email, message, cv ;
+        name = $("#cv-name").val();
+        email = $("#cv-email").val();
+        file = $("#cv")[0].files[0];
+        message = $("#cv-message").val();
+        
+        var formData = new FormData();
+        formData.append("cv", file);
+        formData.append("email", email)
+        formData.append("name", name)
+        formData.append("position", message)
+        //send mail
+        const Url = 'https://ggjungle.vn/api/send-mail'
+        // const Url = 'localhost:3000/api/send-mail'
+        axios.post(Url,formData).then(data => {
+            if (data.status==200) {
+                alert('Your information has been sent!!');
+            }
+        }).catch(err => console.log(err))
     }
 </script>
 <script>
@@ -32,7 +61,7 @@
         $( ".form" ).hide();
     })
     for (i in data) {
-        let job = "<div id=\""+i+"\" class=\"job flex\" onclick=\"myFunction(this)\" style=\"border: 2px solid " + data[i].color + "; border-top: 8px solid " + data[i].color + ";\">";
+        let job = "<div id=\""+i+"\" class=\"job flex\" onclick=\"loadJob(this)\" style=\"border: 2px solid " + data[i].color + "; border-top: 8px solid " + data[i].color + ";\">";
         if (data[i].position)
             job += "<div class=\"job-position\" style=\" background-color:"+ data[i].color + " \">"+ data[i].position +"</div>";
         job += "<div class=\"job-name\">"+ data[i].name +"</div>";
@@ -40,18 +69,13 @@
         let tag = 0
         for (j in data[i].tags)
         {
-            if(tag > 4)
-            {
-                break;
-            }
+            if(tag > 4) { break; } // 4 tags max
             tag++;
             job += "<span>"+ data[i].tags[j] + "</span>"
         }
         job += "</div></div>";
         $(".jobs").append(job);
-        //text += cars[i] + "<br>";
     }
-    //document.getElementById("demo").innerHTML = text;
 </script>
 <div class="layout jobs flex center flex-wrap">
     <!---
@@ -64,56 +88,39 @@
         </div>
     </div>--->
 </div>
-<div class="layout">
+<div class="layout full-1000">
     <div class="job-des">
-
         <div id="name" class="job-name"></div>
-
         <div id="tags" class="tags"></div>
-
         <div class="job-subtitle">Requirement</div>
-        <div id="requirement" class="job-detail requirement">
-            - MUST be fluent in English – both spoken and written 
-            <br> - Understand domain knowledge & client testing process clearly to implement all testing activities independently and effectively
-            <br> - Able to understand, communicate, analyse requirements, and identify gaps in requirements
-            <br> - Good at analyzing information objectively and making reasonable decisions
-            <br> - Able to perform all kinds of testing effectively & independently
-            <br> - Able to manage time and prioritize multiple tasks
-            <br> - Able to perform testing under high pressure
-        </div>
-
+        <div id="requirement" class="job-detail requirement"></div>
         <div class="job-subtitle">Nice to have</div>
-        <div id="plus" class="job-detail">
-            - Experience in creating and implementing test cases/scripts based on requirements
-            <br> - Experience in estimating testing activities
-            <br> - Good knowledge and experience in automation tests
-        </div>
-
+        <div id="plus" class="job-detail"></div>
     </div>
 </div>
-
 <div class="layout form">
+    <div id="form-title"></div>
     <div class="form-info">
         <div class="left">
             <div>
                 <span>Your name:</span>
-                <input />
+                <input id="cv-name"/>
             </div>
             <div>
                 <span>Your email:</span>
-                <input />
+                <input id="cv-email"/>
             </div>
             <div>
                 <span>Your CV:</span>
-                <input />
+                <input type="file" id="cv"/>
             </div>
         </div>
         <div class="right">
             <div>
-                <span>Your message</span>
-                <textarea id="message" rows="3" cols="50"/>
+                <span>Your message:</span>
+                <textarea rows="3" id="cv-message"/>
             </div>
         </div>
     </div>
-    <div class="btn-send">SendCV</div>
+    <div class="btn-send cursor-pointer" onclick="sendCV()">SendCV</div>
 </div>
