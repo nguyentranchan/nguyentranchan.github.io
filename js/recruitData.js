@@ -1,6 +1,6 @@
 var display;
 var data = {
-    qa: {
+    /*qa: {
         color:'#E64C3C',
         name:'QA/QC',
         //position:'Fresher',
@@ -22,7 +22,7 @@ var data = {
             '- Experience in estimating testing activities',
             '- Good knowledge and experience in automation tests'
         ]
-    },
+    },*/
     fe: {
         color:'#EDC951',
         name:'Front-end Developer',
@@ -69,7 +69,7 @@ var data = {
             '- Can work independant without/less guidance'
         ]
     },
-    de: {
+    /*de: {
         color:'#F2F5D0',
         name:'Web Designer',
         //position:'Fresher',
@@ -91,6 +91,6 @@ var data = {
             '- Experience in estimating testing activities',
             '- Good knowledge and experience in automation tests'
         ]
-    },
+    },*/
     
 }
