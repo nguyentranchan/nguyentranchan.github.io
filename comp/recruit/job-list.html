@@ -39,7 +39,7 @@
         name = $("#cv-name").val();
         email = $("#cv-email").val();
         file = $("#cv")[0].files[0];
-        message = $("#cv-message").val();
+        message = $("form-title").text().slice(11) + "\n" + $("#cv-message").val();
         
         var formData = new FormData();
         formData.append("cv", file);
