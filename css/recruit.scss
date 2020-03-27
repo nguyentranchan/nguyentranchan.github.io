@@ -85,7 +85,7 @@
 }
 @media screen and (max-width: 640px) {
     .job-des {
-      padding: 20px 5px 40px 5px;
+      padding: 20px 15px 40px 15px;
     }
 }
 .recruit-banner {
@@ -109,6 +109,13 @@
     padding: 20px 40px;
     display: flex;
     flex-direction: column;
+    text-align: left;
+    #form-title {
+        font-size: 24px;
+        color: #0f4e82;
+        text-align: center;
+        margin-bottom: 15px;
+    }
     .form-info {
         display: flex;
         flex-direction: row;
@@ -133,6 +140,16 @@
                 }
             }
         }
+        @media screen and (max-width: 640px) {
+            .left , .right {
+                width: 100%;
+            }
+        }
+    }
+    @media screen and (max-width: 640px) {
+        .form-info {
+            flex-direction: column;
+        }
     }
     .btn-send {
         color: white;
@@ -145,6 +162,18 @@
         transition: 0.5s linear;
     }
 }
+@media screen and (max-width: 1000px) {
+    .full-1000 {
+        width: 100%;
+        padding: 10px 0;
+    }
+    .form {
+        margin: auto;
+    }
+}
+#recruitbanner {
+    padding: 0;
+}
 body {
     background-color: #e9e9e9;
 }
@@ -152,5 +181,5 @@ header {
     background-color: #fff;
 }
 footer {
-    margin-top: 250px;
+    margin-top: 150px;
 }

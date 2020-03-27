@@ -17,7 +17,7 @@ var data = {
             '- Able to manage time and prioritize multiple tasks',
             '- Able to perform testing under high pressure'
         ],
-        more: [
+        plus: [
             '- Experience in creating and implementing test cases/scripts based on requirements',
             '- Experience in estimating testing activities',
             '- Good knowledge and experience in automation tests'
@@ -38,7 +38,7 @@ var data = {
             '- Guarantee the quality for your work',
             '- Fluent English – both spoken and written'
         ],
-        more: [
+        plus: [
             '- Experience in developing web application vs Node.js',
             '- Self-adaptive with new technologies quickly',
             '- Can work independant without/less guidance',
@@ -62,7 +62,7 @@ var data = {
             '- Guarantee the quality for your work',
             '- Fluent English – both spoken and written'
         ],
-        more: [
+        plus: [
             '- Good at analytical and organization skills',
             '- Experience in developing web application vs Node.js',
             '- Self-adaptive with new technologies quickly',
@@ -86,7 +86,7 @@ var data = {
             '- Able to manage time and prioritize multiple tasks',
             '- Able to perform testing under high pressure'
         ],
-        more: [
+        plus: [
             '- Experience in creating and implementing test cases/scripts based on requirements',
             '- Experience in estimating testing activities',
             '- Good knowledge and experience in automation tests'
