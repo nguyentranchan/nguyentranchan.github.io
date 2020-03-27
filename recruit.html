@@ -11,10 +11,49 @@
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/recruit.css" />
+    <link rel="stylesheet" href="css/footer.css" />
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script src="js/email.js"></script>
+    <style>
+        :root {
+            --primary: #0f4e82;
+            --secondary: #f2f5d0;
+        }
+    </style>
     <script>
         $(function() {
-            $("footer").load("./comp/footer.html");
+            $("footer").load("./comp/footer.html", function () {
+                const emailContent = document.querySelector('form textarea')
+                const input = document.querySelector('form input')
+                if (emailContent) {
+                    document.querySelector('#content-error').innerHTML = ''
+                    emailContent.addEventListener('input', e => {
+                        if (e.target.textLength > 1000) {
+                            emailContent.value = e.target.value.substr(0, 1000)
+                        }
+
+                        if (emailContent.value.trim().length > 0) {
+                            document.querySelector('#content-error').innerHTML = ''
+                            emailContent.classList.remove('required')
+                        }
+                    })
+                }
+                if (input) {
+                    input.addEventListener('blur', evt => {
+                        const value = evt.target.value.trim()
+                        if (validateEmail(value)) {
+                            document.querySelector('#email-error').innerHTML = ''
+                        }
+                        if (!value) {
+                            document.querySelector('#email-error').innerHTML = 'Email is required.'
+                        } else if (validateEmail(value)) {
+                            document.querySelector('#email-error').innerHTML = ''
+                        } else {
+                            document.querySelector('#email-error').innerHTML = 'Please enter a valid email.'
+                        }
+                    })
+                }
+            });
             $("header").load("./comp/header.html");
             $("#recruitbanner").load("./comp/recruit/recruit-banner.html");
             $(".job-list").load("./comp/recruit/job-list.html");
@@ -43,18 +82,18 @@
     <section class="job-list"></section>
     <footer></footer>
     <div class="floating hidden">
-        <div id="float-contact" class="btn mb-20 cursor-pointer"><img src="images\float button\comment-dots-solid.svg" /></div>
+<!--        <div id="float-contact" class="btn mb-20 cursor-pointer"><img src="images\float button\comment-dots-solid.svg" /></div>-->
         <div id="scroll-top" class="btn cursor-pointer"><img src="images\float button\arrow-up.svg" /></div>
-        <div class="show-contact float hidden">
-            <div>
-              <span>Hotline:</span>
-              <span class="mr-auto">0919 742 472</span>
-            </div> 
-            <div style="margin-top: 10px">
-              <span>Email:</span>
-              <span class="ml-auto">support@gogojungle.vn</span>
-            </div>
-        </div>
+<!--        <div class="show-contact float hidden">-->
+<!--            <div>-->
+<!--              <span>Hotline:</span>-->
+<!--              <span class="mr-auto">0919 742 472</span>-->
+<!--            </div> -->
+<!--            <div style="margin-top: 10px">-->
+<!--              <span>Email:</span>-->
+<!--              <span class="ml-auto">support@gogojungle.vn</span>-->
+<!--            </div>-->
+<!--        </div>-->
     </div>
 </body>
 <script>
