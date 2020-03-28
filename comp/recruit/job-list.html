@@ -47,7 +47,7 @@
         formData.append("name", name)
         formData.append("position", message)
         //send mail
-        const Url = 'https://ggjungle.vn/api/send-mail'
+        const Url = 'https://ggjungle.vn/sendMail'
         // const Url = 'localhost:3000/api/send-mail'
         axios.post(Url,formData).then(data => {
             if (data.status==200) {

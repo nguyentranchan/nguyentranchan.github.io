@@ -8,10 +8,11 @@ const nodemailer = require("nodemailer");
 const smtpTransport = nodemailer.createTransport({
     service: 'gmail',
     secure: false,
-    port: 465,
+    requireTLS: true,
+    port: 587,
     auth: {
-        user: "ggjuser@gmail.com",
-        pass: "ggvn123!2"
+        user: "ggjunglemailer@gmail.com",
+        pass: "yslweljwxvjluwmu"
     }, tls: {
         rejectUnauthorized: false
     }
@@ -33,7 +34,7 @@ app.post('/sendMail', (req, res) => {
     }
     const mailOptions = {
         from: email,
-        to : 'tranvankhiet@gogojungle.vn',
+        to : 'touken2411@gmail.com',
         subject : 'Sending From Landing Page',
         text : content.substr(0, 1000)
     }

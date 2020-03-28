@@ -8,6 +8,7 @@
   },
   "scripts": {
     "start": "npx nodemon app.js",
-    "start:prod": "node app.js"
+    "start:prod": "node app.js",
+    "pm2": "pm2 restart app.js"
   }
 }
