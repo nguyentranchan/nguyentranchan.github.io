@@ -166,6 +166,13 @@
 
 .form .form-info .left {
   width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .form .form-info .right {
@@ -173,21 +180,25 @@
   margin-left: auto;
 }
 
-.form .form-info .left div span, .form .form-info .right div span {
+.form .form-info .left span,
+.form .form-info .right span {
   display: inline-block;
   width: 110px;
 }
 
-.form .form-info .left div input, .form .form-info .right div input {
-  width: calc(100% - 130px);
+.form .form-info .left input,
+.form .form-info .right input {
+  width: calc(100% - 50px);
 }
 
-.form .form-info .left div textarea, .form .form-info .right div textarea {
+.form .form-info .left textarea,
+.form .form-info .right textarea {
   width: 100%;
 }
 
 @media screen and (max-width: 640px) {
-  .form .form-info .left, .form .form-info .right {
+  .form .form-info .left,
+  .form .form-info .right {
     width: 100%;
   }
 }
@@ -201,9 +212,7 @@
   }
 }
 
-.form .btn-send {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+.form button {
   color: white;
   background-color: #0f4e82;
   width: 150px;

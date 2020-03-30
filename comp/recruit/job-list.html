@@ -1,84 +1,101 @@
 <script src="js/recruitData.js"></script>
 <script>
-    function loadJob(job) { // display target job
-        //display job name
-        document.getElementById("name").innerHTML = data[job.id].name; 
-        //display form title
-        document.getElementById("form-title").innerHTML =  'Join us as ' + data[job.id].name;
-        //display job tags
-        let tags = "";
-        for (i in data[job.id].tags)
-        {
-            tags += "<span class=\"tags-child\">"+ data[job.id].tags[i] + "</span>"
-        }
-        $("span").remove(".tags-child"); // remove old tags
-        $("#tags").append(tags);
-        //display job requirement
-        let req = "";
-        for (i in data[job.id].requirement)
-        {
-            req += data[job.id].requirement[i] + "<br>";
-        }
-        document.getElementById("requirement").innerHTML = req;
-        //display job's `nice to have`
-        let plu = "";
-        for (i in data[job.id].plus)
-        {
-            plu += data[job.id].plus[i] + "<br>";
-        }
-        document.getElementById("plus").innerHTML = plu;
-        //display full JD
-        $(".job-des").css({"border-top": "8px solid "+ data[job.id].color});
-        $(".job-des").slideDown( "slow",function() { $( ".form" ).slideDown("slow"); });
-        //scroll to JD
-        $('html,body').animate({ scrollTop: $(".job-des").offset().top - 50 }, 'slow');
+  function loadJob(job) {
+    // display target job
+    //display job name
+    document.getElementById("name").innerHTML = data[job.id].name;
+    //display form title
+    document.getElementById("form-title").innerHTML =
+      "Join us as " + data[job.id].name;
+    //display job tags
+    let tags = "";
+    for (i in data[job.id].tags) {
+      tags += '<span class="tags-child">' + data[job.id].tags[i] + "</span>";
     }
-    // function sendCV() { 
-    //     //collect data for sending mail
-    //     let name, email, message, cv ;
-    //     name = $("#cv-name").val();
-    //     email = $("#cv-email").val();
-    //     file = $("#cv")[0].files[0];
-    //     message = $("form-title").text().slice(11) + "\n" + $("#cv-message").val();
-        
-    //     var formData = new FormData();
-    //     formData.append("cv", file);
-    //     formData.append("email", email)
-    //     formData.append("name", name)
-    //     formData.append("position", message)
-    //     //send mail
-    //     // const Url = 'https://ggjungle.vn/api/send-mail'
-    //     const Url = 'localhost:3000/api/send-mail'
-    //     axios.post(Url,formData).then(data => {
-    //         if (data.status==200) {
-    //             alert('Your information has been sent!!');
-    //         }
-    //     }).catch(err => console.log(err))
-    // }
+    $("span").remove(".tags-child"); // remove old tags
+    $("#tags").append(tags);
+    //display job requirement
+    let req = "";
+    for (i in data[job.id].requirement) {
+      req += data[job.id].requirement[i] + "<br>";
+    }
+    document.getElementById("requirement").innerHTML = req;
+    //display job's `nice to have`
+    let plu = "";
+    for (i in data[job.id].plus) {
+      plu += data[job.id].plus[i] + "<br>";
+    }
+    document.getElementById("plus").innerHTML = plu;
+    //display full JD
+    $(".job-des").css({ "border-top": "8px solid " + data[job.id].color });
+    $(".job-des").slideDown("slow", function() {
+      $(".form").slideDown("slow");
+    });
+    //scroll to JD
+    $("html,body").animate(
+      { scrollTop: $(".job-des").offset().top - 50 },
+      "slow"
+    );
+  }
+  // function sendCV() {
+  //     //collect data for sending mail
+  //     let name, email, message, cv ;
+  //     name = $("#cv-name").val();
+  //     email = $("#cv-email").val();
+  //     file = $("#cv")[0].files[0];
+  //     message = $("form-title").text().slice(11) + "\n" + $("#cv-message").val();
+
+  //     var formData = new FormData();
+  //     formData.append("cv", file);
+  //     formData.append("email", email)
+  //     formData.append("name", name)
+  //     formData.append("position", message)
+  //     //send mail
+  //     // const Url = 'https://ggjungle.vn/api/send-mail'
+  //     const Url = 'localhost:3000/api/send-mail'
+  //     axios.post(Url,formData).then(data => {
+  //         if (data.status==200) {
+  //             alert('Your information has been sent!!');
+  //         }
+  //     }).catch(err => console.log(err))
+  // }
 </script>
 <script>
-    $(document).ready(function(){
-        $( ".form" ).hide();
-    })
-    for (i in data) {
-        let job = "<div id=\""+i+"\" class=\"job flex\" onclick=\"loadJob(this)\" style=\"border: 2px solid " + data[i].color + "; border-top: 8px solid " + data[i].color + ";\">";
-        if (data[i].position)
-            job += "<div class=\"job-position\" style=\" background-color:"+ data[i].color + " \">"+ data[i].position +"</div>";
-        job += "<div class=\"job-name\">"+ data[i].name +"</div>";
-        job += "<div class=\"tags\">";
-        let tag = 0
-        for (j in data[i].tags)
-        {
-            if(tag > 4) { break; } // 4 tags max
-            tag++;
-            job += "<span>"+ data[i].tags[j] + "</span>"
-        }
-        job += "</div></div>";
-        $(".jobs").append(job);
+  $(document).ready(function() {
+    $(".form").hide();
+  });
+  for (i in data) {
+    let job =
+      '<div id="' +
+      i +
+      '" class="job flex" onclick="loadJob(this)" style="border: 2px solid ' +
+      data[i].color +
+      "; border-top: 8px solid " +
+      data[i].color +
+      ';">';
+    if (data[i].position)
+      job +=
+        '<div class="job-position" style=" background-color:' +
+        data[i].color +
+        ' ">' +
+        data[i].position +
+        "</div>";
+    job += '<div class="job-name">' + data[i].name + "</div>";
+    job += '<div class="tags">';
+    let tag = 0;
+    for (j in data[i].tags) {
+      if (tag > 4) {
+        break;
+      } // 4 tags max
+      tag++;
+      job += "<span>" + data[i].tags[j] + "</span>";
     }
+    job += "</div></div>";
+    $(".jobs").append(job);
+  }
 </script>
 <div class="layout jobs flex center flex-wrap">
-    <!---
+  <!---
     <div class="job flex">
         <div class="job-position">Fresher</div>
         <div class="job-name">QA/QC nono</div>
@@ -89,14 +106,14 @@
     </div>--->
 </div>
 <div class="layout full-1000">
-    <div class="job-des">
-        <div id="name" class="job-name"></div>
-        <div id="tags" class="tags"></div>
-        <div class="job-subtitle">Requirement</div>
-        <div id="requirement" class="job-detail requirement"></div>
-        <div class="job-subtitle">Nice to have</div>
-        <div id="plus" class="job-detail"></div>
-    </div>
+  <div class="job-des">
+    <div id="name" class="job-name"></div>
+    <div id="tags" class="tags"></div>
+    <div class="job-subtitle">Requirement</div>
+    <div id="requirement" class="job-detail requirement"></div>
+    <div class="job-subtitle">Nice to have</div>
+    <div id="plus" class="job-detail"></div>
+  </div>
 </div>
 <!-- <form class="layout form" method="post">
     <div id="form-title"></div>
@@ -126,19 +143,32 @@
 </form> -->
 
 <form class="cv-form layout form" method="post">
-    <h2 id="form-title"></h2>
-    <label for="name">Your name:</label>
-    <input type="text" id="name" name="name" required/>
-    <span class="error" id="name-error"></span>
-    <label for="position">Your Position:</label>
-    <input type="text" id="position" name="position" required/>
-    <!-- <span class="error" id="position-error"></span> -->
-    <label for="email">Email</label>
-    <input type="email" id="email" name="email" autocomplete="off" required>
-    <span class="error" id="email-error"></span>
-    <label for="message">Message (1000 words)</label>
-    <textarea name="message" id="message" cols="30" rows="10" required maxlength="1000"></textarea>
-    <span class="error" id="content-error"></span>
-    <span id="result"></span>
-    <button type="button" onclick="sendCV()">Send</button>
+  <h2 id="form-title"></h2>
+  <div class="form-info">
+    <div class="left">
+      <label for="name">Your name:</label>
+      <input type="text" id="name" name="name" required />
+      <span class="error" id="name-error"></span>
+      <label for="position">Your Position:</label>
+      <input type="text" id="position" name="position" required />
+      <!-- <span class="error" id="position-error"></span> -->
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" autocomplete="off" required />
+      <span class="error" id="email-error"></span>
+    </div>
+    <div class="right">
+      <label for="message">Message (1000 words)</label>
+      <textarea
+        name="message"
+        id="message"
+        cols="30"
+        rows="10"
+        required
+        maxlength="1000"
+      ></textarea>
+      <span class="error" id="content-error"></span>
+    </div>
+  </div>
+  <span id="result"></span>
+  <button type="button btn-send" onclick="sendCV()">Send</button>
 </form>
