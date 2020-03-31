@@ -1,17 +1,17 @@
-<div class="contact-info">
-    <div class="logo"></div>
-    <p><img src="images\address.svg" alt="">3rd Floor, Green Phil Building, 8/1 - 8/3 Nguyen Huy Tuong, Ward 6, Binh Thanh District</p>
-    <p><img src="images\phone.svg" alt="">0919 742 472</p>
-    <p><img src="images\email.svg" alt="">hr@gogojungle.vn</p>
+<div><h2>Contact Us</h2></div>
+<div class="contact">
+    <div class="contact-info">
+        <div class="logo"><img src="images\logo.svg"/></div>
+        <p><img src="images\footer\address.svg" alt="">3rd Floor, Green Phil Building, 8/1 - 8/3 Nguyen Huy Tuong, Ward 6, Binh Thanh District</p>
+        <p><img src="images\footer\phone.svg" alt="">0919 742 472</p>
+        <p><img src="images\footer\mail.svg" alt="">hr@gogojungle.vn</p>
+    </div>
+    <form class="contact-form" method="post">
+        <input type="email" id="email" name="email" autocomplete="off" placeholder="Your email" required>
+        <span class="error" id="email-error"></span>
+        <textarea name="email-content" id="email-content" cols="30" rows="8" required maxlength="1000" placeholder="Your message"></textarea>
+        <span class="error" id="content-error"></span>
+        <span id="result"></span>
+        <button type="button" onclick="sendMail()">Send</button>
+    </form>
 </div>
-<form class="contact-form" method="post">
-    <h2>Contact Us</h2>
-    <label for="email">Email</label>
-    <input type="email" id="email" name="email" autocomplete="off" required>
-    <span class="error" id="email-error"></span>
-    <label for="email-content">Content (1000 words)</label>
-    <textarea name="email-content" id="email-content" cols="30" rows="10" required maxlength="1000"></textarea>
-    <span class="error" id="content-error"></span>
-    <span id="result"></span>
-    <button type="button" onclick="sendMail()">Send</button>
-</form>
