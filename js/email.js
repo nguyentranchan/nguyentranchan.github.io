@@ -47,7 +47,8 @@ function sendMail() {
     });
 }
 
-function sendCV(e) {
+function sendCV() {
+    const cv = document.querySelector('.cv-form #cv-file')
     const textName = document.querySelector('.cv-form #name')
     const textPosition = document.querySelector('.cv-form #position')
     const textarea = document.querySelector('.cv-form textarea')
@@ -59,7 +60,12 @@ function sendCV(e) {
     const emailError = document.querySelector('.cv-form #email-error')
     const contentError = document.querySelector('.cv-form #content-error')
     const nameError = document.querySelector('.cv-form #name-error')
+    const cvError = document.querySelector('.cv-form #cv-error')
     const result = document.querySelector('.cv-form #result')
+    emailError.innerHTML = ''
+    nameError.innerHTML = ''
+    contentError.innerHTML = ''
+    cvError.innerHTML = ''
     if (!email) {
         emailError.innerHTML = 'Email is required.'
         emailInput.classList.add('required')
@@ -81,27 +87,53 @@ function sendCV(e) {
         textarea.classList.add('required')
         return
     }
+    
+    if (!cv.files.length) {
+        cvError.innerHTML = 'CV file is required.'
+        return
+    }
+
+    var formData = new FormData();
+      formData.append("cv", cv.files[0]);
+      formData.append("email", email)
+      formData.append("name", name)
+      formData.append("message", message)
+      formData.append("position", position)
 
     emailError.innerHTML = ''
     nameError.innerHTML = ''
     contentError.innerHTML = ''
+    cvError.innerHTML = ''
     textarea.classList.remove('required')
     emailInput.classList.remove('required')
     textName.classList.remove('required')
 
-    $.ajax({
-        url: "/sendCV",
-        data: JSON.stringify({email, message,name,position}),
-        type: 'POST',
-        contentType: 'application/json'
-    })
-    .done(function(data) {
-        result.classList.add('result-success')
-        result.innerHTML = 'Thank you for contacting us, we will touch base you within 24 hours.'
-    }).fail(function (error) {
-        result.classList.add('result-error')
+
+    axios.post("/sendCV",formData).then(data => {
+        if (data.status==200) {
+            result.classList.add('result-success')
+            result.innerHTML = 'Thank you for contacting us, we will touch base you within 24 hours.'
+        //  document.getElementById("form-recruit").reset();
+        }
+      }).catch(err => {
+          result.classList.add('result-error')
         result.innerHTML = 'Oops! Something went wrong.'
-    });
+      })
+      
+    // $.ajax({
+    //     url: "/sendCV",
+    //     data: formData,
+    //     processData: false,
+    //     type: 'POST',
+    //     contentType: 'application/json'
+    // })
+    // .done(function(data) {
+    //     result.classList.add('result-success')
+    //     result.innerHTML = 'Thank you for contacting us, we will touch base you within 24 hours.'
+    // }).fail(function (error) {
+    //     result.classList.add('result-error')
+    //     result.innerHTML = 'Oops! Something went wrong.'
+    // });
 }
 
 

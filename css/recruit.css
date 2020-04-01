@@ -175,6 +175,10 @@
           flex-direction: column;
 }
 
+.form .form-info .left #cv-file {
+  margin-top: 10px;
+}
+
 .form .form-info .right {
   width: 45%;
   margin-left: auto;

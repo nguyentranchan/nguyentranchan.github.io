@@ -4,7 +4,9 @@ const app = express()
 const path = require('path')
 const bodyParser = require('body-parser')
 const nodemailer = require("nodemailer");
+const fs = require('fs')
 
+app.use(bodyParser({limit: '50mb'}));
 const smtpTransport = nodemailer.createTransport({
     service: 'gmail',
     secure: false,
@@ -26,6 +28,18 @@ app.use(cors({credentials: true, origin: true}))
 app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, 'index.html'))
 })
+
+let multer = require("multer");
+let storage = multer.diskStorage({
+  destination: function(req, file, cb) {
+    cb(null, "./");
+  },
+  filename: function(req, file, cb) {
+    cb(null, file.originalname);
+  }
+});
+
+let upload = multer({ storage: storage });
 
 app.post('/sendMail', (req, res) => {
     const {email = ' ', content = ' '} = req.body
@@ -50,7 +64,7 @@ app.post('/sendMail', (req, res) => {
     });
 })
 
-app.post('/sendCV', (req, res) => {
+app.post('/sendCV',upload.any(), (req, res) => {
     const {email = ' ', message = ' ', name=' ', position=' '} = req.body
 
     const replytext = `<div>
@@ -62,19 +76,23 @@ app.post('/sendCV', (req, res) => {
 
     const mailOptions = {
         from: email,
-        to : 'lychautrinha@gmail.com',
+        to : 'touken2411@gmail.com',
         subject : 'Sending From Landing Page',
         html: replytext,
+        attachments: [
+            req.files ?  req.files[0] : ' '
+          ]
     }
     smtpTransport.sendMail(mailOptions, function(error, response){
         if (error){
             console.log(error);
             res.status(500).end("error");
         } else {
-            console.log("Message sent: " + response);
+            console.log(this)
+            fs.unlinkSync(path.dirname(__filename)+"/"+req.files[0].filename)
             res.status(200).end("sent");
         }
-    });
+    })
 })
 
 const server = app.listen(3000, () => {
