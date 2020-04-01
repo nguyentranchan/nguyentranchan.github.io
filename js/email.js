@@ -117,7 +117,7 @@ function sendCV() {
         }
       }).catch(err => {
           result.classList.add('result-error')
-        result.innerHTML = 'Oops! Something went wrong.'
+        result.innerHTML = 'Oops! Something went wrong, please make you send an CV with PDF type'
       })
       
     // $.ajax({
