@@ -115,34 +115,8 @@
     <div id="plus" class="job-detail"></div>
   </div>
 </div>
-<!-- <form class="layout form" method="post">
-    <div id="form-title"></div>
-    <div class="form-info">
-        <div class="left">
-            <div>
-                <label>Your name:</label>
-                <input id="cv-name"/>
-            </div>
-            <div>
-                <label>Your email:</label>
-                <input id="cv-email"/>
-            </div>
-            <div>
-                <label>Your CV:</label>
-                <input type="file" id="cv"/>
-            </div>
-        </div>
-        <div class="right">
-            <div>
-                <label>Your message:</label>
-                <textarea rows="3" id="cv-message"/>
-            </div>
-        </div>
-    </div>
-    <button class="btn-send cursor-pointer" onclick="sendCV()">SendCV</button>
-</form> -->
 
-<form class="cv-form layout form" method="post">
+<form class="cv-form layout form" method="POST" >
   <h2 id="form-title"></h2>
   <div class="form-info">
     <div class="left">
@@ -169,5 +143,5 @@
     </div>
   </div>
   <span id="result"></span>
-  <button type="button btn-send" onclick="sendCV()">Send</button>
+  <button class="button btn-send" type="button" onclick="sendCV()">Send</button>
 </form>

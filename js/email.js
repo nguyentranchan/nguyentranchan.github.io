@@ -47,8 +47,7 @@ function sendMail() {
     });
 }
 
-function sendCV() {
-    console.log('send')
+function sendCV(e) {
     const textName = document.querySelector('.cv-form #name')
     const textPosition = document.querySelector('.cv-form #position')
     const textarea = document.querySelector('.cv-form textarea')
@@ -61,7 +60,6 @@ function sendCV() {
     const contentError = document.querySelector('.cv-form #content-error')
     const nameError = document.querySelector('.cv-form #name-error')
     const result = document.querySelector('.cv-form #result')
-    // console.log([textarea,textName,emailInput])
     if (!email) {
         emailError.innerHTML = 'Email is required.'
         emailInput.classList.add('required')
