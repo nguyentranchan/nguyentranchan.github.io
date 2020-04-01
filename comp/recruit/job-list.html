@@ -131,6 +131,10 @@
       <span class="error" id="email-error"></span>
       <input type="file"
        id="cv-file" name="cvfile">
+       <div class="cv" style="margin-top: 10px;">
+        <label id="customButton" for="file"><a>Đính kèm CV tại đây</a></label>
+        <span id="cvFileName"></span>
+      </div>
       <span class="error" id="cv-error"></span>
 
     </div>
@@ -149,3 +153,14 @@
   <span id="result"></span>
   <button class="button btn-send" type="button" onclick="sendCV()">Send</button>
 </form>
+<script>
+  document.getElementById("customButton").addEventListener("click", function () {
+      document.getElementById("cv-file").click();  // trigger the click of actual file upload button
+    });
+
+    document.getElementById("cv-file").addEventListener("change", function () {
+      var fullPath = this.value; // fetched value = C:\fakepath\fileName.extension
+      var fileName = fullPath.split(/(\\|\/)/g).pop();  // fetch the file name
+      document.getElementById("cvFileName").innerHTML = fileName;  // display the file name
+    }, false);
+</script>

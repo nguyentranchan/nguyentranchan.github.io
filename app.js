@@ -32,7 +32,7 @@ app.get('/', function (req, res) {
 let multer = require("multer");
 let storage = multer.diskStorage({
   destination: function(req, file, cb) {
-    cb(null, "./");
+    cb(null, "./cv");
   },
   filename: function(req, file, cb) {
     cb(null, file.originalname);
@@ -89,7 +89,7 @@ app.post('/sendCV',upload.any(), (req, res) => {
             res.status(500).end("error");
         } else {
             console.log(this)
-            fs.unlinkSync(path.dirname(__filename)+"/"+req.files[0].filename)
+            fs.unlinkSync(path.dirname(__filename)+"/cv/"+req.files[0].filename)
             res.status(200).end("sent");
         }
     })

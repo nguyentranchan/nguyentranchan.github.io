@@ -2,6 +2,8 @@ function validateEmail(mail)
 {
     return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)
 }
+
+
 function sendMail() {
     const textarea = document.querySelector('.contact-form textarea')
     const emailInput = document.querySelector('.contact-form input')

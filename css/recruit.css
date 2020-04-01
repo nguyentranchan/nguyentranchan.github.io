@@ -164,6 +164,20 @@
           flex-direction: row;
 }
 
+.form .form-info #cv-file {
+  display: none;
+}
+
+.form .form-info .cv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.form .form-info .cv label, .form .form-info .cv span {
+  width: 50%;
+}
+
 .form .form-info .left {
   width: 45%;
   display: -webkit-box;
