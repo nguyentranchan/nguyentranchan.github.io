@@ -3,39 +3,31 @@
   function loadJob(job) {
     // display target job
     //display job name
-    document.getElementById("name").innerHTML = data[job.id].name;
+    document.getElementById("name").innerHTML = data[job].name;
     //display form title
     document.getElementById("form-title").innerHTML =
-      "Join us as " + data[job.id].name;
+      "Join us as " + data[job].name;
     //display job tags
     let tags = "";
-    for (i in data[job.id].tags) {
-      tags += '<span class="tags-child">' + data[job.id].tags[i] + "</span>";
+    for (i in data[job].tags) {
+      tags += '<span class="tags-child">' + data[job].tags[i] + "</span>";
     }
     $("span").remove(".tags-child"); // remove old tags
     $("#tags").append(tags);
     //display job requirement
     let req = "";
-    for (i in data[job.id].requirement) {
-      req += data[job.id].requirement[i] + "<br>";
+    for (i in data[job].requirement) {
+      req += data[job].requirement[i] + "<br>";
     }
     document.getElementById("requirement").innerHTML = req;
     //display job's `nice to have`
     let plu = "";
-    for (i in data[job.id].plus) {
-      plu += data[job.id].plus[i] + "<br>";
+    for (i in data[job].plus) {
+      plu += data[job].plus[i] + "<br>";
     }
     document.getElementById("plus").innerHTML = plu;
     //display full JD
-    $(".job-des").css({ "border-top": "8px solid " + data[job.id].color });
-    $(".job-des").slideDown("slow", function() {
-      $(".form").slideDown("slow");
-    });
-    //scroll to JD
-    $("html,body").animate(
-      { scrollTop: $(".job-des").offset().top - 50 },
-      "slow"
-    );
+    $(".job-des").css({ "border-top": "8px solid " + data[job].color });
   }
   // function sendCV() {
   //     //collect data for sending mail
@@ -62,13 +54,13 @@
 </script>
 <script>
   $(document).ready(function() {
-    $(".form").hide();
+    loadJob(Object.keys(data)[0])
   });
   for (i in data) {
     let job =
       '<div id="' +
       i +
-      '" class="job flex" onclick="loadJob(this)" style="border: 2px solid ' +
+      '" class="job flex" onclick="loadJob(this.id)" style="border: 2px solid ' +
       data[i].color +
       "; border-top: 8px solid " +
       data[i].color +
@@ -94,7 +86,7 @@
     $(".jobs").append(job);
   }
 </script>
-<div class="layout jobs flex center flex-wrap">
+<div class="layout jobs flex flex-wrap">
   <!---
     <div class="job flex">
         <div class="job-position">Fresher</div>
@@ -132,7 +124,7 @@
       <input type="file"
        id="cv-file" name="cvfile">
        <div class="cv" style="margin-top: 10px;">
-        <label id="customButton" for="file"><a>Đính kèm CV tại đây</a></label>
+        <label class="cursor-pointer" id="customButton" for="file"><a>Đính kèm CV tại đây</a></label>
         <span id="cvFileName"></span>
       </div>
       <span class="error" id="cv-error"></span>
