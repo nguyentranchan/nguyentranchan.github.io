@@ -43,7 +43,7 @@
 @media screen and (max-width: 1000px) {
   .header {
     width: 100%;
-    padding: 20px 150px;
+    padding: 10px 50px;
   }
 }
 
@@ -68,7 +68,6 @@
   }
 }
 #banner {
-  height: 87vh;
   display: flex;
   overflow: hidden;
   background-color: #f5f7e1;
@@ -210,11 +209,12 @@
     }
   }
   .image {
+    display: flex;
+    justify-content: flex-end;
     img {
-      width: 1200px;
+      width: 60vmax;
       position: relative;
-      bottom: 175px;
-      right: -11vw;
+      left: 15vmax;
     }
   }
   // .circle-03 {
@@ -250,7 +250,7 @@
 
 @media screen and (max-width: 900px) {
   .header {
-    padding: 20px 40px;
+    padding: 10px 40px;
   }
   .logo {
     font-size: 20px !important;
@@ -267,8 +267,7 @@
   #banner {
     height: 85vh;
     .slogan {
-      margin-left: 40px;
-      margin-top: 20vmax;
+        margin-top: 20vmax;
       &-1 {
         line-height: 30px;
         color: black;
@@ -282,128 +281,12 @@
     }
     .image {
       img {
-        width: 103vw;
+        width: 60vmax;
         position: relative;
-        bottom: 5px;
-        left: 25vw;
       }
     }
   }
 }
-
-@media screen and (max-width: 500px) {
-  .header {
-    ul {
-      display: none;
-    }
-  }
-  #banner {
-    height: 550px;
-    .slogan {
-      margin-left: 20px;
-      margin-top: 50px;
-      &-1 {
-        line-height: 30px;
-        color: black;
-        font-size: 30px;
-      }
-      &-2 {
-        margin-top: 20px;
-        font-size: 20px;
-        font-weight: 100;
-        width: 134px;
-        color: #535353;
-      }
-    }
-    .image {
-      img {
-        width: 142vw;
-        position: relative;
-        bottom: 5px;
-        left: 10vw;
-      }
-    }
-  }
-}
-
-//footer {
-//  .bg-blue {
-//    background-color: var(--primary);
-//  }
-//  .w-full {
-//    width: 100%;
-//  }
-//  .mr-10 {
-//    margin-right: 10px;
-//  }
-//  .mr-15 {
-//    margin-right: 15px;
-//  }
-//  .ml-10 {
-//    margin-left: 10px;
-//  }
-//  .ml-auto {
-//    margin-left: auto;
-//  }
-//  .mt-auto {
-//    margin-top: auto;
-//  }
-//  .co-white {
-//    color: white;
-//  }
-//  .fs-13 {
-//    font-size: 13px;
-//  }
-//  .fs-35 {
-//    font-size: 35px;
-//  }
-//  .footer {
-//    padding: 30px 0px;
-//    width: 1000px;
-//    margin: auto;
-//  }
-//  .social-links {
-//    img {
-//      width: 30px;
-//      height: 30px;
-//      filter: invert(99%) sepia(100%) saturate(2%) hue-rotate(270deg) brightness(105%) contrast(101%);
-//    }
-//    img:hover {
-//      filter: invert(49%) sepia(89%) saturate(5365%) hue-rotate(340deg) brightness(97%) contrast(89%);
-//    }
-//  }
-//  .address {
-//    width: calc(100% - 310px);
-//  }
-//  .inline {
-//    display: inline-block;
-//  }
-//  @media screen and (max-width: 1000px) {
-//    .footer {
-//      padding: 30px 40px;
-//      width: 100%;
-//    }
-//  }
-//
-//  @media screen and (max-width: 900px) {
-//    .header {
-//      padding: 20px 40px;
-//    }
-//  }
-//  @media screen and (max-width: 640px) {
-//    .inline {
-//      display: block;
-//      width: 100%;
-//    }
-//    .address {
-//      padding: 5px;
-//    }
-//    .footer {
-//      padding: 15px 5px;
-//      text-align: center;
-//    }
-//  }
-//}
 
 .hiring {
   height: 600px;
@@ -717,10 +600,19 @@ body {
 }
 @media screen and (max-width: 900px) {
   .layout {
-    padding: 40px;
+    padding: 0px 40px 40px 40px;
     text-align: center;
   }
 }
+// @media screen and (max-width: 425px) {
+//   #banner {
+//     height: 400px;
+//   }
+//   .layout {
+//     padding: 0px 40px 40px 40px;
+//     text-align: center;
+//   }
+// }
 .mb-100 {
   margin-bottom: 100px;
 }
@@ -733,5 +625,44 @@ body {
 @media screen and (max-width: 720px) {
   .our-project > div:nth-child(2) {
     height: 1800px;
+  }
+}
+
+
+@media screen and (max-width: 425px) {
+  .header {
+    padding: 10px 20px;
+    ul {
+      display: none;
+    }
+  }
+  
+  #banner {
+    height: 65vh; 
+    .layout {
+      padding: 40px;
+    }
+    .slogan {
+      margin-top: 0px;
+      &-1 {
+        line-height: 30px;
+        color: black;
+        font-size: 30px;
+      }
+      &-2 {
+        margin-top: 20px;
+        font-size: 20px;
+        font-weight: 100;
+        width: 150px;
+        color: #535353;
+      }
+    }
+    .image {
+      img {
+        opacity: 0.8;
+        top: 10px;
+        left: 5vh;
+      }
+    }
   }
 }
