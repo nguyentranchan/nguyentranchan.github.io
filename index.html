@@ -74,14 +74,6 @@
           $("html, body").animate({ scrollTop: 0 }, "slow");
         });
       });
-      $(document).scroll(function () {
-        var y = $(this).scrollTop();
-        if (y > 100) {
-          $(".floating").fadeIn();
-        } else {
-          $(".floating").fadeOut();
-        }
-      });
     </script>
     <style>
       :root {
@@ -119,6 +111,7 @@
 
     btn.onclick = function () {
       modal.style.display = "block";
+      modal.style.animation = "modalAnimate 0.25s linear";
     };
 
     span.onclick = function () {
