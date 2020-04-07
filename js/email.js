@@ -43,6 +43,13 @@ function sendMail() {
     .done(function(data) {
         result.classList.add('result-success')
         result.innerHTML = 'Thank you for contacting us, we will touch base you within 8 hours.'
+        $("#contact-send-mail").hide()
+        setTimeout(() => { 
+            result.innerHTML = "";
+            $("#email").val("");
+            $("#email-content").val("");
+            $("#contact-send-mail").show()
+         }, 5000);
     }).fail(function (error) {
         result.classList.add('result-error')
         result.innerHTML = 'Oops! Something went wrong.'

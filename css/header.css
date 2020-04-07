@@ -518,12 +518,13 @@
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: #fefefe;
-  margin: 15% auto;
+  margin: 15% auto auto auto;
   /* 15% from the top and centered */
   padding: 0 20px 20px 20px;
   border: 1px solid #888;
   width: 80%;
   /* Could be more or less, depending on screen size */
+  max-width: 750px;
   background-color: #fff;
 }
 
@@ -898,6 +899,16 @@ body {
   margin-left: auto;
 }
 
+.modal .contact .contact-form .required {
+  border: 1px solid #ef5227 !important;
+}
+
+.modal .contact .contact-form .error {
+  font-size: 12px;
+  margin-top: -12px;
+  color: #ef5227 !important;
+}
+
 .modal .contact .contact-form h2 {
   margin-bottom: 8px;
   color: var(--primary);
@@ -914,6 +925,8 @@ body {
   line-height: 20px;
   background: #9fb8cd;
   color: #fff;
+  opacity: 85%;
+  resize: none;
 }
 
 .modal .contact .contact-form input::-webkit-input-placeholder, .modal .contact .contact-form textarea::-webkit-input-placeholder {
@@ -942,5 +955,21 @@ body {
   width: 100%;
   border-radius: 10px;
   background-color: var(--primary);
+  opacity: 85%;
+}
+
+@media screen and (max-width: 720px) {
+  .modal .contact .contact-img {
+    display: none;
+  }
+  .modal .contact .contact-form {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .modal .contact {
+    background: url("../images/float button/ContactUs.svg") no-repeat center;
+  }
 }
 /*# sourceMappingURL=header.css.map */

@@ -49,7 +49,7 @@ app.post('/sendMail', (req, res) => {
     console.log(req.body)
     const mailOptions = {
         from: email,
-        to : 'lychautrinha@gmail.com',
+        to : 'touken2411@gmail.com',
         subject : 'Sending From Landing Page',
         text : content.substr(0, 1000)
     }
