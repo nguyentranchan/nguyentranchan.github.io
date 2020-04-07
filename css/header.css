@@ -5,7 +5,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 20px 0;
+  padding: 15px 0;
   width: 1000px;
   margin: auto;
   position: relative;
@@ -25,8 +25,12 @@
   font-size: 30px;
 }
 
-.header .logo img {
-  width: 200px;
+.header .logo a {
+  max-height: 50px;
+}
+
+.header .logo a img {
+  width: 150px;
 }
 
 .header .logo-text {
@@ -38,7 +42,7 @@
 }
 
 .header ul {
-  font-size: 24px;
+  font-size: 20px;
   margin-left: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -520,6 +524,7 @@
   border: 1px solid #888;
   width: 80%;
   /* Could be more or less, depending on screen size */
+  background-color: #fff;
 }
 
 /* The Close Button */
@@ -602,6 +607,7 @@ body {
   border: 1px solid #b2b2b2;
   border-radius: 50px;
   background-color: #fff;
+  margin-top: 15px;
 }
 
 .floating .btn:hover {
@@ -850,5 +856,91 @@ body {
     top: 10px;
     left: 5vh;
   }
+}
+
+.modal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.modal .contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.modal .contact .contact-img {
+  width: 45%;
+}
+
+.modal .contact .contact-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 45%;
+  margin-left: auto;
+}
+
+.modal .contact .contact-form h2 {
+  margin-bottom: 8px;
+  color: var(--primary);
+  font-size: 24px;
+}
+
+.modal .contact .contact-form input, .modal .contact .contact-form textarea {
+  min-height: 32px;
+  margin-top: 12px;
+  margin-bottom: 16px;
+  padding: 4px;
+  border: none;
+  border-radius: 5px;
+  line-height: 20px;
+  background: #9fb8cd;
+  color: #fff;
+}
+
+.modal .contact .contact-form input::-webkit-input-placeholder, .modal .contact .contact-form textarea::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.modal .contact .contact-form input:-ms-input-placeholder, .modal .contact .contact-form textarea:-ms-input-placeholder {
+  color: #fff;
+}
+
+.modal .contact .contact-form input::-ms-input-placeholder, .modal .contact .contact-form textarea::-ms-input-placeholder {
+  color: #fff;
+}
+
+.modal .contact .contact-form input::placeholder, .modal .contact .contact-form textarea::placeholder {
+  color: #fff;
+}
+
+.modal .contact .contact-form button {
+  margin-top: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  border: none;
+  min-height: 38px;
+  width: 100%;
+  border-radius: 10px;
+  background-color: var(--primary);
 }
 /*# sourceMappingURL=header.css.map */

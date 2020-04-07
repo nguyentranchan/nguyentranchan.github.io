@@ -90,7 +90,10 @@
     <section class="our-project"></section>
     <section class="hire"></section>
     <footer id="contact-us"></footer>
-    <div id="myBtn" class="floating">
+    <div class="floating">
+      <div id="contactBtn" class="btn cursor-pointer">
+        <img src="images\float button\mail.svg" />
+      </div>
       <div id="scroll-top" class="btn cursor-pointer">
         <img src="images\float button\arrow-up.svg" />
       </div>
@@ -98,14 +101,26 @@
     <div id="myModal" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
-        <p>Bla bla bla</p>
+        <div class="contact">
+          <div class="contact-img"><img src="images\float button\ContactUs.svg" /></div>
+          <form class="contact-form" method="post">
+            <h2>Contact us</h2>
+            <input type="text" id="send-name" name="send-name" autocomplete="off" placeholder="Your name" required>
+            <input type="email" id="email" name="email" autocomplete="off" placeholder="Your email" required>
+            <span class="error" id="email-error"></span>
+            <textarea name="email-content" id="email-content" cols="30" rows="8" required maxlength="1000" placeholder="Your message"></textarea>
+            <span class="error" id="content-error"></span>
+            <span id="result"></span>
+            <button type="button" onclick="sendMail()">Send</button>
+          </form>
+        </div>
       </div>
     </div>
   </body>
   <script>
     var modal = document.getElementById("myModal");
 
-    var btn = document.getElementById("myBtn");
+    var btn = document.getElementById("contactBtn");
 
     var span = document.getElementsByClassName("close")[0];
 
