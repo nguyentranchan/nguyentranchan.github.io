@@ -12,5 +12,3 @@ build:
     - git checkout v2
     - git pull
     - npm run build
-only:
-  - v2
