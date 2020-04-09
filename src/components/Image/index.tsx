@@ -17,7 +17,7 @@ class Image extends React.PureComponent<{}, {}> {
         // tslint:disable-next-line:jsx-no-multiline-js
         query={graphql`
           query {
-            placeholderImage: file(relativePath: { eq: "gatsby-typescript.jpg" }) {
+            placeholderImage: file(relativePath: { eq: "" }) {
               childImageSharp {
                 fluid(maxWidth: 600) {
                   ...GatsbyImageSharpFluid

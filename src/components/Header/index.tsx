@@ -28,8 +28,8 @@ class Header extends React.PureComponent<HeaderProps, {}> {
     // const { siteTitle } = this.props;
 
     return (
-      <header className="container-lg shadow-md h-20">
-        <nav className="flex items-center justify-between flex-wrap px-6 md:px-20 lg:px-20 h-20">
+      <header className="container-lg shadow-md">
+        <nav className="flex items-center justify-between flex-wrap px-6 md:px-20 lg:px-20 md:h-20 lg:20">
           <div className="flex items-center flex-shrink-0 text-white mr-6">
             <Logo />
           </div>
@@ -41,7 +41,7 @@ class Header extends React.PureComponent<HeaderProps, {}> {
               </svg>
             </button>
           </div>
-          <div className="menu-item w-full block flex-grow lg:flex lg:justify-end lg:w-auto md:flex md:justify-end md:w-auto">
+          <div className="menu-item w-full block flex-grow lg:flex lg:justify-end lg:w-auto md:flex md:justify-end md:w-auto z-10 bg-white">
             <div className="text-md md:inline-flex lg:inline-flex">
               <DesktopMenuItem text="Products" />
               <DesktopMenuItem text="Our Company" />
