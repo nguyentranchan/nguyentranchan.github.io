@@ -1,0 +1,12 @@
+@responsive {
+  .slogan {
+    top: 32%;
+    &-md,&-lg {
+      left: 10%;
+    }
+  
+    &-xs {
+      left: 2%;
+    }
+  }
+}
