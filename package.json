@@ -6,7 +6,7 @@
   "scripts": {
     "build": "gatsby build",
     "start": "gatsby develop",
-    "pm2": "gatsby serve"
+    "pm2": "pm2 start pm2.config.json"
   },
   "browserslist": [
     "defaults",
@@ -17,9 +17,9 @@
     "gatsby-image": "^2.0.20",
     "gatsby-plugin-favicon": "^3.1.4",
     "gatsby-plugin-manifest": "^2.0.8",
-    "gatsby-plugin-netlify": "^2.0.5",
     "gatsby-plugin-offline": "^2.0.13",
     "gatsby-plugin-react-helmet": "^3.0.1",
+    "gatsby-plugin-react-svg": "^3.0.0",
     "gatsby-plugin-sass": "^2.2.1",
     "gatsby-plugin-sharp": "^2.0.12",
     "gatsby-plugin-sitemap": "^2.0.2",

@@ -1,6 +1,6 @@
 import React from 'react'
-import IntroBg from '../../images/intro.svg'
 import Typewriter from 'typewriter-effect'
+import IntroImage from '../../images/intro.svg'
 
 export function Intro() {
   return (
@@ -17,7 +17,7 @@ export function Intro() {
           }}
         />
       </div>
-      <img src={IntroBg} alt="" />
+      <IntroImage />
     </div>
   )
 }

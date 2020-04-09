@@ -59,6 +59,6 @@ module.exports = {
     `gatsby-plugin-typescript`,
     `gatsby-plugin-tslint`,
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-netlify`,
+    `gatsby-plugin-react-svg`,
   ],
 }
