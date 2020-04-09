@@ -18,8 +18,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'gatsby-typescript-boilerplate',
-        short_name: 'starter',
+        name: 'GGJungle',
+        short_name: 'GGJ',
         start_url: '/',
         background_color: '#663399',
         theme_color: '#663399',
