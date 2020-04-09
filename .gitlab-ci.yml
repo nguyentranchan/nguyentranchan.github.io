@@ -1,6 +1,12 @@
 before_script:
   - apt-get update -qq
   - apt-get install -qq git
+  - apt-get install build-essential libssl-dev
+  - curl -sL https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh -o install_nvm.sh
+  - nano install_nvm.sh
+  - source ~/.profile
+  - nvm ls-remote
+  - nvm install 10.16.0
 
 stages:
   - build
