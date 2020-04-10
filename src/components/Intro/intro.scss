@@ -1,0 +1,29 @@
+//small
+@media screen and (max-width: 763px) {
+  .typewriter-lg, .typewriter-md {
+    display: none;
+  }
+  .typewriter-sm {
+    display: block;
+  }
+}
+
+// medium
+@media screen and (min-width: 764px), screen and (max-width: 1023px) {
+  .typewriter-sm, .typewriter-lg {
+    display: none;
+  }
+  .typewriter-md {
+    display: block;
+  }
+}
+
+// large
+@media screen and (min-width: 1024px) {
+  .typewriter-sm, .typewriter-md {
+    display: none;
+  }
+  .typewriter-lg {
+    display: block;
+  }
+}

@@ -1,12 +1,13 @@
 @responsive {
   .slogan {
-    top: 32%;
     &-md,&-lg {
-      left: 10%;
+      top: 32%;
+      left: 64px;
     }
   
     &-xs {
-      left: 2%;
+      top: 24%;
+      left: 24px;
     }
   }
 }

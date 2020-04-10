@@ -5,9 +5,10 @@ interface Props {
   fill?: string
   displayText?: boolean
   className?: string
+  textColor?: string
 }
 export function Logo(props: Props) {
-  const { fill = '#2B6CB0', displayText = true, className = '' } = props
+  const { fill = '#2B6CB0', displayText = true, className = '', textColor = 'text-blue-700' } = props
   return (
     <a href="/">
       <div className={`logo inline-flex ${className}`}>
@@ -26,7 +27,7 @@ export function Logo(props: Props) {
           />
         </svg>
         {displayText && (
-          <div className="logo-text font-semibold text-2xl tracking-tight text-blue-700 flex items-center ml-2">
+          <div className={`logo-text font-semibold text-2xl tracking-tight ${textColor} flex items-center ml-2`}>
             GGJungle
           </div>
         )}
