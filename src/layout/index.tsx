@@ -42,9 +42,13 @@ class Layout extends React.Component<LayoutProps, {}> {
                 meta={[
                   {
                     name: 'description',
-                    content: 'Gatsby TypeScript Boilerplate Starter',
+                    content: 'GGJungle VN - Provide Stock, FX services',
                   },
-                  { name: 'keywords', content: 'Gatsby, TypeScript, Starter' },
+                  {
+                    name: 'keywords',
+                    content:
+                      'FX, forex learning, system forex, trade, automatic trading, trade, trader, copy trading, stock, investment',
+                  },
                 ]}
               >
                 <html lang="en" />
