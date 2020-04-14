@@ -6,7 +6,7 @@ import Particles from 'react-particles-js'
 import IntroImageMobile from '../../images/intro-mobile.png'
 
 export function Intro() {
-  if (window) {
+  if (typeof window !== 'undefined') {
     ;(window as any).particlesJS.load('particles-js', params)
   }
 
