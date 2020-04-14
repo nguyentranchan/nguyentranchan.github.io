@@ -5,9 +5,10 @@
       left: 64px;
     }
   
-    &-xs {
+    &-sm,&-xs {
       top: 24%;
-      left: 24px;
+      left: 0;
+      right: 0;
     }
   }
 }

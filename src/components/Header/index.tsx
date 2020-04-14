@@ -21,8 +21,7 @@ const DesktopMenuItem = (props: ItemProps) => {
     <a
       onClick={props.onClick}
       className={
-        'h-20 text-blue-700 hover:text-white hover:bg-blue-700 px-4 flex items-center text-center cursor-pointer' +
-        className
+        'h-16 text-white hover:menu-h-white--hover px-4 flex items-center text-center cursor-pointer' + className
       }
     >
       {text}
@@ -45,14 +44,14 @@ class Header extends React.PureComponent<HeaderProps, HeaderState> {
   }
   public render() {
     return (
-      <header className="container-lg shadow-md fixed top-0 right-0 left-0 bg-white z-10">
-        <nav className="flex items-center justify-between flex-wrap px-6 md:px-16 lg:px-18 md:h-20 lg:20">
+      <header className="container-lg fixed top-0 right-0 left-0 bg-transparent z-10">
+        <nav className="flex items-center justify-between px-6 md:px-16 lg:px-18 md:h-16 lg:16">
           <div className="flex items-center flex-shrink-0 text-white mr-6">
-            <Logo />
+            <Logo fill="white" textColor="text-white" />
           </div>
           <div className="block lg:hidden md:hidden">
             <button
-              className="flex items-center px-3 py-2 border rounded text-blue-700 hover:border-blue-700 outline-none"
+              className="flex items-center px-3 py-2 border rounded text-white hover:border-white outline-none"
               onClick={this.handleMenuClick}
             >
               <svg className="fill-current h-4 w-4" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -62,9 +61,9 @@ class Header extends React.PureComponent<HeaderProps, HeaderState> {
             </button>
           </div>
           <div
-            className={`menu-list w-full flex-grow lg:flex lg:justify-end lg:w-auto md:flex md:justify-end md:w-auto z-10 bg-white lg:block hidden`}
+            className={`menu-list w-full flex-grow lg:flex lg:justify-end lg:w-auto md:flex md:justify-end md:w-auto z-10 bg-transparent lg:block hidden`}
           >
-            <div className="text-md md:inline-flex lg:inline-flex">
+            <div className="text-sm md:inline-flex lg:inline-flex">
               <DesktopMenuItem text="Products" />
               <DesktopMenuItem text="Our Company" />
               <DesktopMenuItem text="Career" />

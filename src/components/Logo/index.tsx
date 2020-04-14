@@ -27,7 +27,7 @@ export function Logo(props: Props) {
           />
         </svg>
         {displayText && (
-          <div className={`logo-text font-semibold text-2xl tracking-tight ${textColor} flex items-center ml-2`}>
+          <div className={`logo-text font-semibold text-xl tracking-tight ${textColor} flex items-center ml-2`}>
             GGJungle
           </div>
         )}
