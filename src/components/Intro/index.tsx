@@ -6,7 +6,9 @@ import Particles from 'react-particles-js'
 import IntroImageMobile from '../../images/intro-mobile.png'
 
 export function Intro() {
-  ;(window as any).particlesJS.load('particles-js', params)
+  if (window) {
+    ;(window as any).particlesJS.load('particles-js', params)
+  }
 
   return (
     <div className="intro relative bg-gblue">
