@@ -1,6 +1,6 @@
 import React from 'react'
 import Vision from '../../images/icons/vision.png'
-import Misison from '../../images/icons/mission.svg'
+import Misison from '../../images/icons/mission.png'
 import './about-us.scss'
 
 export class AboutUs extends React.Component {
@@ -32,7 +32,7 @@ export class AboutUs extends React.Component {
           <div className="mission mt-10">
             <h2 className="text-2xl">Mission</h2>
             <div className="flex mt-4">
-              <Misison style={{ width: 60, height: 60 }} />
+              <img src={Misison} alt="" style={{ width: 60, height: 60 }} />
               <p className="pl-4" style={{ width: 280 }}>
                 Build the great place for people to work and improve
               </p>
