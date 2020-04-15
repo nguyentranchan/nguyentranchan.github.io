@@ -32,7 +32,7 @@ export class Intro extends React.Component<any, { width: number }> {
     const { width } = this.state
 
     return (
-      <div className="intro relative bg-gblue">
+      <div className="container-lg intro relative bg-gblue">
         <Particles className="absolute top-0 right-0 left-0 bottom-0" params={params} />
         <div className="absolute text-white slogan md:slogan-md slogan-xs">
           <p className="block md:text-3xl lg:text-4xl text-2xl text-center md:text-left">Think Globally, Act Locally</p>

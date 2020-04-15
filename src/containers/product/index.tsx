@@ -23,7 +23,10 @@ const ProductItem = (props: any) => {
 export class Product extends React.Component {
   render() {
     return (
-      <div id="products" className="mt-16 product-container px-6 flex flex-col items-center lg:px-18 md:px-16">
+      <div
+        id="products"
+        className="container-lg mt-16 product-container px-6 flex flex-col items-center lg:px-18 md:px-16"
+      >
         <h1 className="text-4xl flex justify-center text-blue-800">What We Do</h1>
         <p className="text-center">
           We build, launch business that helpful. In hac habitasse platea dictumst. Proin at ultricies neque, nec tempus

@@ -6,7 +6,7 @@ import logo2 from '../../images/partner/gogojungle.png'
 export class Parter extends React.Component {
   render() {
     return (
-      <div className="mt-16 px-6 md:px-16 lg:px-18">
+      <div className="container-lg mt-16 px-6 md:px-16 lg:px-18">
         <h1 className="text-center text-4xl text-blue-800">Our Partners</h1>
         <p className="text-center pb-6">
           Aenean odio ex, aliquet id scelerisque finibus, luctus eu mi. Sed in erat sed dui faucibus suscipit ac sit
