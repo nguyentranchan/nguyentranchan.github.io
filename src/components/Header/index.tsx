@@ -8,6 +8,7 @@ interface HeaderProps {
 interface ItemProps {
   className?: string
   text: string
+  href?: string
   onClick?: (event: React.MouseEvent<HTMLAnchorElement> | React.TouchEvent<HTMLAnchorElement>) => void
 }
 
@@ -16,9 +17,10 @@ interface HeaderState {
 }
 
 const DesktopMenuItem = (props: ItemProps) => {
-  const { className = '', text } = props
+  const { className = '', text, href } = props
   return (
     <a
+      href={href}
       onClick={props.onClick}
       className={
         'h-16 text-white hover:menu-h-white--hover px-4 flex items-center text-center cursor-pointer' + className
@@ -64,10 +66,10 @@ class Header extends React.PureComponent<HeaderProps, HeaderState> {
             className={`menu-list w-full flex-grow lg:flex lg:justify-end lg:w-auto md:flex md:justify-end md:w-auto z-10 bg-transparent lg:block hidden`}
           >
             <div className="text-sm md:inline-flex lg:inline-flex">
-              <DesktopMenuItem text="Products" />
-              <DesktopMenuItem text="Our Company" />
-              <DesktopMenuItem text="Career" />
-              <DesktopMenuItem text="Contact" />
+              <DesktopMenuItem text="Products" href="#products" />
+              <DesktopMenuItem text="About Us" href="#about-us" />
+              <DesktopMenuItem text="Career" href="#career" />
+              <DesktopMenuItem text="Contact" href="#footer" />
             </div>
           </div>
           <SideBar isOpen={this.state.open} onClose={this.handleMenuClick} />

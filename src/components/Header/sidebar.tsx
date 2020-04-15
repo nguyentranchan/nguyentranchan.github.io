@@ -9,15 +9,15 @@ interface SideBarProps {
 export function SideBar(props: SideBarProps) {
   const { isOpen, onClose } = props
   return (
-    <div className={`sidenav bg-blue-700 ${isOpen ? 'w-64' : 'w-0'}`}>
+    <div className={`sidenav bg-gblue ${isOpen ? 'w-64' : 'w-0'}`}>
       <a href="javascript:void(0)" className="closebtn" onClick={onClose}>
         &times;
       </a>
       <Logo fill="white" textColor="text-white" />
-      <a href="">Products</a>
-      <a href="">Our Company</a>
-      <a href="">Career</a>
-      <a href="">Contact</a>
+      <a href="#products">Products</a>
+      <a href="#about-us">About Us</a>
+      <a href="#career">Career</a>
+      <a href="#contact">Contact</a>
     </div>
   )
 }

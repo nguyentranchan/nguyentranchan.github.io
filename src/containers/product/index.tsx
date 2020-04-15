@@ -6,11 +6,11 @@ import RealTrade from '../../images/icons/realtrade.svg'
 import Blog from '../../images/icons/blog.svg'
 
 const ProductItem = (props: any) => {
-  const { Icon, className = '', title = '', url, desc } = props
+  const { Icon, className = '', title = '', url, desc, styleIcon } = props
   return (
-    <div className="roduct-item flex flex-col max-w-xs h-56 items-center px-4 mt-10">
+    <div className="roduct-item flex flex-col max-w-xs h-56 items-center px-4 mt-16">
       <div className="product-icon">
-        <Icon className={className || 'w-20'} />
+        <Icon className={className || 'w-20'} style={styleIcon} />
       </div>
       <h2 className="text-blue-800 text-xl font-bold mt-2">
         <a href={url}>{title}</a>
@@ -23,7 +23,7 @@ const ProductItem = (props: any) => {
 export class Product extends React.Component {
   render() {
     return (
-      <div className="container-lg pt-10 product-container px-6 flex flex-col items-center lg:px-18 md:px-16">
+      <div id="products" className="mt-16 product-container px-6 flex flex-col items-center lg:px-18 md:px-16">
         <h1 className="text-4xl flex justify-center text-blue-800">What We Do</h1>
         <p className="text-center">
           We build, launch business that helpful. In hac habitasse platea dictumst. Proin at ultricies neque, nec tempus
@@ -39,13 +39,13 @@ export class Product extends React.Component {
           />
           <ProductItem
             Icon={Labo}
-            title="LABO"
+            title="Labo"
             url="https://labo.gogojungle.co.jp/"
             desc="The forex specialized question and answer site for beginner and expert traders smoothly."
           />
           <ProductItem
             Icon={CrowdSourcing}
-            className="w-16"
+            styleIcon={{ width: 70, height: 90 }}
             title="Crowdsourcing"
             url="https://www.gogojungle.co.jp/crowdsourcing"
             desc="Freelancer marketplace - an easy approach to get a job or find suitable talent for your projects."

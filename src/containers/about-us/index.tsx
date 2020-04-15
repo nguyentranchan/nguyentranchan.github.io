@@ -1,12 +1,12 @@
 import React from 'react'
 import Vision from '../../images/icons/vision.png'
-import Misison from '../../images/icons/mission.png'
+import Misison from '../../images/icons/mission.svg'
 import './about-us.scss'
 
 export class AboutUs extends React.Component {
   render() {
     return (
-      <div className="container-lg py-10 mt-10 bg-gblue px-6 md:px-16 lg:px-18 text-white about-us-container">
+      <div id="about-us" className="py-10 mt-16 bg-gblue px-6 md:px-16 lg:px-18 text-white about-us-container">
         <h1 className="text-4xl">About Us</h1>
         <p className="pt-4">
           GoGoJungle Japan has over 10 years' experience of the foreign exchange market. The company continues using the
@@ -29,7 +29,7 @@ export class AboutUs extends React.Component {
           <div className="mission mt-10">
             <h2 className="text-2xl">Mission</h2>
             <div className="flex mt-4">
-              <img src={Misison} alt="" style={{ width: 60, height: 60 }} />
+              <Misison style={{ width: 60, height: 60 }} />
               <p className="pl-4" style={{ width: 280 }}>
                 Build the great place for people to work and improve
               </p>
