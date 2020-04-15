@@ -40,8 +40,6 @@ export class Intro extends React.Component<any, { width: number }> {
         </div>
         {width >= 768 && <IntroImage className="w-full h-full hidden md:block" />}
         {width < 768 && <IntroImageMobile className="w-full h-full block md:hidden" />}
-
-        {/* <img src={IntroImageMobile} alt="" className="w-full h-full block md:hidden" /> */}
       </div>
     )
   }
