@@ -2,6 +2,7 @@ import React from 'react'
 import { Intro } from '../../components/Intro'
 import { Product } from '../product'
 import { AboutUs } from '../about-us'
+import { CompanyValue } from '../company-value'
 
 export function MainPage() {
   return (
@@ -9,6 +10,7 @@ export function MainPage() {
       <Intro />
       <Product />
       <AboutUs />
+      <CompanyValue />
     </React.Fragment>
   )
 }
