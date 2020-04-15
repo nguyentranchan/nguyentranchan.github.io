@@ -9,7 +9,7 @@ export class Intro extends React.Component<any, { width: number }> {
   constructor(props: any) {
     super(props)
     this.state = {
-      width: 0,
+      width: window.innerWidth,
     }
   }
   componentDidMount() {
