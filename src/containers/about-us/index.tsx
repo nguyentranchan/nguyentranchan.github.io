@@ -20,7 +20,7 @@ export class AboutUs extends React.Component {
           <div className="vision mt-10">
             <h2 className="text-2xl">Vision</h2>
             <div className="flex mt-4">
-              <img src={Vision} alt="" style={{ width: 60 }} />
+              <img src={Vision} alt="" style={{ width: 60, height: 60 }} />
               <p className="pl-4" style={{ width: 280 }}>
                 Become one of the best tech company in Vietnam.
               </p>
@@ -29,7 +29,7 @@ export class AboutUs extends React.Component {
           <div className="mission mt-10">
             <h2 className="text-2xl">Mission</h2>
             <div className="flex mt-4">
-              <img src={Misison} alt="" style={{ width: 60 }} />
+              <img src={Misison} alt="" style={{ width: 60, height: 60 }} />
               <p className="pl-4" style={{ width: 280 }}>
                 Build the great place for people to work and improve
               </p>
