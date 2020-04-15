@@ -4,7 +4,6 @@ import Labo from '../../images/icons/labo.svg'
 import CrowdSourcing from '../../images/icons/crowdsourcing.svg'
 import RealTrade from '../../images/icons/realtrade.svg'
 import Blog from '../../images/icons/blog.svg'
-import './product.scss'
 
 const ProductItem = (props: any) => {
   const { Icon, className = '', title = '', url, desc } = props
@@ -24,7 +23,7 @@ const ProductItem = (props: any) => {
 export class Product extends React.Component {
   render() {
     return (
-      <div className="container-lg pt-6 product-container px-16 flex flex-col items-center lg:px-18 md:px-16">
+      <div className="container-lg pt-10 product-container px-6 flex flex-col items-center lg:px-18 md:px-16">
         <h1 className="text-4xl flex justify-center text-blue-800">What We Do</h1>
         <p className="text-center">
           We build, launch business that helpful. In hac habitasse platea dictumst. Proin at ultricies neque, nec tempus
