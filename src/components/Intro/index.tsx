@@ -16,7 +16,7 @@ export class Intro extends React.Component<IntroProps, { width: number }> {
   constructor(props: IntroProps) {
     super(props)
     this.state = {
-      width: 0,
+      width: typeof window !== 'undefined' ? window.innerWidth : 0,
     }
   }
   componentDidMount() {
