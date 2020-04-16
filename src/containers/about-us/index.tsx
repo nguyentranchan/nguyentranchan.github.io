@@ -6,8 +6,8 @@ import './about-us.scss'
 export class AboutUs extends React.Component {
   render() {
     return (
-      <div className="flex justify-center bg-gblue">
-        <div id="about-us" className="gcontainer py-10 mt-16 px-6 md:px-16 lg:px-18 text-white about-us-container">
+      <div className="flex justify-center bg-gblue mt-16">
+        <div id="about-us" className="gcontainer py-10 px-6 md:px-16 lg:px-18 text-white about-us-container">
           <h1 className="text-4xl">About Us</h1>
           <p className="pt-4">
             GoGoJungle Japan has over 10 years' experience of the foreign exchange market. The company continues using
