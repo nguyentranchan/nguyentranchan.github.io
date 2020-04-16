@@ -10,7 +10,7 @@ export default class Career extends React.Component {
           title="“Unfold the talents and shine the lives with GGJungle”"
           titleClass="max-w-full md:max-w-md lg:max-w-lg"
         />
-        <div className="gcontainer">
+        <div className="gcontainer flex flex-wrap-reverse">
           <div className="px-6 md:px-16 lg:px-18">
             <div className="jd flex flex-col border mt-10">
               <div className="bg-yellow-500 h-2" />
