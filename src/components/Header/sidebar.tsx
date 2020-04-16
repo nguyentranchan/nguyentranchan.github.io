@@ -15,7 +15,7 @@ export function SideBar(props: SideBarProps) {
     if (el) el.scrollIntoView({ behavior: 'smooth' })
   }
   return (
-    <div className={`sidenav bg-gblue ${isOpen ? 'w-64' : 'w-0'}`}>
+    <div className={`sidenav bg-gblue ${isOpen ? 'w-64' : 'w-0'} z-20`}>
       <a href="javascript:void(0)" className="closebtn" onClick={onClose}>
         &times;
       </a>

@@ -12,11 +12,12 @@ interface IntroProps {
   titleClass?: string
 }
 
-export class Intro extends React.Component<IntroProps, { width: number }> {
+export class Intro extends React.Component<IntroProps, { width: number; rendered: boolean }> {
   constructor(props: IntroProps) {
     super(props)
     this.state = {
-      width: typeof window !== 'undefined' ? window.innerWidth : 0,
+      width: 0,
+      rendered: false,
     }
   }
   componentDidMount() {
@@ -25,6 +26,8 @@ export class Intro extends React.Component<IntroProps, { width: number }> {
     if (typeof window !== 'undefined' && this.props.displayParticle) {
       ;(window as any).particlesJS.load('particles-js', params)
     }
+
+    this.setState({ rendered: true })
   }
   componentWillUnmount() {
     window.removeEventListener('resize', this.detectWindowSize)
@@ -48,8 +51,12 @@ export class Intro extends React.Component<IntroProps, { width: number }> {
             <p className={`block md:text-3xl lg:text-4xl text-2xl text-center md:text-left ${titleClass}`}>{title}</p>
             {description && <p className="text-center md:text-left">{description}</p>}
           </div>
-          {width >= 768 && <IntroImage className="w-full h-full hidden md:block gcontainer" />}
-          {width < 768 && <IntroImageMobile className="w-full h-full block md:hidden gcontainer" />}
+          {this.state.rendered && (
+            <React.Fragment>
+              {width >= 768 && <IntroImage className="w-full h-full gcontainer" />}
+              {width < 768 && <IntroImageMobile className="w-full h-full block" />}
+            </React.Fragment>
+          )}
         </div>
       </div>
     )
