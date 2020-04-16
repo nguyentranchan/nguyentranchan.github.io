@@ -9,7 +9,11 @@ import { Career } from '../career'
 export function MainPage() {
   return (
     <React.Fragment>
-      <Intro />
+      <Intro
+        title="Think Globally, Act Locally"
+        description="Deliver the high performance products and services"
+        displayParticle={true}
+      />
       <Product />
       <AboutUs />
       <CompanyValue />

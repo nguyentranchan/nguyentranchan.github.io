@@ -5,8 +5,15 @@ import IntroImage from '../../images/intro.svg'
 import './intro.scss'
 import params from './particles.json'
 
-export class Intro extends React.Component<any, { width: number }> {
-  constructor(props: any) {
+interface IntroProps {
+  title: string
+  description?: string
+  displayParticle?: boolean
+  titleClass?: string
+}
+
+export class Intro extends React.Component<IntroProps, { width: number }> {
+  constructor(props: IntroProps) {
     super(props)
     this.state = {
       width: 0,
@@ -15,7 +22,7 @@ export class Intro extends React.Component<any, { width: number }> {
   componentDidMount() {
     this.setState({ width: window.innerWidth })
     window.addEventListener('resize', this.detectWindowSize)
-    if (typeof window !== 'undefined') {
+    if (typeof window !== 'undefined' && this.props.displayParticle) {
       ;(window as any).particlesJS.load('particles-js', params)
     }
   }
@@ -31,15 +38,15 @@ export class Intro extends React.Component<any, { width: number }> {
   render() {
     const { width } = this.state
 
+    const { title, description, displayParticle, titleClass = '' } = this.props
+
     return (
       <div className="intro relative bg-gblue flex justify-center">
-        <Particles className="absolute top-0 right-0 left-0 bottom-0 z-10" params={params} />
+        {displayParticle && <Particles className="absolute top-0 right-0 left-0 bottom-0 z-10" params={params} />}
         <div className="relative gcontainer">
           <div className="absolute text-white slogan md:slogan-md slogan-xs gcontainer">
-            <p className="block md:text-3xl lg:text-4xl text-2xl text-center md:text-left">
-              Think Globally, Act Locally
-            </p>
-            <p className="text-center md:text-left">Deliver the high performance products and services</p>
+            <p className={`block md:text-3xl lg:text-4xl text-2xl text-center md:text-left ${titleClass}`}>{title}</p>
+            {description && <p className="text-center md:text-left">{description}</p>}
           </div>
           {width >= 768 && <IntroImage className="w-full h-full hidden md:block gcontainer" />}
           {width < 768 && <IntroImageMobile className="w-full h-full block md:hidden gcontainer" />}

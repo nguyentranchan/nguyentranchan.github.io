@@ -54,7 +54,7 @@ class Layout extends React.Component<LayoutProps, {}> {
                 <html lang="en" />
               </Helmet>
               <Header siteTitle={siteMetadata.title} />
-              <div className="container-lg m-0 p-0">{children}</div>
+              <div className="m-0 p-0">{children}</div>
               <Footer />
             </>
           )

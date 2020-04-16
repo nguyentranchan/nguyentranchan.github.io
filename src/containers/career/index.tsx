@@ -5,6 +5,9 @@ import be from '../../images/career/be.png'
 import fe from '../../images/career/fe.png'
 
 export class Career extends React.Component {
+  gotoCareerPage() {
+    window.location.his
+  }
   render() {
     return (
       <React.Fragment>
@@ -23,7 +26,7 @@ export class Career extends React.Component {
               </div>
               <div className="md:w-1/2 pt-4">
                 <div className="job inline-flex">
-                  <img src={ba} alt="" style={{ width: 120, height: 120 }} />
+                  <img src={ba} alt="" style={{ width: 8, height: 120 }} />
                   <div className="flex flex-col pl-4">
                     <h3 className="text-xl">Backend Developer</h3>
                     <p>
@@ -33,7 +36,7 @@ export class Career extends React.Component {
                   </div>
                 </div>
                 <div className="job inline-flex mt-4">
-                  <img src={be} alt="" style={{ width: 120, height: 120 }} />
+                  <img src={be} alt="" style={{ width: 8, height: 120 }} />
                   <div className="flex flex-col pl-4">
                     <h3 className="text-xl">Fontend Developer</h3>
                     <p>
@@ -42,8 +45,8 @@ export class Career extends React.Component {
                     </p>
                   </div>
                 </div>
-                <div className="job inline-flex mt-4">
-                  <img src={fe} alt="" style={{ width: 120, height: 120 }} />
+                <div className="job inline-flex mt-4 mb-6">
+                  <img src={fe} alt="" style={{ width: 8, height: 120 }} />
                   <div className="flex flex-col pl-4">
                     <h3 className="text-xl">Business Analyist</h3>
                     <p>
@@ -52,9 +55,9 @@ export class Career extends React.Component {
                     </p>
                   </div>
                 </div>
-                <button className="bg-blue-700 hover:bg-blue-600 text-white py-2 px-4 mt-4" style={{ width: 120 }}>
+                <a className="bg-blue-700 hover:bg-blue-600 text-white py-2 px-4" style={{ width: 120 }} href="/career">
                   See all
-                </button>
+                </a>
               </div>
             </div>
           </div>
