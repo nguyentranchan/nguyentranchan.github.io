@@ -20,6 +20,8 @@ interface StaticQueryProps {
 
 class Layout extends React.Component<LayoutProps, {}> {
   public render() {
+    if (typeof window !== 'undefined' && window.location.pathname.includes('offline-plugin-app-shell-fallback'))
+      return null
     return (
       <StaticQuery
         query={graphql`
