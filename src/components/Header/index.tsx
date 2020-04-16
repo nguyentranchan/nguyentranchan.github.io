@@ -39,10 +39,23 @@ class Header extends React.PureComponent<HeaderProps, HeaderState> {
       open: false,
     }
   }
+  componentDidMount() {
+    const hash = window.location.hash
+    const el = document.getElementById(hash)
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
   handleMenuClick = () => {
     this.setState(prvState => ({
       open: !prvState.open,
     }))
+  }
+  onClickMenuItem = (menu: string) => (event: any) => {
+    event.persist()
+    event.preventDefault()
+    const el = document.getElementById(menu)
+    if (el) el.scrollIntoView({ behavior: 'smooth' })
   }
   public render() {
     return (
@@ -66,10 +79,10 @@ class Header extends React.PureComponent<HeaderProps, HeaderState> {
             className={`menu-list w-full flex-grow lg:flex lg:justify-end lg:w-auto md:flex md:justify-end md:w-auto z-10 bg-transparent lg:block hidden`}
           >
             <div className="text-sm md:inline-flex lg:inline-flex">
-              <DesktopMenuItem text="Products" href="#products" />
-              <DesktopMenuItem text="About Us" href="#about-us" />
-              <DesktopMenuItem text="Career" href="#career" />
-              <DesktopMenuItem text="Contact" href="#footer" />
+              <DesktopMenuItem text="Products" href="#products" onClick={this.onClickMenuItem('products')} />
+              <DesktopMenuItem text="About Us" href="#about-us" onClick={this.onClickMenuItem('about-us')} />
+              <DesktopMenuItem text="Career" href="#career" onClick={this.onClickMenuItem('career')} />
+              <DesktopMenuItem text="Contact" href="#footer" onClick={this.onClickMenuItem('footer')} />
             </div>
           </div>
           <SideBar isOpen={this.state.open} onClose={this.handleMenuClick} />
