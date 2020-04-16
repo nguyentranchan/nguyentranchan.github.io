@@ -46,8 +46,8 @@ class Header extends React.PureComponent<HeaderProps, HeaderState> {
   }
   public render() {
     return (
-      <header className="container-lg sticky top-0 right-0 left-0 bg-gblue z-10">
-        <nav className="flex items-center justify-between px-6 md:px-16 lg:px-18 md:h-16 lg:16">
+      <header className="sticky top-0 right-0 left-0 bg-gblue z-10 flex justify-center">
+        <nav className="flex flex-auto items-center justify-between px-6 md:px-16 lg:px-18 md:h-16 lg:16 gcontainer">
           <div className="flex items-center flex-shrink-0 text-white mr-6">
             <Logo fill="white" textColor="text-white" />
           </div>

@@ -32,14 +32,18 @@ export class Intro extends React.Component<any, { width: number }> {
     const { width } = this.state
 
     return (
-      <div className="container-lg intro relative bg-gblue">
+      <div className="intro relative bg-gblue flex justify-center">
         <Particles className="absolute top-0 right-0 left-0 bottom-0" params={params} />
-        <div className="absolute text-white slogan md:slogan-md slogan-xs">
-          <p className="block md:text-3xl lg:text-4xl text-2xl text-center md:text-left">Think Globally, Act Locally</p>
-          <p className="text-center md:text-left">Deliver the high performance products and services</p>
+        <div className="relative gcontainer">
+          <div className="absolute text-white slogan md:slogan-md slogan-xs gcontainer">
+            <p className="block md:text-3xl lg:text-4xl text-2xl text-center md:text-left">
+              Think Globally, Act Locally
+            </p>
+            <p className="text-center md:text-left">Deliver the high performance products and services</p>
+          </div>
+          {width >= 768 && <IntroImage className="w-full h-full hidden md:block gcontainer" />}
+          {width < 768 && <IntroImageMobile className="w-full h-full block md:hidden gcontainer" />}
         </div>
-        {width >= 768 && <IntroImage className="w-full h-full hidden md:block" />}
-        {width < 768 && <IntroImageMobile className="w-full h-full block md:hidden" />}
       </div>
     )
   }
