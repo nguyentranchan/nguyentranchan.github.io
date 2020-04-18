@@ -9,15 +9,12 @@ export class AboutUs extends React.Component {
       <React.Fragment>
         <div className="anchor" id="about-us" />
         <div className="flex justify-center bg-gblue mt-16">
-          <div className="gcontainer py-10 px-6 md:px-16 lg:px-18 text-white about-us-container">
+          <div className="container py-10 px-6 md:px-16 lg:px-18 text-white about-us-container">
             <h1 className="text-4xl">About Us</h1>
             <p className="pt-4">
-              GoGoJungle Japan has over 10 years' experience of the foreign exchange market. The company continues using
-              the advance technology to provide each clients the awesome and beneficial services.
-            </p>
-            <p className="pt-4">
-              GGJungle Co. Ltd is an information technology company established in 2016 July in Ho Chi Minh City by
-              GoGoJungle Inc. (Japan).
+              GGJungle is part of GogoJungle Japan. We are leading in the investment field in Japan. We provide
+              technologies, solutions & utilities for the investors. We are expanding the market to South East Asia like
+              Vietnam, Thailand, China.
             </p>
             <div className="flex flex-wrap flex-row">
               <div className="vision mt-10">

@@ -8,7 +8,7 @@ export function Footer() {
       <div className="bg-gblue flex justify-center mt-16">
         <div
           id="footer"
-          className="gcontainer flex flex-wrap justify-around text-white w-full p-6 md:p-16 lg:18 md:inline-fex"
+          className="container flex flex-wrap justify-around text-white w-full p-6 md:p-16 lg:18 md:inline-fex"
         >
           <Logo textColor="white" fill="#ffffff" className="footer-logo max-w-lg md:max-w-xs" />
           <div className="contact pl-6 flex flex-col text-center md:text-left pt-10 md:pt-0 max-w-lg md:max-w-xs w-full md:w-auto">
@@ -32,9 +32,9 @@ export function Footer() {
           <div className="contact pl-6 text-center md:text-left pt-10 md:pt-0 max-w-lg md:max-w-xs w-full md:w-auto">
             <h2 className="text-xl pb-4">Contact</h2>
             <p className="leading-8">
-              <a href="mailto:hr@gogojungle.vn">hr@gogojungle.vn</a>
+              <a href="mailto:hr@ggjungle.vn">hr@ggjungle.vn</a>
             </p>
-            <p className="leading-8">0919 742 472</p>
+            <p className="leading-8">(+84) 91 974 2472</p>
             <p>3rd Floor, Green Phil Building, 8/1 - 8/3 Nguyen Huy Tuong, Ward 6, Binh Thanh District</p>
           </div>
         </div>

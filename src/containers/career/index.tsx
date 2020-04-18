@@ -13,7 +13,7 @@ export class Career extends React.Component {
       <React.Fragment>
         <div className="anchor" id="career" />
         <div className="flex justify-center">
-          <div className="gcontainer mt-16 px-6 md:px-16 lg:px-18">
+          <div className="container mt-16 px-6 md:px-16 lg:px-18">
             <h1 className="text-4xl text-center text-blue-800">Early Career</h1>
             <div className="md:inline-flex pt-4">
               <div className="md:w-1/2 flex flex-col md:mr-4">

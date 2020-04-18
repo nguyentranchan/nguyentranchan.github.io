@@ -26,7 +26,7 @@ export class Product extends React.Component {
       <React.Fragment>
         <div className="anchor" id="products" />
         <div className="flex justify-center">
-          <div className="gcontainer mt-16 product-container px-6 flex flex-col items-center lg:px-18 md:px-16">
+          <div className="container mt-16 product-container px-6 flex flex-col items-center lg:px-18 md:px-16">
             <h1 className="text-4xl flex justify-center text-blue-800">What We Do</h1>
             <p className="text-center">
               We build, launch business that helpful. In hac habitasse platea dictumst. Proin at ultricies neque, nec
@@ -37,8 +37,15 @@ export class Product extends React.Component {
               <ProductItem
                 Icon={FxOn}
                 title="FX-ON"
-                url="https://fx-on.com"
-                desc="The E-Commerce and C2C market to exchange Trade Systems, Expert Advisors (EAs), FX E-books, etc."
+                url="https://www.gogojungle.co.jp"
+                desc="The E-Commerce to exchange Trade Systems, Expert Advisors (EAs), FX E-books, etc."
+              />
+              <ProductItem
+                Icon={RealTrade}
+                className="w-16"
+                title="Real Trade"
+                url="https://real-trade.tech/"
+                desc="A new service that collects transaction information from the MT4 platform."
               />
               <ProductItem
                 Icon={Labo}
@@ -52,13 +59,6 @@ export class Product extends React.Component {
                 title="Crowdsourcing"
                 url="https://www.gogojungle.co.jp/crowdsourcing"
                 desc="Freelancer marketplace - an easy approach to get a job or find suitable talent for your projects."
-              />
-              <ProductItem
-                Icon={RealTrade}
-                className="w-16"
-                title="Real Trade"
-                url="https://real-trade.tech/"
-                desc="A new service that collects transaction information from the MT4 platform."
               />
               <ProductItem
                 Icon={Blog}

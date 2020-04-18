@@ -9,9 +9,10 @@ export default class Career extends React.Component {
         <Intro
           title="“Unfold the talents and shine the lives with GGJungle”"
           titleClass="max-w-full md:max-w-md lg:max-w-lg"
+          displayParticle={true}
         />
         <div className="flex justify-center flex-auto">
-          <div className="gcontainer flex flex-wrap-reverse">
+          <div className="container flex flex-wrap-reverse">
             <div className="px-6 md:px-16 lg:px-18">
               <div className="jd flex flex-col border mt-10">
                 <div className="bg-yellow-500 h-2" />
@@ -50,8 +51,8 @@ export default class Career extends React.Component {
 
                   <div className="text-gray-600 mt-10">
                     If you are interested, don't hesitate to contact us via{' '}
-                    <a href="mailto:hr@gogojungle.vn" className="text-orange-600">
-                      hr@gogojungle.vn
+                    <a href="mailto:hr@ggjungle.vn" className="text-orange-600">
+                      hr@ggjungle.vn
                     </a>
                   </div>
                 </div>
