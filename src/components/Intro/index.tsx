@@ -23,9 +23,9 @@ export class Intro extends React.Component<IntroProps, { width: number; rendered
   componentDidMount() {
     this.setState({ width: window.innerWidth })
     window.addEventListener('resize', this.detectWindowSize)
-    if (typeof window !== 'undefined' && this.props.displayParticle) {
-      ;(window as any).particlesJS.load('particles-js', params)
-    }
+    //if (typeof window !== 'undefined' && this.props.displayParticle) {
+    //  ;(window as any).particlesJS.load('particles-js', params)
+    //}
 
     this.setState({ rendered: true })
   }
