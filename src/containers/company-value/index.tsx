@@ -1,6 +1,10 @@
 import React from 'react'
 import './compay-value.scss'
-import Team from '../../images/icons/team.svg'
+import Invested from '../../images/icons/Invested.svg'
+import Family from '../../images/icons/Family.svg'
+import Reputation from '../../images/icons/Reputation.svg'
+import TeamPlayers from '../../images/icons/TeamPlayers.svg'
+import Innovative from '../../images/icons/Innovative.svg'
 
 export class CompanyValue extends React.Component {
   render() {
@@ -11,7 +15,7 @@ export class CompanyValue extends React.Component {
           <div className="text-white md:inline-flex">
             <div className="flex bg-gblue items-center p-4 md:w-1/2 mt-4 core-item">
               <div className="value-icon">
-                <Team />
+                <Reputation />
               </div>
               <p className="value-desc pl-4">
                 <b>Reputation</b>
@@ -21,7 +25,7 @@ export class CompanyValue extends React.Component {
             </div>
             <div className="flex bg-gblue items-center p-4 md:w-1/2 md:ml-6 mt-4 core-item">
               <div className="value-icon">
-                <Team />
+                <Invested />
               </div>
               <p className="value-desc pl-4">
                 <b>Invested</b>
@@ -33,7 +37,7 @@ export class CompanyValue extends React.Component {
           <div className="text-white md:inline-flex">
             <div className="flex bg-gblue items-center p-4 md:w-1/2 mt-4 core-item">
               <div className="value-icon">
-                <Team />
+                <TeamPlayers />
               </div>
               <p className="value-desc pl-4">
                 <b>Team Players</b>
@@ -43,7 +47,7 @@ export class CompanyValue extends React.Component {
             </div>
             <div className="flex bg-gblue items-center p-4 md:w-1/2 md:ml-6 mt-4 core-item">
               <div className="value-icon">
-                <Team />
+                <Family />
               </div>
               <p className="value-desc pl-4">
                 <b>Family</b>
@@ -55,7 +59,7 @@ export class CompanyValue extends React.Component {
           <div className="text-white flex justify-center">
             <div className="flex bg-gblue items-center p-4 w-full md:w-1/2 mt-4 core-item">
               <div className="value-icon">
-                <Team />
+                <Innovative />
               </div>
               <p className="value-desc pl-4">
                 <b>Innovative</b>
