@@ -27,16 +27,13 @@ export class Product extends React.Component {
         <div className="anchor" id="products" />
         <div className="flex justify-center">
           <div className="container mt-16 product-container px-6 flex flex-col items-center lg:px-18 md:px-16">
-            <h1 className="text-4xl flex justify-center text-blue-800">What We Do</h1>
-            <p className="text-center">
-              We build, launch business that helpful. In hac habitasse platea dictumst. Proin at ultricies neque, nec
-              tempus mauris. Ut id leo ut nibh tincidunt congue nec ut ipsum. Etiam non lacinia est, vel imperdiet
-              velit. Etiam placerat viverra mauris, ac lobortis tellus bibendum tempus.
-            </p>
+            <h1 className="text-4xl flex justify-center text-blue-800">
+              Provide innovative solutions, quality products & responsive service
+            </h1>
             <div className="flex justify-center flex-row flex-wrap">
               <ProductItem
                 Icon={FxOn}
-                title="FX-ON"
+                title="GogoJungle"
                 url="https://www.gogojungle.co.jp"
                 desc="The E-Commerce to exchange Trade Systems, Expert Advisors (EAs), FX E-books, etc."
               />
@@ -44,18 +41,18 @@ export class Product extends React.Component {
                 Icon={RealTrade}
                 className="w-16"
                 title="Real Trade"
-                url="https://real-trade.tech/"
+                url="https://real-trade.tech"
                 desc="A new service that collects transaction information from the MT4 platform."
               />
               <ProductItem
                 Icon={Labo}
                 title="Labo"
-                url="https://labo.gogojungle.co.jp/"
+                url="https://labo.gogojungle.co.jp"
                 desc="The forex specialized question and answer site for beginner and expert traders smoothly."
               />
               <ProductItem
                 Icon={CrowdSourcing}
-                styleIcon={{ width: 70, height: 90 }}
+                styleIcon={{ width: 70 }}
                 title="Crowdsourcing"
                 url="https://www.gogojungle.co.jp/crowdsourcing"
                 desc="Freelancer marketplace - an easy approach to get a job or find suitable talent for your projects."
@@ -63,7 +60,7 @@ export class Product extends React.Component {
               <ProductItem
                 Icon={Blog}
                 title="Blog"
-                url="https://blog.gogojungle.co.jp/"
+                url="https://blog.gogojungle.co.jp"
                 desc="An informational or discussion website to share and enhance knowledge of the community."
               />
             </div>

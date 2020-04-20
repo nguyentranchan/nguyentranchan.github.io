@@ -11,7 +11,7 @@ export function MainPage() {
     <React.Fragment>
       <Intro
         title="Think Globally, Act Locally"
-        description="Deliver the high performance products and services"
+        description="Deliver high quality products and services"
         displayParticle={true}
       />
       <Product />

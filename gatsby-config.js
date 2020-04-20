@@ -5,7 +5,7 @@ const mqPacker = require('css-mqpacker')
 module.exports = {
   siteMetadata: {
     title: 'GGJungle',
-    siteUrl: `http://ggjungle.vn`,
+    siteUrl: `https://ggjungle.vn`,
   },
   plugins: [
     {
