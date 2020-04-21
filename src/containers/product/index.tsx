@@ -27,7 +27,7 @@ export class Product extends React.Component {
         <div className="anchor" id="products" />
         <div className="flex justify-center">
           <div className="container mt-16 product-container px-6 flex flex-col items-center lg:px-18 md:px-16">
-            <h1 className="text-4xl flex justify-center text-blue-800">
+            <h1 className="text-4xl text-center text-blue-800">
               Provide innovative solutions, quality products & responsive service
             </h1>
             <div className="flex justify-center flex-row flex-wrap">
