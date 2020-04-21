@@ -4,7 +4,7 @@ import { Logo } from '../Logo'
 
 interface SideBarProps {
   isOpen: boolean
-  onClose: () => void
+  onClose: (event: any) => void
 }
 export function SideBar(props: SideBarProps) {
   const { isOpen, onClose } = props
@@ -12,11 +12,14 @@ export function SideBar(props: SideBarProps) {
     event.persist()
     event.preventDefault()
     const el = document.getElementById(menu)
+    if (window.location.pathname.includes('career')) {
+      return (window.location.href = window.location.origin + '/#' + menu)
+    }
     if (el) el.scrollIntoView({ behavior: 'smooth' })
   }
   return (
     <div className={`sidenav bg-gblue ${isOpen ? 'w-64' : 'w-0'} z-20`}>
-      <a href="javascript:void(0)" className="closebtn" onClick={onClose}>
+      <a href="#" className="closebtn" onClick={onClose}>
         &times;
       </a>
       <Logo fill="white" textColor="text-white" />

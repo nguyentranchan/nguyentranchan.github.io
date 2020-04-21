@@ -40,13 +40,15 @@ class Header extends React.PureComponent<HeaderProps, HeaderState> {
     }
   }
   componentDidMount() {
-    const hash = window.location.hash
-    const el = document.getElementById(hash)
+    const hash = window.location.hash || ''
+    const el = document.getElementById(hash.replace('#', ''))
     if (el) {
       el.scrollIntoView({ behavior: 'smooth' })
     }
   }
-  handleMenuClick = () => {
+  handleMenuClick = (event: any) => {
+    event.persist()
+    event.preventDefault()
     this.setState(prvState => ({
       open: !prvState.open,
     }))
@@ -55,6 +57,9 @@ class Header extends React.PureComponent<HeaderProps, HeaderState> {
     event.persist()
     event.preventDefault()
     const el = document.getElementById(menu)
+    if (window.location.pathname.includes('career')) {
+      return (window.location.href = window.location.origin + '/#' + menu)
+    }
     if (el) el.scrollIntoView({ behavior: 'smooth' })
   }
   public render() {

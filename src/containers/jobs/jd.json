@@ -1,0 +1,45 @@
+{
+  "jobs": [
+    {
+      "title": "BackEnd Developer",
+      "description": "Develop the new services along with maintenance the current services. Eg: getting the requirement, investigation, create solution, development, guarantee quality and deployment. You can do anything to make sure the service run well\nCan involve to R&D new technologies",
+      "responsibilities": [],
+      "benefits": [
+        "Work in dynamic & creative environment. We're eager to learn & apply new technology",
+        "13th month salary + bonus",
+        "Team building activities",
+        "15 days annual leaves, working Monday - Friday",
+        "Stock of company"
+      ],
+      "skills": ["MySQL", "PostgreSQL", "Node.js", "Golang", "PHP"],
+      "qualifications": [
+        "In-depth knowledge about data structures and algorithms",
+        "Understand OOP & design pattern",
+        "Understand software design principles SOLID, DRY, KISS",
+        "Experience about web-based technologies, micro-service",
+        "Experience about MySQL, PostgreSQL. Know how to writing SQL efficient",
+        "Experience Node.js, Golang, PHP"
+      ]
+    },
+    {
+      "title": "FrontEnd Developer",
+      "description": "Develop the new services along with maintenance the current services. Eg: getting the requirement, investigation, create solution, development, guarantee quality and deployment. You can do anything to make sure the service run well\nCan involve to R&D new technologies",
+      "responsibilities": [],
+      "benefits": [
+        "Work in dynamic & creative environment. We're eager to learn & apply new technology",
+        "13th month salary + bonus",
+        "Team building activities",
+        "15 days annual leaves, working Monday - Friday",
+        "Stock of company"
+      ],
+      "skills": ["JavaScript", "HTML5", "CSS3", "jQuery", "React", "Vue"],
+      "qualifications": [
+        "Fluent in JavaScript, HTML5, CSS3",
+        "Experience in JS frameworks like jQuery, React, Vue.js",
+        "Experience in bundle like Webpack, Parcel",
+        "Have design background or experience with UX/UI design or visual design",
+        "Experience about web-based technologies, micro-service"
+      ]
+    }
+  ]
+}
