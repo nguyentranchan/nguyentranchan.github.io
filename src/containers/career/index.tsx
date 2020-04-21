@@ -26,7 +26,7 @@ export class Career extends React.Component {
                 </div>
                 <div className="job inline-flex mt-4 mb-6">
                   <div className="flex flex-col pl-4">
-                    <h2 className="text-xl">Fontend Developer</h2>
+                    <h2 className="text-xl">Frontend Developer</h2>
                     <p>
                       We are looking for an ambitious and self-driven Front-end Developer to join our team. As a
                       Front-end Developer, you will be responsible for implementing visual elements that users see and
