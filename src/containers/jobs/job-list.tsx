@@ -26,7 +26,10 @@ export class JobList extends React.PureComponent {
                   ))}
                 </div>
               </div>
-              <a href={'/career?job=' + jd.title} className="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 border">
+              <a
+                href={'/career?job=' + jd.title}
+                className="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 border text-center"
+              >
                 View detail
               </a>
             </div>

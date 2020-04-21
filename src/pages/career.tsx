@@ -20,7 +20,7 @@ export default class Career extends React.Component<any> {
           displayParticle={true}
         />
         <div className="container px-6 md:px-16 lg:px-18">
-          {!selectedJob && <JobList />}
+          <div className={'jobs'}>{!selectedJob && <JobList />}</div>
           {selectedJob && <JobDetail selectedJob={selectedJob} />}
         </div>
       </Layout>

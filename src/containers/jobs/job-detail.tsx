@@ -10,7 +10,7 @@ export class JobDetail extends React.PureComponent<JobDetailProps> {
   render() {
     const { selectedJob } = this.props
     return (
-      <div className={'flex mt-10 '}>
+      <div className={'flex mt-10'}>
         <div className={'text-gray-700 pr-0 md:pr-4'}>
           <h1 className={'text-3xl'}>{selectedJob.title}</h1>
           <div className="skills flex flex-wrap">
