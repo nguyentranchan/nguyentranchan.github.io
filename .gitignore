@@ -9,6 +9,5 @@ node_modules
 
 #IDE 
 .vscode
-yarn.lock
 yarn-error.log
 .idea
