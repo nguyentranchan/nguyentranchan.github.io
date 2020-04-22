@@ -16,7 +16,9 @@ export class Career extends React.Component {
               <div className="md:w-1/2 pt-4 md:pt-0 border-0 md:border-l-2 border-none md:border-solid">
                 <div className="job inline-flex">
                   <div className="flex flex-col pl-4">
-                    <h2 className="text-xl">Back-end Developer</h2>
+                    <h2 className="text-xl">
+                      <a href="/career/?job=Back-end%20Developer">Back-end Developer</a>
+                    </h2>
                     <p>
                       We are looking for an experienced back-end developer to join our team! As a back-end developer,
                       you will be responsible for the server-side web application logic as well as for the integration
@@ -26,7 +28,9 @@ export class Career extends React.Component {
                 </div>
                 <div className="job inline-flex mt-4 mb-6">
                   <div className="flex flex-col pl-4">
-                    <h2 className="text-xl">Front-end Developer</h2>
+                    <h2 className="text-xl">
+                      <a href="/career/?job=Front-end%20Developer">Front-end Developer</a>
+                    </h2>
                     <p>
                       We are looking for an ambitious and self-driven front-end developer to join our team. As a
                       front-end developer, you will be responsible for implementing visual elements that users see and

@@ -14,16 +14,16 @@ export function Footer() {
           <div className="contact pl-6 flex flex-col text-center md:text-left pt-10 md:pt-0 max-w-lg md:max-w-xs w-full md:w-auto">
             <h2 className="text-xl pb-4">Products</h2>
             <a className="leading-8" href="https://fx-on.com">
-              FX-ON
+              GogoJungle
+            </a>
+            <a className="leading-8" href="https://real-trade.tech/">
+              Real Trade
             </a>
             <a className="leading-8" href="https://labo.gogojungle.co.jp/">
               Labo
             </a>
             <a className="leading-8" href="https://www.gogojungle.co.jp/crowdsourcing">
               Crowdsourcing
-            </a>
-            <a className="leading-8" href="https://real-trade.tech/">
-              Real Trade
             </a>
             <a className="leading-8" href="https://blog.gogojungle.co.jp/">
               Blog
