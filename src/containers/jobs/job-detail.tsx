@@ -20,7 +20,7 @@ export class JobDetail extends React.PureComponent<JobDetailProps> {
               </div>
             ))}
           </div>
-          <p className={'pt-2'}>{selectedJob.description}</p>
+          <p className={'pt-2'} dangerouslySetInnerHTML={{ __html: selectedJob.description }} />
           <h1 className="pt-8 text-xl text-blue-700">Responsibilities</h1>
           <div className={'flex flex-col'}>
             {selectedJob.responsibilities.map(resp => (

@@ -12,7 +12,7 @@ export class JobList extends React.PureComponent {
           looking for an internship, a graduate seeking a full-time position, take your first step toward a career at
           GGJungle below. Who knows where it may take you next.
         </p>
-        <div className="text-2xl text-gray-800 pt-6">I’m looking for:</div>
+        <div className="text-2xl text-gray-800 pt-6">We looking for:</div>
         <div className={'flex flex-wrap'}>
           {jds.jobs.map((jd: IJob) => (
             <div key={jd.title} className="job-item max-w-sm w-full flex flex-col mr-0 md:mr-4 border mt-6">
