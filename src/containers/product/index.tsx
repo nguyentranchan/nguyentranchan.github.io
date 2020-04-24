@@ -28,7 +28,7 @@ export class Product extends React.Component {
         <div className="flex justify-center">
           <div className="container mt-16 product-container px-6 flex flex-col items-center lg:px-18 md:px-16">
             <h1 className="text-4xl text-center text-blue-800">
-              Provide innovative solutions, quality products & responsive service
+              Provide innovative solutions, quality products & responsive services
             </h1>
             <div className="flex justify-center flex-row flex-wrap">
               <ProductItem
@@ -61,7 +61,7 @@ export class Product extends React.Component {
                 Icon={Blog}
                 title="Blog"
                 url="https://blog.gogojungle.co.jp"
-                desc="An informational or discussion website to share and enhance knowledge of the community."
+                desc="An informational or discussion website to share experiences and broaden knowledge from the community."
               />
             </div>
           </div>
