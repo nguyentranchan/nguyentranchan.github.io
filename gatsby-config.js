@@ -8,6 +8,7 @@ module.exports = {
     siteUrl: `https://ggjungle.vn`,
   },
   plugins: [
+    `gatsby-plugin-remove-trailing-slashes`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -21,8 +22,8 @@ module.exports = {
         name: 'GGJungle',
         short_name: 'GGJ',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
+        background_color: '#0f4e82',
+        theme_color: '#ffffff',
         display: 'minimal-ui',
         icon: './src/favicon.png', // This path is relative to the root of the site.
       },

@@ -12,7 +12,7 @@ export function Footer() {
         >
           <Logo textColor="white" fill="#ffffff" className="footer-logo max-w-lg md:max-w-xs" />
           <div className="contact pl-6 flex flex-col text-center md:text-left pt-10 md:pt-0 max-w-lg md:max-w-xs w-full md:w-auto">
-            <h2 className="text-xl pb-4">Products</h2>
+            <h2 className="text-xl pb-4">Services</h2>
             <a className="leading-8" href="https://fx-on.com">
               GogoJungle
             </a>

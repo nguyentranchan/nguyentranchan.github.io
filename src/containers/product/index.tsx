@@ -13,7 +13,9 @@ const ProductItem = (props: any) => {
         <Icon className={className || 'w-20'} style={styleIcon} />
       </div>
       <h2 className="text-blue-800 text-xl font-bold mt-2">
-        <a href={url}>{title}</a>
+        <a href={url} target={'_blank'}>
+          {title}
+        </a>
       </h2>
       <p className="text-center pt-4">{desc}</p>
     </div>
