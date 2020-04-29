@@ -19,7 +19,7 @@ export class Career extends React.Component {
                 <div className="job inline-flex">
                   <div className="flex flex-col pl-4">
                     <h2 className="text-xl">
-                      <a href="/career/?job=Back-end%20Developer">Back-end Developer</a>
+                      <a href="/career?job=Back-end%20Developer">Back-end Developer</a>
                     </h2>
                     <p>
                       We are looking for an experienced back-end developer to join our team! As a back-end developer,
@@ -31,7 +31,7 @@ export class Career extends React.Component {
                 <div className="job inline-flex mt-4 mb-6">
                   <div className="flex flex-col pl-4">
                     <h2 className="text-xl">
-                      <a href="/career/?job=Front-end%20Developer">Front-end Developer</a>
+                      <a href="/career?job=Front-end%20Developer">Front-end Developer</a>
                     </h2>
                     <p>
                       We are looking for an ambitious and self-driven front-end developer to join our team. As a
