@@ -10,6 +10,13 @@ module.exports = {
   plugins: [
     `gatsby-plugin-remove-trailing-slashes`,
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-164915989-1',
+        head: true,
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,

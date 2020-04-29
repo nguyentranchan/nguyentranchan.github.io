@@ -44,26 +44,26 @@ export class Product extends React.Component {
                 className="w-16"
                 title="Real Trade"
                 url="https://real-trade.tech"
-                desc="A new service that collects transaction information from the MT4 platform."
+                desc="The service that automatically collects transaction information from MT4 platform."
               />
               <ProductItem
                 Icon={Labo}
                 title="Labo"
                 url="https://labo.gogojungle.co.jp"
-                desc="The forex specialized question and answer site for beginner and expert traders smoothly."
+                desc="The forex specialized Q&A site for beginners and experts."
               />
               <ProductItem
                 Icon={CrowdSourcing}
                 styleIcon={{ width: 70 }}
                 title="Crowdsourcing"
                 url="https://www.gogojungle.co.jp/crowdsourcing"
-                desc="Freelancer marketplace - an easy approach to get a job or find suitable talent for your projects."
+                desc="Freelance marketplace - where to find the perfect freelance services for your business."
               />
               <ProductItem
                 Icon={Blog}
                 title="Blog"
                 url="https://blog.gogojungle.co.jp"
-                desc="An informational or discussion website to share experiences and broaden knowledge from the community."
+                desc="The community to share experiences and broaden knowledge."
               />
             </div>
           </div>

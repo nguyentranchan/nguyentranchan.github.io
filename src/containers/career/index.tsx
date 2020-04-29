@@ -10,7 +10,9 @@ export class Career extends React.Component {
             <h1 className="text-4xl text-center text-blue-800">Early Career</h1>
             <div className="md:inline-flex pt-4">
               <div className="md:w-1/2 flex flex-col md:mr-4">
-                <h2 className="text-2xl text-blue-800 pb-2">We need guys willing to learn, work and play</h2>
+                <h2 className="text-2xl text-blue-800 pb-2">
+                  We are looking for people willing to learn, work and play
+                </h2>
                 <JoinUs className="w-full h-full" />
               </div>
               <div className="md:w-1/2 pt-4 md:pt-0 border-0 md:border-l-2 border-none md:border-solid">
