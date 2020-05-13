@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="../hackerrank_r_library-4adfab84.css">
+  <link rel="stylesheet" type="text/css" href="../vendors~hackerrank_r_challenge~hackerrank_r_contest~hackerrank_r.css">
+  <link rel="stylesheet" type="text/css" href="../hackerrank_r_work-7101ef89.css">
+  <link rel="stylesheet" type="text/css" href="../vendors~hackerrank_r_library~hackerrank_r_testquestions-0bf06575.css">
+  <script
+          src="https://code.jquery.com/jquery-2.2.4.min.js"
+          integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+          crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="library-card-view hrx-version challenge-text ck_table-wrap col"><div class="d-flex justify-content-end close-icon font-sz-16"><span class="icon2-close cursor-pointer"></span></div><div class="card-container mlB"><div class="card-header row"><div class="main-title col-10">FizzBuzz</div><div class="card-actions col-6 font-sz-12"><span class="action mjR"><a class="bold" data-analytics="ViewQuestion" target="_blank" rel="noopener noreferrer" href="/x/library/hackerrank/all/questions/111166/view"><i class="icon-eye"></i>View</a></span><span class="action mjR"><a class="bold" data-analytics="TryQuestion" target="_blank" rel="noopener noreferrer" href="/x/library/hackerrank/all/questions/111166/try"><i class="icon-code"></i>Try</a></span><span class="action"><a class="bold" data-analytics="ViewInsights" target="_blank" rel="noopener noreferrer" href="/x/library/hackerrank/all/questions/111166/insights"><i class="icon2-testlist_reports"></i>Insights</a></span><span class="action"><div class="library-dropdown"><div class="dropdown selectable-dropdown"><div class="js-dropdown-toggle js-link selectable-dropdown__toggle"><span><i class="three-dot-action icon-ellipsis-vert plL plR"></i></span></div><ul class="dropdown-menu menu-list three-dot-library-card down"><li data-value="addToTest" class="menu-list-item"><span data-value="addToTest">Add to test</span></li><li data-value="clone" class="menu-list-item"><span data-value="clone">Clone</span></li><li data-value="requestLeak" class="menu-list-item"><span data-value="requestLeak">Report question leak</span></li></ul></div></div></span></div><div class="card-meta font-sz-12 mdT col-16 color-alt"><span class="meta-item mlR" data-automation="question-recommended-time" data-balloon="Recommended time to solve this question" data-balloon-pos="down" data-balloon-length="medium"><i class="icon-clock"></i>Recommended Time: 10 mins</span><span class="meta-item mlR"><i class="icon-trophy"></i>Points: <!-- -->50</span><span class="meta-item mlR" data-automation="sample"><i class="icon2-status_correct"></i>8<!-- --> test <!-- -->cases<!-- --> (<!-- -->3<!-- --> <!-- -->samples<!-- -->)</span></div><div class="tags-meta font-sz-12 mdT mdB col-16 color-santa"><span class="meta-item mlR question-type mlR">Coding</span><span class="meta-item"><i class="icon-tag-fill color-alt mmR"></i><span class="level-tag easy mmA">EASY</span><span class="tags">Problem Solving</span><span class="tags">Loops</span></span><div class="meta-item msT"><span data-balloon="This question can be attempted in any of these languages" data-balloon-pos="down" data-balloon-length="medium">Languages:<!-- --> <!-- -->C, Clojure, C++, C++14, C#<a class="cursor-pointer"> + 20 more</a></span></div></div></div><div class="question mdT"><style type="text/css">.ps-content-wrapper-v0 div { margin: 0 auto; overflow: auto; } .ps-content-wrapper-v0 div.preheader { display: none; } .ps-content-wrapper-v0 p { white-space: pre-wrap; padding-left: 4px; padding-right: 4px; padding-top: 0px; padding-bottom: 2px; } .ps-content-wrapper-v0 p.section-title { font-weight: bold; padding-bottom: 0px; } .ps-content-wrapper-v0 ol.plain-list, .ps-content-wrapper-v0 ul.plain-list { list-style-type: none; padding: 4px; } .ps-content-wrapper-v0 li { white-space: normal; margin-top: 4px; margin-bottom: 4px; } .ps-content-wrapper-v0 code { color: black; } .ps-content-wrapper-v0 pre { background-color: #f4faff; border: 0; border-radius: 2px; margin: 8px; padding: 10px; } .ps-content-wrapper-v0 figure { background-color: transparent; display: table; margin-top: 8px; margin-bottom: 8px; text-align: center; margin-left: auto; margin-right: auto; } .ps-content-wrapper-v0 figcaption { text-align: center; display: table-caption; caption-side: bottom; margin-top: 4px; margin-bottom: 4px; } .ps-content-wrapper-v0 img { width: auto; max-width: 100%; height: auto; } .ps-content-wrapper-v0 details { background-color: transparent; padding-left: 4px; padding-right: 4px; padding-top: 0px; padding-bottom: 2px; } .ps-content-wrapper-v0 details summary { background-color: #39424e; color: white; font-weight: bold; margin-top: 4px; margin-bottom: 4px; padding: 8px; } .ps-content-wrapper-v0 details div.collapsable-details { margin: 0 auto; padding-left: 4px; padding-right: 4px; padding-top: 0px; padding-bottom: 2px; overflow: auto; } .ps-content-wrapper-v0 details div.collapsable-details pre { margin-left: 4px; margin-right: 4px; margin-top: 4px; margin-bottom: 4px; } .ps-content-wrapper-v0 table { border: 1px solid black; border-collapse: collapse; border-color: darkgray; margin: 0 auto; margin-top: 8px; margin-bottom: 8px; padding: 8px; width: 96%; table-layout: fixed; } .ps-content-wrapper-v0 table tbody tr th, .ps-content-wrapper-v0 table tbody tr td { font-weight: bold; white-space: nowrap; text-align: center; vertical-align: middle; border: 1px solid black; border-color: darkgray; padding: 8px; } .ps-content-wrapper-v0 table tbody tr th.description { width: 60%; } .ps-content-wrapper-v0 table tbody tr td { font-weight: normal; white-space: normal; } .ps-content-wrapper-v0 table.function-params tbody tr:first-child td.headers { border-bottom-width: 2px; } .ps-content-wrapper-v0 table.function-params tbody tr:last-child td { border-top-width: 2px; border-top-color: darkgray; } .ps-content-wrapper-v0 table.function-params tbody tr td.headers { width: 25%; font-weight: bold; text-align: center; border: 1px solid black; border-right-width: 2px; border-color: darkgray; } .ps-content-wrapper-v0 table.function-params tbody tr td.params-table-cell { width: 100%; height: 100%; padding: 0px; } .ps-content-wrapper-v0 table.function-params tbody tr td.params-table-cell table.params-table { width: 100%; height: 100%; padding: 0px; margin: 0px; border: 0; } .ps-content-wrapper-v0 table.function-params tbody tr td.params-table-cell table.params-table tbody tr td.code { white-space: normal; } .ps-content-wrapper-v0 table.function-params tbody tr td.params-table-cell table.params-table tbody tr th { border-top: 0; } .ps-content-wrapper-v0 table.function-params tbody tr td.params-table-cell table.params-table tbody tr th:first-child { border-left: 0; } .ps-content-wrapper-v0 table.function-params tbody tr td.params-table-cell table.params-table tbody tr th:last-child { border-right: 0; } .ps-content-wrapper-v0 table.function-params tbody tr td.params-table-cell table.params-table tbody tr:last-child td { border-bottom: 0; border-top-width: 1px; } .ps-content-wrapper-v0 table.function-params tbody tr td.params-table-cell table.params-table tbody tr td:first-child { border-left: 0; } .ps-content-wrapper-v0 table.function-params tbody tr td.params-table-cell table.params-table tbody tr td:last-child { border-right: 0; } .ps-content-wrapper-v0 .left { text-align: left; } .ps-content-wrapper-v0 .right { text-align: right; } .ps-content-wrapper-v0 .code { font-family: monospace; white-space: nowrap; } .ps-content-wrapper-v0 .json-object-array ol, .ps-content-wrapper-v0 .json-object-array ol ul { margin-top: 0px; padding-left: 14px; } .json-object-array li { float: left; margin-right: 30px; margin-left: 10px; } .json-object-array pre { padding: 4px; margin-left: 0px; }
+</style>
+<div class="ps-content-wrapper-v0">
+<p>Given a number <em>n</em>, for each integer <em>i</em>&nbsp;in the range from <em>1</em>&nbsp;to <em>n</em>&nbsp;inclusive, print one value per line as follows:</p>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>If <em>i</em> is a multiple of both <em>3</em> and <em>5</em>, print <em>FizzBuzz</em>.</li>
+	<li>If <em>i</em> is a multiple of <em>3</em> (but not <em>5</em>), print <em>Fizz</em>.</li>
+	<li>If <em>i</em> is a multiple of <em>5</em> (but not <em>3</em>), print <em>Buzz</em>.</li>
+	<li>If <em>i</em> is not a multiple of <em>3</em>&nbsp;or <em>5</em>, print the value of <em>i</em>.</li>
+</ul>
+
+<p>&nbsp;</p>
+<!--
+<p class="section-title">Function Description</p>
+
+<p>Complete the function&nbsp;<em>fizzBuzz</em>&nbsp; in the editor.</p>
+
+<table class="function-params">
+	<tbody>
+		<tr>
+			<td class="headers">Parameters</td>
+			<td class="params-table-cell">
+			<table class="params-table">
+				<tbody>
+					<tr>
+						<th>Name</th>
+						<th>Type</th>
+						<th class="description">Description</th>
+					</tr>
+					<tr>
+						<td style="text-align:center;font-family:monospace;white-space:nowrap;">n</td>
+						<td style="text-align:center;font-family:monospace;white-space:nowrap;">integer</td>
+						<td>upper limit of values to test</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+		<tr>
+			<td class="headers">Return</td>
+			<td class="left">Print FizzBuzz, Fizz, Buzz or the value if it&#39;s not a multiple, for each value <em>i &isin; {1, 2, ... n}</em>&nbsp;in ascending order, each on a separate line.&nbsp; There is no return value expected.</td>
+		</tr>
+	</tbody>
+</table>
+-->
+
+<p class="section-title">Function Description</p>
+
+<p>Complete the function <em>fizzBuzz</em> in the editor below.</p>
+
+<p>&nbsp;</p>
+
+<p>fizzBuzz has the following parameter(s):</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;<em>int n:</em>&nbsp; upper limit of values to test (inclusive)</p>
+
+<p>Returns:&nbsp;&nbsp;&nbsp;&nbsp;NONE</p>
+
+<p>Prints:</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;The function must print the appropriate response for each value <em>i </em>in the set<em> {1, 2, ... n}</em>&nbsp;in ascending order, each on a separate line.</p>
+
+<p>&nbsp;</p>
+
+<p class="section-title">Constraints</p>
+
+<ul>
+	<li><em>0 &lt; n &lt; 2 × 10<sup>5</sup></em></li>
+</ul>
+<!--       <StartOfInputFormat> DO NOT REMOVE THIS LINE-->
+
+<details><summary class="section-title">Input Format for Custom Testing</summary>
+
+<div class="collapsable-details">
+<p>Input from stdin will be processed as follows and passed to the function.</p>
+
+<p>&nbsp;</p>
+
+<p>The single integer <em>n</em>, the limit of the range to test: [1, 2, ...n].</p>
+</div>
+</details>
+
+<details open="open"><summary class="section-title">Sample Case 0</summary>
+
+<div class="collapsable-details">
+<p class="section-title">Sample Input</p>
+
+<pre>STDIN&nbsp;&nbsp;&nbsp;&nbsp;Function
+-----&nbsp;&nbsp;&nbsp;&nbsp;--------
+15&nbsp;&nbsp;&nbsp;&nbsp;→  n = 15</pre>
+
+<p>&nbsp;</p>
+
+<p class="section-title">Sample Output</p>
+
+<pre>1     
+2
+Fizz
+4
+Buzz
+Fizz
+7
+8
+Fizz
+Buzz
+11
+Fizz
+13
+14
+FizzBuzz</pre>
+
+<p>&nbsp;</p>
+
+<p class="section-title">Explanation</p>
+
+<p>The numbers <em>3</em>, <em>6</em>, <em>9</em>, and <em>12</em> are multiples of <em>3</em> (but not <em>5</em>), so print <em>Fizz</em> on those lines.</p>
+
+<p>The numbers <em>5</em> and <em>10</em> are multiples of <em>5</em> (but not <em>3</em>), so print <em>Buzz</em> on those lines.</p>
+
+<p>The number <em>15</em> is a multiple of both <em>3</em> and <em>5</em>, so print <em>FizzBuzz</em> on that line.</p>
+
+<p>None of the other values is a multiple of either <em>3</em> or <em>5</em>, so print the value of <em>i</em> on those lines.</p>
+</div>
+</details>
+</div>
+</div></div></div>
+</body>
+</html>
