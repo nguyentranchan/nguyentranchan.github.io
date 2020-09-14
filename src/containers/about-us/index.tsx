@@ -12,7 +12,7 @@ export class AboutUs extends React.Component {
           <div className="container py-10 px-6 md:px-16 lg:px-18 text-white about-us-container">
             <h1 className="text-4xl">About Us</h1>
             <p className="pt-4">
-              GGJungle is part of GogoJungle Japan, we are leading in the investment field in Japan. Now, we are
+              Be a partner of GogoJungle Japan, we are leading in the investment field in Japan. Now, we are
               expanding the market to South East Asia like Vietnam, Thailand & China.
               <br />
             </p>
