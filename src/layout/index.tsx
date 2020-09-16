@@ -44,12 +44,12 @@ class Layout extends React.Component<LayoutProps, {}> {
                 meta={[
                   {
                     name: 'description',
-                    content: 'GGJungle VN - Provide Stock, FX services',
+                    content: 'GGJungle VN - Provide innovative solutions, quality products & responsive services',
                   },
                   {
                     name: 'keywords',
                     content:
-                      'FX, forex learning, system forex, trade, automatic trading, trade, trader, copy trading, stock, investment',
+                      'Product, FX, forex learning, system forex, trade, automatic trading, trade, trader, copy trading, stock, investment',
                   },
                 ]}
               >
