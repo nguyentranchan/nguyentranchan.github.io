@@ -52,7 +52,7 @@ export class CompanyValue extends React.Component {
               <p className="value-desc pl-4">
                 <b>Family</b>
                 <br />
-                We maintain a culture of respect, a fun, listen & understand each other
+                We maintain a culture of respect, fun, listen & understand each other
               </p>
             </div>
           </div>
