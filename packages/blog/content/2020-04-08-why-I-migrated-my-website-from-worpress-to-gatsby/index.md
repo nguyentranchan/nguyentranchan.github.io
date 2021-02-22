@@ -4,14 +4,14 @@ tags: [ javascript, gatsby, typescript ]
 date: 2020-04-08T05:25:44.226Z
 path: blog/why-i-migrated-my-website-from-wordpress-to-gatsby
 cover: ./gatsby-wordpress.jpg
-excerpt: While building a CMS for blogging, worpdress is the most commonly used platform. Gatsby has also topped the list recently. This article talk which one to go for and why I shifted from wordpress to gatsby. Is gatsby better than wordpress is the question I would be answering.  
+excerpt: While building a CMS for blogging, worpdress is the most commonly used platform. Gatsby has also topped the list recently. This article talk which one to go for and why I shifted from wordpress to gatsby. Is gatsby better than wordpress is the question I would be answering.
 ---
 
 [`Wordpress`](https://wordpress.org/) is an awesome 😍 platform for blogging 📖 and dynamic websites that powers more than 29% of the website on the internet 🌐. Previously I used to run my website on Wordpress. But recently I migrated my website and blog from Wordpress to Gatsby.
 
-## So is wordpress bad and I decided to migrate my website 🤔 ? 
+## So is wordpress bad and I decided to migrate my website 🤔 ?
 
-No absolutely not. That would be stupid to say Wordpress is bad. In fact, I believe it is a wonderful platform to build websites without much technical knowledge. `Wordpress` is powered by `PHP`. It's a full-fledged platform that is good for blogging, marketing, creating dynamic websites and even supports eCommerce websites for small businesses. There are many plugins that are available for WordPress for different purposes and can be integrated with it very well.
+No absolutely not. That would be stupid to say Wordpress is bad. In fact, I believe it is a wonderful platform to build websites without much technical knowledge. `Wordpress` is powered by `render-page.js`. It's a full-fledged platform that is good for blogging, marketing, creating dynamic websites and even supports eCommerce websites for small businesses. There are many plugins that are available for WordPress for different purposes and can be integrated with it very well.
 
 ## What is wordpress ?
 
@@ -64,16 +64,3 @@ So It depends on the use-case when to go for Gatsby and When to go for Wordpress
 ## Building a Gatsby application
 
 There are plenty of different ways to build gatsby websites. To start with you can look into official [gatsby docs](https://www.gatsbyjs.org/docs/) and the tutorials on their [site](https://www.gatsbyjs.org/tutorial/). There are also a list of [plugins](https://www.gatsbyjs.org/plugins/) that can help you to develop your site faster. For more comparision about Wordpress with Gatsby you can check this [link](https://www.gatsbyjs.org/features/cms/). You can go through the starters which are available over the internet. I have also open-sourced my website [Rolwin Reevan](https://rolwinreevan.com) on my [Github page](https://github.com/rolwin100/rolwinreevan_gatsby_blog). You can use this starter to build your portfolio. I have put in a lot of effort to build this starter. So please make sure you give a star for this repo.
-
-
-
-
-
-
-
-
-
-
-
-
-
