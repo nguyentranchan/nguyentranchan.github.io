@@ -28,20 +28,20 @@ export default () => {
           <div className={style.hamburgerText}>MENU</div>
         </div>
       </div>
-      <Layout className={`${style.navWrap} ${menu ? null : style.hidden} ${menu ? style.openMenu : null}`}>
+      <Layout className={` ${menu ? null : style.hidden} ${menu ? style.openMenu : null}`}>
         <div className={style.backgroundDiv}>
-          <ul className={style.nav}>
-            <li className={style.navItem}>
+          <div className={style.nav}>
+            <div className={style.navItem}>
               <Link to="/" onClick={toggleMenu} activeClassName={style.anchorActive}>
-                Blog
+                GGJungle BLOG
               </Link>
-            </li>
-            <li className={style.navItem}>
-              <Link to="/tags" onClick={toggleMenu} activeClassName={style.anchorActive}>
-                Tags
+            </div>
+            <div className={style.navItem} style={{marginLeft: 'auto'}}>
+              <Link to="https://ggjungle.vn" onClick={toggleMenu} activeClassName={style.anchorActive}>
+                About Us
               </Link>
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
       </Layout>
     </>
