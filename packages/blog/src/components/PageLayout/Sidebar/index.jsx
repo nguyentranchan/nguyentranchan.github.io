@@ -83,16 +83,9 @@ const Sidebar = (props) => {
     <>
       <Layout>
         <Content className={`${style.content} ${style.background}`}>
-          <Row>
-            <Col sm={24} md={9} lg={6} className={style.sidebarContent}>
-              { domContent }
-            </Col>
-            <Col sm={24} md={15} lg={18}>
-              <Layout className={`${style.background} ${style.boxContent} borderRadiusSection`}>
-                { children }
-              </Layout>
-            </Col>
-          </Row>
+          <Layout className={`${style.background} ${style.boxContent}`}>
+            { children }
+          </Layout>
         </Content>
       </Layout>
     </>

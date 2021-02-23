@@ -25,6 +25,7 @@ const Post = ({ data }) => {
   );
   return (
     <Layout className="outerPadding">
+      <Header />
       <Layout className="container">
         <SEO
           title={title}
@@ -32,7 +33,7 @@ const Post = ({ data }) => {
           path={path}
           keywords={['GGJungle', 'FullStack developer', 'Javascript', 'ReactJS', 'NodeJS', 'Gatsby', 'technology']}
         />
-        <Header />
+        
         <SidebarWrapper>
           <div className="marginTopTitle">
             <h1>{title}</h1>
