@@ -10,8 +10,9 @@ import SEO from '../components/Seo';
 
 const Blog = ({ data }) => (
   <Layout className="outerPadding">
+    <Header />
+    
     <Layout className="container">
-      <Header />
       <SEO
         title="Blog"
         description="I like blogging about various web technologies and other stuff related to
@@ -19,10 +20,10 @@ const Blog = ({ data }) => (
           and scenarios I have come across in realtime."
         path="blog"
       />
+      <div className="topTitle">
+        <h1 className="titleSeparate">Learning <br/> experimenting,<br/> and liberating our ability.</h1>
+      </div>
       <SidebarWrapper>
-        <div className="marginTopTitle">
-          <h1 className="titleSeparate">Blog</h1>
-        </div>
         <Row gutter={[20, 20]}>
           {
             data.allMarkdownRemark && data.allMarkdownRemark.edges.map((val, key) => (
