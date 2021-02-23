@@ -9,9 +9,11 @@ import PostCard from '../components/PostCard';
 import SEO from '../components/Seo';
 
 const Blog = ({ data }) => (
-  <Layout className="outerPadding">
+  <Layout className="outerPadding bgWhite">
     <Header />
-    
+    <div className="topTitle">
+      <h1 className="titleSeparate">Learning <br/> experimenting,<br/> and liberating our ability.</h1>
+    </div>
     <Layout className="container">
       <SEO
         title="Blog"
@@ -20,11 +22,9 @@ const Blog = ({ data }) => (
           and scenarios I have come across in realtime."
         path="blog"
       />
-      <div className="topTitle">
-        <h1 className="titleSeparate">Learning <br/> experimenting,<br/> and liberating our ability.</h1>
-      </div>
+      
       <SidebarWrapper>
-        <Row gutter={[20, 20]}>
+        <Row gutter={[25, 25]}>
           {
             data.allMarkdownRemark && data.allMarkdownRemark.edges.map((val, key) => (
               // eslint-disable-next-line react/no-array-index-key

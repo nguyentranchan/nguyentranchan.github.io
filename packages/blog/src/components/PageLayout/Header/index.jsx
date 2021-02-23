@@ -32,7 +32,7 @@ export default () => {
         <div className={style.backgroundDiv}>
           <div className={style.nav}>
             <div className={style.navItem}>
-              <Link to="/" onClick={toggleMenu} activeClassName={style.anchorActive}>
+              <Link to="/" onClick={toggleMenu} className={style.topAnchor}>
                 GGJungle BLOG
               </Link>
             </div>
