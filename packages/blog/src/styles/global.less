@@ -59,9 +59,12 @@ ul{
 	  height: 5px;
 	  position: absolute;
 	  bottom: -0.1rem;
-	  left: 5rem;
+	  left: 0;
 	  width: 11.12rem;
 	  z-index: 1;
+    @media only screen and (max-width: 767px) {
+      left: 3rem;
+    }
     }
     &::after {
         background-color: #FF965D;
@@ -103,9 +106,6 @@ ul{
 }
 .outerPadding {
   padding: 0;
-  @media screen and (max-width: 768px){
-    padding: 0.6rem;
-  }
 }
 .container { 
   max-width: 1264px;
@@ -136,10 +136,16 @@ ul{
   background: lightslategray;
 }
 .topTitle{
-  @media screen and (min-width: 768px){
-    margin-bottom: 2rem;
-  }
+  background-color: #EBF2FA;
   .titleSeparate{
-    padding: 2rem 5rem;
+    padding: 2rem 0;
+    @media screen and (max-width: 768px){
+      padding: 2rem 3rem;
+    }
   }
+}
+.tagBox{
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid rgb(230, 230, 230);
 }
