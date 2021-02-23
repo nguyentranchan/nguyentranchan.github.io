@@ -22,9 +22,10 @@ const Tags = ({ data }) => {
   // const tagPage = Config.pages.tag;
   const tagData = Config.tags;
   return (
-    <Layout className="outerPadding">
+    <Layout className="outerPadding bgWhite">
+      <Header />
       <Layout className="container">
-        <Header />
+        
         <SEO
           title="Tags"
           description="This page consists of various Tags on various technologies that I'll be using
@@ -33,8 +34,8 @@ const Tags = ({ data }) => {
         />
         <SidebarWrapper>
           <>
-            <div className="marginTopTitle">
-              <h1 className="titleSeparate">#Tags</h1>
+            <div>
+              <h1 className="titleSeparate" style={{padding: "0 0 2rem 0"}}>Explore topics</h1>
             </div>
             <Row gutter={[30, 20]}>
               {
