@@ -1,8 +1,8 @@
 ---
 title: What's new in React 17 ( No new features )
-tags: [ html, css, reactjs ]
+tags: [html, css, reactjs]
 date: 2020-12-24T05:25:44.226Z
-path: blog/react17-new-features
+path: react17-new-features
 cover: ./react17.png
 excerpt: In this article let's discuss the new upgrades made to React v17.0 that were released on October 20, 2020. React 17 has no new developer features added to it rather it has features added for backward compatibility.
 ---
@@ -33,13 +33,11 @@ In React we write a click event like:
 
 ```
 
-This event does not attach itself to the document node on which it is written rather it attaches itself to the document root in React 16 and previous versions of React. In React 17 the event is attached to the root dom container in which your tree is rendered. 
+This event does not attach itself to the document node on which it is written rather it attaches itself to the document root in React 16 and previous versions of React. In React 17 the event is attached to the root dom container in which your tree is rendered.
 
 ```javascript
-
-    const rootNode = document.getElementById('root');
-    ReactDOM.render(<App />, rootNode);
-
+const rootNode = document.getElementById("root")
+ReactDOM.render(<App />, rootNode)
 ```
 
 The below diagram shows us how the event progation works in React 16 vs React 17.
@@ -55,23 +53,17 @@ This is why we can nest muliple versions of React in React 17.
 With the new React 17 you don't need to import React while writing a React component.
 
 ```javascript
-
-const MyComponent = ()=> (
-    <div>"some text man"</div>
-)
-
+const MyComponent = () => <div>"some text man"</div>
 ```
 
-The above code will turn into 
+The above code will turn into
 
 ```javascript
-
-import { jsx as _jsx } from "react/jsx-runtime";
+import { jsx as _jsx } from "react/jsx-runtime"
 
 function MyComponent() {
-  return _jsx("div", "some text man");
+  return _jsx("div", "some text man")
 }
-
 ```
 
 The react team has worked closely with the babel developers to introduce this feature. There is a chance that this feature may reduce the bundle size according to the react docs.

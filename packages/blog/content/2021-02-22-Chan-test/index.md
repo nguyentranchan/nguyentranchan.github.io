@@ -1,6 +1,6 @@
 ---
 title: "chan-test"
-path: blog/chan-test
+path: chan-test
 tags: [javascript, html]
 cover: ./rolwin.jpg
 date: 2021-02-22

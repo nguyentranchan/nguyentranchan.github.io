@@ -8,7 +8,7 @@ module.exports = {
   defaultLanguage: "en",
   pages: {
     home: "/",
-    blog: "blog",
+    blog: "/",
     contact: "contact",
     tag: "tags",
   },

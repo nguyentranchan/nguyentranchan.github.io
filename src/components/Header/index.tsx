@@ -86,6 +86,7 @@ class Header extends React.PureComponent<HeaderProps, HeaderState> {
             <div className="text-sm md:inline-flex lg:inline-flex">
               <DesktopMenuItem text="Products" href="#products" onClick={this.onClickMenuItem('products')} />
               <DesktopMenuItem text="About Us" href="#about-us" onClick={this.onClickMenuItem('about-us')} />
+              <DesktopMenuItem text="Blog" href="https://blog.ggjungle.com/" />
               <DesktopMenuItem text="Career" href="#career" onClick={this.onClickMenuItem('career')} />
               <DesktopMenuItem text="Contact" href="#footer" onClick={this.onClickMenuItem('footer')} />
             </div>

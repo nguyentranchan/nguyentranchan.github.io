@@ -28,11 +28,11 @@ exports.createPages = ({ actions, graphql }) => {
 
     /* Post pages */
     allMarkdownRemark.edges.forEach(({ node }) => {
-      // Check path prefix of post
-      if (node.frontmatter.path.indexOf(config.pages.blog) !== 0) {
-        // eslint-disable-next-line no-throw-literal
-        throw `Invalid path prefix: ${node.frontmatter.path}`
-      }
+      // // Check path prefix of post
+      // if (node.frontmatter.path.indexOf(config.pages.blog) !== 0) {
+      //   // eslint-disable-next-line no-throw-literal
+      //   throw `Invalid path prefix: ${node.frontmatter.path}`
+      // }
 
       createPage({
         path: node.frontmatter.path,
