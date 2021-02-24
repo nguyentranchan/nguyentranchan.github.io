@@ -102,4 +102,18 @@ module.exports = [
       showSpinner: true,
     },
   },
+  {
+    resolve: `gatsby-plugin-gitalk`,
+    options: {
+      config: {
+        repo: "calpa.github.io",
+        admin: ["nguyentranchan"],
+        owner: "nguyentranchan",
+        clientID: "c98003e0326a3cb28f0a",
+        clientSecret: "40249028720f844b50aec7fb75d47e4b05b0288a",
+        pagerDirection: "first",
+        distractionFreeMode: true,
+      },
+    },
+  },
 ]

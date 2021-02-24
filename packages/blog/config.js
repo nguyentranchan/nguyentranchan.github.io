@@ -72,5 +72,11 @@ module.exports = {
         "A general purpose programming language that is widely used for developing various applications.",
       color: "#f9c646",
     },
+    php: {
+      name: "php",
+      description:
+        "An open-source server-side scripting language that can be embedded into HTML to build web applications and dynamic websites.",
+      color: "#f9c646",
+    },
   },
 }

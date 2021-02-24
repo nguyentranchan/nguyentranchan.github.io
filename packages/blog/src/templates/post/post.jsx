@@ -5,12 +5,15 @@ import Img from 'gatsby-image';
 import Header from '../../components/PageLayout/Header';
 import SidebarWrapper from '../../components/PageLayout/Sidebar';
 import SEO from '../../components/Seo';
-import Config from '../../../config';
-import Utils from '../../utils/pageUtils';
+// import Config from '../../../config';
+// import Utils from '../../utils/pageUtils';
 
 import 'prismjs/themes/prism-solarizedlight.css';
 import './highlight-syntax.less';
 import style from './post.module.less';
+
+import Gitalk from 'gatsby-plugin-gitalk'
+import 'gitalk/dist/gitalk.css'
 
 const Post = ({ data }) => {
   const { html, frontmatter } = data.markdownRemark;
@@ -18,11 +21,17 @@ const Post = ({ data }) => {
     title, cover: { childImageSharp: { fluid } }, excerpt, path,
   } = frontmatter;
 
-  const canonicalUrl = Utils.resolvePageUrl(
-    Config.siteUrl,
-    Config.pathPrefix,
-    path,
-  );
+  // const canonicalUrl = Utils.resolvePageUrl(
+  //   Config.siteUrl,
+  //   Config.pathPrefix,
+  //   path,
+  // );
+
+  const gitalkConfig = {
+    id: path,
+    title: title,
+  };
+
   return (
     <Layout className="outerPadding">
       <Header />
@@ -33,7 +42,6 @@ const Post = ({ data }) => {
           path={path}
           keywords={['GGJungle', 'FullStack developer', 'Javascript', 'ReactJS', 'NodeJS', 'Gatsby', 'technology']}
         />
-        
         <SidebarWrapper>
           <div className="marginTopTitle">
             <h1>{title}</h1>
@@ -43,6 +51,7 @@ const Post = ({ data }) => {
             <article className={style.blogArticle} dangerouslySetInnerHTML={{ __html: html }} />
           </div>
         </SidebarWrapper>
+        <Gitalk options={gitalkConfig}/>
       </Layout>
     </Layout>
   );
