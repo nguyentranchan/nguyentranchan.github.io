@@ -2,11 +2,6 @@
 .cache
 node_modules
 
-
-# Build directory
-/public
-.DS_Store
-
 #IDE 
 .vscode
 yarn-error.log
